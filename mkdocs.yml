@@ -1,0 +1,63 @@
+site_name: Lorekeeper Docs
+site_url: 'https://lk-arpg.github.io/lk-docs/'
+repo_url: https://github.com/lk-arpg/lorekeeper
+repo_name: lk-arpg/lorekeeper
+
+nav:
+  - Home: 'index.md'
+
+theme:
+  name: 'material'
+  language: 'en'
+  features:
+    - navigation.instant
+  
+  favicon: images/favicon.ico
+  
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+  - media: '(prefers-color-scheme)'
+    toggle:
+      icon: material/brightness-auto
+      name: System preference
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: deep purple
+    accent: cyan
+    toggle:
+      icon: material/weather-night
+      name: Light mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    primary: deep purple
+    accent: cyan
+    toggle:
+      icon: material/weather-sunny
+      name: Dark mode
+
+extra:
+  version:
+    provider: mike
+    default: latest
+    alias: true
+
+markdown_extensions:
+  - admonition
+  - sane_lists
+  - toc:
+      permalink: true
+  - extra
+  - footnotes
+  - codehilite:
+      guess_lang: false
+  - attr_list
+  - md_in_html
+
+  - pymdownx.blocks.caption
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.snippets
+  
