@@ -6,6 +6,54 @@ repo_name: lk-arpg/lorekeeper
 nav:
   - Home: 'index.md'
 
+  - Guides:
+    - Setting Up: 'guides/setup.md'
+    - Creating Item Types: 'guides/creating-item-types.md'
+  
+  - Features:
+    - Admin Panel: 'features/admin-panel.md'
+    
+    - Characters: 'features/characters.md'
+    - MYO Slots: 'features/myo-slots.md'
+    - Character Images: 'features/character-images.md'
+    - Design Updates: 'features/design-updates.md'
+    - Masterlist: 'features/masterlist.md'
+    - Bookmarks: 'features/bookmarks.md'
+
+    - Species: 'features/species.md'
+    - Rarities: 'features/rarities.md'
+    - Traits: 'features/traits.md'
+
+    - Currencies: 'features/currencies.md'
+    - Items: 'features/items.md'
+    - Shops: 'features/shops.md'
+    - Trades: 'features/trades.md'
+    - Loot Tables: 'features/loot-tables.md'
+
+    - Prompts: 'features/prompts.md'
+    - Claims: 'features/claims.md'
+
+    - News: 'features/news.md'
+
+    - Raffles: 'features/raffles.md'
+
+    - User Accounts: 'features/user-accounts.md'
+    - User Ranks: 'features/user-ranks.md'
+    - Notifications: 'features/notifications.md'
+    - Invitation Keys: 'features/invitation-keys.md'
+    
+    - Config Files: 'features/config-files.md'
+    - Site Settings: 'features/site-settings.md'
+    - Site Pages: 'features/site-pages.md'
+    - Site Images: 'features/site-images.md'
+    - File Manager: 'features/file-manager.md'
+
+  - Design:
+    - How Random is Random?: 'features/randomness.md'
+
+  - Development:
+    - Future Plans: 'roadmap.md'
+
 theme:
   name: 'material'
   language: 'en'
