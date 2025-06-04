@@ -6,9 +6,9 @@ Characters are a resource that can be attached to [user accounts](user-accounts.
 
 All characters are listed on the [masterlist](masterlist.md).
 
-Characters can hold [currency](currencies.md) and be used to participate in [prompts](prompts.md), as well as be transferred/traded. Their designs can be updated through the [design updates](design-updates.md) system. For more information, please refer to the respective pages.
+Characters can hold [currency](currencies.md) and [items](items.md) and be used to participate in [prompts](prompts.md), as well as be transferred/traded. Their designs can be updated through the [design updates](design-updates.md) system. For more information, please refer to the respective pages.
 
-Users are able to edit a section of their character's profile, and list their character as being available for receiving gift art and/or trade. This section also includes a text field that allows HTML.
+Users are able to edit a section of their character's profile, and list their character as being available for receiving gift art, gift writing, and/or sale/trade. This section also includes a text field that allows HTML.
 
 ## Editing
 
@@ -36,7 +36,7 @@ Characters are set up in a manner such that traits, species, rarity and other sp
 Characters have the following properties:
 
 - Owner
-- Owner Alias
+- Owner URL
 - Character Category
 - Number
 - Character Code
@@ -49,7 +49,7 @@ Characters have the following properties:
 
 The **Owner** is the user on-site who owns the character. This field can be left blank if the owner has not registered for an account, and the following field has been filled in.
 
-The **Owner Alias** is the deviantART account name of the user who owns the character. If the Owner field is filled in, this field will be ignored. In the future, if the owner registers for the site, any characters listed under their deviantART name will automatically be attached to their account. Note that if the user has since changed their dA username, this will not happen (characters have to be transferred to their new site account manually).
+The **Owner URL** is the URL of the offsite profile of the user who owns the character. If the Owner field is filled in, this field will be ignored. In the future, if the owner registers for the site and links the associated account, any characters attached to the offsite account will automatically be attached to their on-site account. Note that if the user has since changed their offsite username, this will not happen (characters have to be transferred to their new site account manually).
 
 The **Character Category** is required, and characters cannot be created if at least 1 character category does not exist yet. This is a category for the character that is separate from the character’s species or any other stats, and can be used for example to categorise creator-made designs, MYO designs and guest artist designs. Of course, the usage is entirely up to you - you can also use it to categorise characters by species, or any other criteria you see fit. This category, by default, provides the first half of the character code.
 
@@ -77,29 +77,50 @@ After a character has been created, its profile can be edited by the owner or us
 - Name
 - Profile Content
 - Allow Gift Art
+- Allow Gift Writing
 - Up For Trade
 
 **Name** is an optional name given to the character. This is purely cosmetic, and also displays next to the character's code on the masterlist, on user profiles, etc.
 
 **Profile Content** is a section that allows HTML content to be entered.
 
-**Allow Gift Art** is a toggle that denotes if the character's owner is open to receiving gift art of the character. This toggle can be searched on the [masterlist](masterlist.md) to find a list of characters for users to draw. This cannot be edited by anyone other than the owner.
+**Allow Gift Art** is a setting that denotes if the character's owner is open to receiving gift art of the character. This can be searched on the [masterlist](masterlist.md) to find a list of characters for users to draw. This cannot be edited by anyone other than the owner. The possible values are Yes, No, and Ask First.
+
+**Allow Gift Writing** is a setting that denotes if the character's owner is open to receiving gift writing of the character. This can be searched on the masterlist to find a list of characters for users to write about. This cannot be edited by anyone other than the owner. The possible values are Yes, No, and Ask First.
 
 **Up For Trade** is a toggle that denotes if the character's owner wants to trade the character. Similarly, this toggle can also be searched on the masterlist. This cannot be edited by anyone other than the owner.
 
 Additionally, for users who are not the owner (has the required power), a **Notify User** toggle is present. If left on, the owner of the character will be notified that their character's profile has been edited (implied: for moderation purposes). Regardless of the status of the toggle, owners of non-visible characters will not be notified.
 
+## Gallery
+
+Character's galleries contain [gallery](galleries.md) submissions with the character attached and are populated automatically. This is not to be confused with Character Images, the official record of the character's design.
+
+## Bank and Inventory
+
+### Bank
+
+Characters can hold [currencies](currencies.md) that have been configured to allow it. Character's banks show their current held currencies, as well as allowing transfer of currencies (if enabled). Currencies may also be granted directly to characters via their bank.
+
+### Inventory
+
+Characters can hold [items](items.md) that have been configured to allow it (via their category). Items are transferred to character inventories from the owner's inventory. Items may also be granted directly to characters via their inventory.
+
+Note that characters' inventories are separate from their owner's, and items in a character's inventory remain in their posession if ownership of a character changes. Consequently, account-bound items cannot be transferred to characters (and vice versa).
+
 ## Logs
 
 Aside from images, characters have 4 types of logs: the change log, ownership history log, currency log and submission log.
 
-**Change Log**: This log specifically logs changes to the character and its images. It lists the specific fields updated, who made the edits, as well as the date of editing.
+**Change Log:** This log specifically logs changes to the character and its images. It lists the specific fields updated, who made the edits, as well as the date of editing.
 
-**Ownership History**: This log tracks the transfer of the character between different users, noting the sender, recipient, log information as well as the date. This is similar to the ownership history log that a user also possesses, but specifically monitors the character only.
+**Ownership History:** This log tracks the transfer of the character between different users, noting the sender, recipient, log information as well as the date. This is similar to the ownership history log that a user also possesses, but specifically monitors the character only.
 
-**Currency Logs**: Like the user currency logs, this log tracks the in and outflow of currency from the character's bank. Note that characters are unable to transfer currency between each other, and can only transfer currency to their owners. However, character-owned currencies can be used to purchase items from shops (if the settings allow).
+**Currency Logs:** Like the user currency logs, this log tracks the in and outflow of currency from the character's bank. Note that characters are unable to transfer currency between each other, and can only transfer currency to their owners. However, character-owned currencies can be used to purchase items from shops (if the settings allow).'
 
-**Submissions**: This is a list of submissions that the character has been attached to for rewards.
+**Item Logs:** Like the user item logs, this log tracks the in and outflow of items from the character's inventory. Note that characters are unable to transfer items between each other, and can only transfer items to their owners.
+
+**Submissions:** This is a list of submissions that the character has been attached to for rewards.
 
 ## Transfers
 

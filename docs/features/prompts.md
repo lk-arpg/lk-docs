@@ -4,7 +4,7 @@ Prompts are a submission type that accepts user submissions into a queue and dis
 
 ## Usage
 
-This section pertains to the general purpose and usage of the prompt index page. See the [Submission](#submission) section below for more information on submitting prompts.
+!!! info "This section pertains to the general purpose and usage of the prompt index page. See the [Submission](#submission) section below for more information on submitting prompts."
 
 Prompts can be accessed from the navigation bar, under the World dropdown. The prompt index lists all visible prompts, sorted by category order, and can be further filtered by the following:
 
@@ -29,6 +29,7 @@ Each prompt lists the following:
 - End date (if applicable)
 - Summary
 - Details (collapsed)
+    - This also notes if submissions to the prompt are temporarily or indefinitely hidden
 - Rewards
 - Button for submission (if allowed)
 
@@ -36,7 +37,7 @@ Prompts can only be submitted between the start and end dates if either or both 
 
 ## Editing
 
-This section pertains to the editing of prompt categories and prompts. See the [Approval Queue](#approval-queue) section below for more information on the approval queue.
+!!! info "This section pertains to the editing of prompt categories and prompts. See the [Approval Queue](#approval-queue) section below for more information on the approval queue."
 
 ### Categories
 
@@ -63,6 +64,7 @@ Prompts themselves have the following properties:
 - Hide Before Start Time
 - Hide After End Time
 - Is Active
+- Hide Submissions
 
 **Name** is the prompt name which is displayed on the prompt index.
 
@@ -78,6 +80,8 @@ Prompts themselves have the following properties:
 
 **Is Active** toggles the visibility of the prompt altogether. This overrides the hiding options - if this is set to not active, the prompt will never show on the index.
 
+**Hide Submissions** controls whether or not submissions to a prompt should be hidden until the prompt's end (if an end date is set) or indefinitely. Staff with the **Manage Submissions** power will be able to see all submissions regardless of this setting.
+
 #### Rewards
 
 The rewards section allows you to attach some default rewards to the prompt. Users will not be able to edit these rewards during submission.
@@ -87,6 +91,7 @@ You can attach any of the following, specifying a quantity:
 - Item
 - Currency
 - Loot table
+- Raffle Ticket
 
 Note that loot table quantity rolls the table x times, and not the rewards from 1 roll multiplied by x. Only the display name of the loot table will be shown - users will not see the internal name of the table, nor the contents/odds of rolling.
 
@@ -105,7 +110,7 @@ A prompt submission requires:
 
 **Prompt** is the prompt that is being responded to. If the submit button on the prompts page is clicked, this field will already have been filled.
 
-**Submission URL** is the link to a page containing the material to be reviewed for prompt submission. This is expected to be something like a dA submission or sta.sh link, but can be anything relevant.
+**Submission URL** is the link to a page containing the material to be reviewed for prompt submission. This is expected to be something like a [gallery](galleries.md) submission, but can be anything relevant.
 
 **Comments** are optional. This space could be used for, for example, entering calculations for tiered rewards. Line breaks will be preserved, but HTML will not be rendered.
 
@@ -129,9 +134,18 @@ The characters section allows the user to add characters to their submission. In
 
 **Rewards** function much like the user selected rewards, but only currencies can be selected, and these rewards will be credited directly to the character on approval.
 
+### Expanded Rewards
+
+An optional extension toggleable in the extensions [config file](config-files.md) allows additional reward types to be awarded to characters. These are:
+
+- Items
+- Loot Tables
+
+The config file also contains a toggle for how to handle rewards that cannot be held by characters (whether they go to the character's owner or to the submitting user).
+
 ### Submission
 
-Submissions submitted to the approval queue cannot be edited by the user. The submission will have its own page containing all submitted information - this will not be visible to any users besides the submitter and users with the Manage Submissions power until it is approved.
+Submissions submitted to the approval queue cannot be edited by the user. The submission will have its own page containing all submitted information - this will not be visible to any users besides the submitter and users with the Manage Submissions power until it is approved. If the prompt is set to not show submissions until the end of the prompt or indefinitely, it will not become visible to other (non-permissioned) users until the prompt ends or the setting is changed, respectively.
 
 ## Approval Queue
 

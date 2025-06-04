@@ -12,16 +12,17 @@ News posts can be scheduled to post at certain times. Note that this posting is 
 
 News posts have the following properties:
 
-Title
-Post Time
-Post Content (accepts HTML)
+- Title
+- Post Time
+- Post Content (accepts HTML)
 
 **Title** is the title of the news post.
 
 **Post Time** is optional, and schedules the post to be posted after a certain date/time. If not set, the news post will be posted immediately.
 
-**Post Content** is the content of the news post itself. HTML is allowed. The File Manager can be used to upload images to be inserted into news posts if desired.
+**Post Content** is the content of the news post itself. HTML is allowed. The [File Manager](file-manager.md) can be used to upload images to be inserted into news posts if desired.
 
 ## See Also
 
 - [Site Pages](site-pages.md)
+- [Sales](sales.md)

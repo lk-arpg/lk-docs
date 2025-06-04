@@ -8,7 +8,17 @@ nav:
 
   - Guides:
     - Setting Up: 'guides/setup.md'
+    - Updating Lorekeeper: 'guides/update.md'
+    - v2 Upgrade Guide: 'guides/upgrade.md'
     - Creating Item Types: 'guides/creating-item-types.md'
+    - Social Media Authentication:
+      - Index: 'guides/socmed/index.md'
+      - deviantArt: 'guides/socmed/deviantart.md'
+      - Imgur: 'guides/socmed/imgur.md'
+      - Instagram: 'guides/socmed/instagram.md'
+      - Tumblr: 'guides/socmed/tumblr.md'
+      - Twitch: 'guides/socmed/twitch.md'
+      - Twitter: 'guides/socmed/twitter.md'
   
   - Features:
     - Admin Panel: 'features/admin-panel.md'
@@ -30,10 +40,13 @@ nav:
     - Trades: 'features/trades.md'
     - Loot Tables: 'features/loot-tables.md'
 
+    - Galleries: 'features/galleries.md'
+
     - Prompts: 'features/prompts.md'
     - Claims: 'features/claims.md'
 
     - News: 'features/news.md'
+    - Sales: 'features/sales.md'
 
     - Raffles: 'features/raffles.md'
 
@@ -41,6 +54,8 @@ nav:
     - User Ranks: 'features/user-ranks.md'
     - Notifications: 'features/notifications.md'
     - Invitation Keys: 'features/invitation-keys.md'
+
+    - Reports: 'features/reports.md'
     
     - Config Files: 'features/config-files.md'
     - Site Settings: 'features/site-settings.md'
@@ -52,7 +67,7 @@ nav:
     - How Random is Random?: 'features/randomness.md'
 
   - Development:
-    - Future Plans: 'roadmap.md'
+    - Contributing: 'contributing.md'
 
 theme:
   name: 'material'

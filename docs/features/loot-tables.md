@@ -33,6 +33,11 @@ This is the name that users will see, if a random reward will be given as a prom
 Under this section, you can choose the rewards that can be given out through this table. The following loot types can be selected:
 
 - Item
+- Item Category
+- Any items of given raritie(s) (optional)
+    - Enable in the extensions [config file](config-files.md)
+- Any items of given raritie(s) in an item category (optional)
+    - Enable in the extensions [config file](config-files.md)
 - Currency
 - Loot table
 - None (no reward given)

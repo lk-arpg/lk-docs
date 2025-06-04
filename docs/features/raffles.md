@@ -47,13 +47,21 @@ Raffles have the following properties:
 
 The **Active** setting controls if the raffle is visible to users.
 
-#### Tickets
+#### Adding Tickets
+
+##### Via the Ticket Index
 
 The ticket index allows adding tickets with a single text field:
 
 - Names
 
 **Names** should be entered into this field, separated by commas. Spaces will be removed. 1 name counts for 1 ticket, and duplicates of the same name can be entered to give the same user multiple tickets. These names will first be matched to usernames on the site, and if no match is found, it will label the ticket with the deviantART account of that name.
+
+##### Via Rewards
+
+Tickets may also be awarded to users as a reward for a [prompt](prompts.md) or [claim](claims.md) submission. A raffle must be active for it to be selected as a potential reward.
+
+Additionally, tickets may also be rewarded from Box-type [items](items.md) under the same conditions.
 
 ## See Also
 

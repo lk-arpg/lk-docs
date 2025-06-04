@@ -62,9 +62,9 @@ Additionally, for users who are not the owner (has the required power), a **Noti
 
 Unlike characters, MYO slots do not have an image gallery (new images cannot be uploaded until it becomes a full character) and have no submission/currency logs as they cannot be submitted in prompts/hold currency. MYO slots have only 2 types of logs: the change log and ownership history log.
 
-**Change Log**: This log specifically logs changes to the slot and its images. It lists the specific fields updated, who made the edits, as well as the date of editing.
+**Change Log:** This log specifically logs changes to the slot and its images. It lists the specific fields updated, who made the edits, as well as the date of editing.
 
-**Ownership History**: This log tracks the transfer of the slot between different users, noting the sender, recipient, log information as well as the date. This is similar to the ownership history log that a user also possesses, but specifically monitors the slot only.
+**Ownership History:** This log tracks the transfer of the slot between different users, noting the sender, recipient, log information as well as the date. This is similar to the ownership history log that a user also possesses, but specifically monitors the slot only.
 
 ## Transfers
 

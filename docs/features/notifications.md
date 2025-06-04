@@ -52,6 +52,25 @@ This is a list of all events for which the user will be notified by default:
 - A character the user has bookmarked has had its gift art allowed status updated
 - A character the user has bookmarked has been transferred to another user
 - A character the user has bookmarked has had a new image uploaded
+- A character the user has bookmarked has has its gift writing allowed status updated
+- A [report](reports.md) the user has made has been assigned to a staff member
+- A report the user has made has been closed
+- A comment has been made on something of the user's
+- A comment the user has made has been replied to
+- Staff have granted one of the user's characters item(s)
+- Staff have removed item(s) from one of the user's characters
+- The user has been added as a collaborator on a gallery submission
+- All collaborators on a gallery submission the user made have approved it
+- [Gallery](galleries.md) submission has been approved by staff
+- Gallery submission has been rejected by staff
+- Gallery submission has been awarded currency by staff
+- Gallery submission has been moved by staff
+- One of the user's characters has been attached to a gallery submission
+- One of the user's gallery submissions has been favorited
+- Gallery submission staff comments have been updated
+    - Note that this notification type is no longer in use but is present to support previously created notifications
+- Gallery submission has been edited by staff
+- The user has been added as a participant on a gallery submission
 
 ## See Also
 

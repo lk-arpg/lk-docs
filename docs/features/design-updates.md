@@ -38,6 +38,10 @@ The staff member reviewing the submission cannot modify any of the trait informa
 - Upload a new thumbnail
 - Change the designer/artist credits of the image
 
+#### Voting
+
+Voting on design updates may optionally be enabled via the extensions [config file](config-files.md). This allows users viewing design updates in the approval queue to vote to approve or reject/cancel a design update. This is only a communication tool for sites' staff and does not automatically perform any actions when a consensus has been reached.
+
 ### Approve
 
 Approving the request requires some data about the character to be added (in the case of MYO slots) or reviewed:

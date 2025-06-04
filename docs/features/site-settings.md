@@ -6,6 +6,12 @@ Site settings are editable in the admin panel (requires the **Edit Site Settings
 
 These are the site settings that are added by default during setup.
 
+#### admin_user
+
+By default, this is used to direct notifications for comments on site pages to an account. Extensions may also use this setting. It's recommended that this correspond to the ID of an account that is not used by any one person and is solely for administrative purposes.
+
+Default: 1
+
 #### blacklist_key
 
 Optional key to view the blacklist. Enter "0" to not require one.
@@ -27,6 +33,36 @@ Default value: 1
 Who can view the blacklist? 0: Admin only, 1: Staff only, 2: Members only, 3: Public.
 
 Default value: 1
+
+#### design_votes_needed
+
+The number of votes needed for consensus on a design update.
+
+Default: 3
+
+#### gallery_submissions_open
+
+Whether or not gallery submissions are open globally.
+
+Default: 1
+
+#### gallery_submissions_require_approval
+
+Whether or not gallery submissions require approval.
+
+Default: 1
+
+#### gallery_submissions_reward_currency
+
+Whether or not gallery submissions reward currency.
+
+Default: 0
+
+#### group_currency
+
+ID of the group currency used for gallery submission rewards, if enabled.
+
+Default: 1
 
 #### is_claims_open
 
@@ -57,6 +93,12 @@ Default value: 1
 0: Registration closed, 1: Registration open. When registration is closed, invitation keys can still be used to register.
 
 Default value: 1
+
+#### is_reports_open
+
+0: New reports cannot be made (mods can work on the queue still), 1: Reports are open.
+
+Default: 1
 
 #### open_transfers_queue
 

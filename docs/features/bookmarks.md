@@ -15,13 +15,14 @@ Bookmarks have the following properties:
 - Notify me when…
     - Open For Trades status changes
     - Gift Art Allowed status changes
+    - Gift Writing Allowed status changes
     - Character's owner changes
     - A new image is uploaded
 - Comment (No HTML, 500 characters maximum)
 
 The **Notify me when...** settings each represent whether a notification will be sent to you when the respective change occurs. All of these settings are optional.
 
-**Open For Trades/Gift Art Allowed** settings change whenever the user or a staff member edits the settings. Note that since these are editable by the character's owner themselves, they may change frequently, resulting in a lot of notifications.
+**Open For Trades/Gift Art Allowed/Gift Writing Allowed** settings change whenever the user or a staff member edits the settings. Note that since these are editable by the character's owner themselves, they may change frequently, resulting in a lot of notifications.
 
 The **Character's owner** changes when a character is transferred (voluntarily or forced by a staff member) or traded to another user. It does not send a notification when a new user registers for the site and has their existing characters credited to them.
 

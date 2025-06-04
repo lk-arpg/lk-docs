@@ -22,6 +22,15 @@ Item categories can be created in the admin panel, with the usual category prope
 
 The image and description are displayed only on the world page. Categories are optional, but useful for sorting items. Items without a category will be placed in a "Miscellaneous" category in the inventory.
 
+Item categories also have the following properties pertaining to character ownership of the items in them:
+
+- **Can be Owned by Characters**
+    - Whether or not items in the category can be owned by characters/users can transfer items in this category from their inventory to their characters' inventories.
+- **Character Hold Limit**
+    - If set/non-0, this limits the number of items of the category a character can own at one time.
+- **Can be Named**
+    - Whether or not items in this category can be "named" when in character inventories, e.g. in the case of pets. This does not override the name of the item itself.
+
 Additionally, categories can be sorted from the Item Categories index page. This order reflects the sorting order of categories in user inventories.
 
 ### Items
@@ -50,11 +59,18 @@ This is a section under the item editing form that becomes accessible after the 
 
 The Add a Tag button can be used to select an item tag. Duplicate item tags cannot be added to the same item. Attached item tags can be toggled on or off to allow or remove functionality without completely removing the item tag.
 
-By default, the Box type item tag is available - this allows you to choose a particular set of rewards from items, currencies and loot tables. When a user chooses to use the item in the inventory, they will receive these rewards. The process of creating this item tag can be seen in [this tutorial](../guides/creating-item-types.md).
+By default, two item tags are available:
+
+- **Box**
+    - This allows you to choose a particular set of rewards from items, currencies, loot tables, and tickets for any active raffles.
+    - When a user chooses to use the item in their inventory, the box item will be consumed and the user will receive these rewards. The process of creating this item tag can be seen in [this tutorial](../guides/creating-item-types.md).
+- **Slot**
+    - This allows you to set various properties for [MYO slots](myo-slots.md) that will be created using the item to which the tag is assigned.
+    - When a user chooses to use the item in their inventory, the slot item will be consumed and the user will receive a MYO slot with these properties.
 
 ## Inventory
 
-Each user has an inventory, which is sorted by item category and further sorted by alphabetical order of item names. Clicking on an item brings up a menu that lists the item's source (if any), accompanying notes (if any), and actions that can be performed on it.
+Each user has an inventory, which is sorted by item category and further sorted by alphabetical order of item names.  Items within this inventory are "stacked", meaning that all copies of an item, or stacks, are collapsed down to one entry in the user's inventory. Clicking on an item brings up a menu that lists the item's source (if any), accompanying notes (if any), and actions that can be performed on it.
 
 The **Source** field notes down the source of the item. This field is automatically filled out when the user receives an item through site activity e.g. through [prompts](prompts.md)/[claims](claims.md) and functions as a record of how/why an item was received. In the case of shop purchases, this also notes who purchased the item, the shop it was purchased from, and the price.
 
@@ -62,9 +78,23 @@ The **Notes** field contains additional information about the item. This is some
 
 Below this section, actions that can be used are listed. Special actions from item tags are listed first, then general actions.
 
-**Transfer Item** (if the item can be transferred) allows the user to transfer the item to another user.
+- **Transfer Item to Character** (if the item can be transferred)
+    - Allows the user to transfer all or part of stack(s) to one of their characters. Only available if the item can be owned by characters.
+- **Transfer Item** (if the item can be transferred)
+    - Allows the user to transfer all or part of stack(s) to another user.
+- **Delete Item**
+    - Allows the users to trash all or part of stack(s) entirely.
 
-**Delete Item** allows the users to trash the item entirely.
+### Character Inventories
+
+Character inventories are largely similar to user inventories. The notable difference is that different actions may be used on items compared to user inventories:
+
+- **Name Item** (if the item can be "named")
+    - Allows the user to assign a nametag to a stack, e.g. in the case of a pet.
+- **Transfer Item** (if the item can be transferred)
+    - Allows the user to transfer all or part of stack(s) to the inventory of the character's owner.
+- **Delete Item**
+    - Allows the users to trash all or part of stack(s) entirely.
 
 ## See Also
 

@@ -10,9 +10,11 @@ New user accounts will always have FTO status on registration.
 
 ## Verification
 
-After a new account has been created, users need to verify their identity by linking their deviantART account to their site user account. They will not be able to use any other parts of the site until this process has been completed. This account cannot be changed by the user once it has been linked. In the user admin panel, the name cannot be changed directly but can be unlinked, which will require the user to link a deviantART account again to regain access to their account features.
+After a new account has been created, users need to verify their identity by linking a social media or other platform (by default deviantArt) account to their site user account. They will not be able to use any other parts of the site until this process has been completed. Associated accounts' usernames are also referred to as the user's "aliases". Upon linkage, any characters that were previously credited an alias will be credited to the account immediately. This will also update their FTO status.
 
-The deviantART account name is also referred to as the user's "alias". Upon linkage, any characters that were previously credited to the user's alias will be credited to the account immediately. This will also update their FTO status.
+Users have a "primary" alias, which is always visible and is displayed on their profile, similar to the previous system. Users may also have multiple non-primary aliases. These may or may not be visible to other users, as set by the user. Which sites may or may not be used for authentication and/or as primary aliases can be configured in the sites [config file](config-files.md). Users may link and unlink additional accounts from any site(s) enabled at will so long as they retain a primary alias.
+
+In the user admin panel, aliases cannot be changed directly but can be unlinked. Unlinking a user's primary alias will require the user to link an account again to regain access to their account features.
 
 ## Profile
 
@@ -20,7 +22,9 @@ Each user has a profile page, which lists their name, rank, join date, FTO statu
 
 This profile page will also display an alert if the user has been banned.
 
-From the main profile page, the sidebar includes links to logs of player activity.
+From the main profile page, the sidebar includes links to logs of player activity, a list of their current aliases, as well as their [characters](characters.md), [bank](currencies.md), and [inventory](items.md).
+
+Also included are links to the user's gallery-- automatically populated with any [gallery](galleries.md) submissions the user has made and/or collaborated on-- as well as to a list of gallery submissions the user has favourited and a special version of this page listing only favourites that also have one or more of the user's characters attached.
 
 ### FTO Status
 
@@ -44,6 +48,7 @@ Users can be banned from the admin panel. This still allows them to log in, but 
 Banning causes a few things to happen immediately:
 
 - Pending character transfers to/from the user are cancelled
+- Pending gallery submissions from the user are rejected
 - Pending prompt submissions and claims from the user are rejected
 - Pending design update approvals/MYO approvals from the user are rejected
 - Pending trades involving the user are rejected

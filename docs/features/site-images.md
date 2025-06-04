@@ -13,20 +13,29 @@ The Site Images page provides uploads for the following images:
 - Currency Icon
 - MYO Default Image
 - MYO Default Image (Thumbnail)
+- Meta Tag Image
+- Watermark Image
+- Content Warning Image
 
-**Header Image**: The header banner displayed at the top of the page. PNG format, default height of 200px. Tiles in both directions.
+**Header Image:** The header banner displayed at the top of the page. PNG format, default height of 200px. Tiles in both directions.
 
-**Characters Icon**: The characters graphic on the front page. PNG format, default size of 200px x 200px (no restriction).
+**Characters Icon:** The characters graphic on the front page. PNG format, default size of 200px x 200px (no restriction).
 
-**Account Icon**: The account graphic on the front page. PNG format, default size of 200px x 200px (no restriction).
+**Account Icon:** The account graphic on the front page. PNG format, default size of 200px x 200px (no restriction).
 
-**Inventory Icon**: The inventory graphic on the front page. PNG format, default size of 200px x 200px (no restriction).
+**Inventory Icon:** The inventory graphic on the front page. PNG format, default size of 200px x 200px (no restriction).
 
-**Currency Icon**: The bank graphic on the front page. PNG format, default size of 200px x 200px (no restriction).
+**Currency Icon:** The bank graphic on the front page. PNG format, default size of 200px x 200px (no restriction).
 
-**MYO Default Image**: The default image used for MYO slots when no image is uploaded. PNG format, no size restriction.
+**MYO Default Image:** The default image used for MYO slots when no image is uploaded. PNG format, no size restriction.
 
-**MYO Default Image (Thumbnail)**: The default masterlist thumbnail used for MYO slots when no image is uploaded. PNG format, size of masterlist thumbnails.
+**MYO Default Image (Thumbnail):** The default masterlist thumbnail used for MYO slots when no image is uploaded. PNG format, size of masterlist thumbnails.
+
+**Meta Tag Image:** The image displayed in meta tag previews on social media, discord, and the like. PNG format, no size restriction.
+
+**Watermark Image:** Watermark for applying to [character images](character-images.md) (if enabled).
+
+**Content Warning Image:** Thumbnail used for gallery submissions with a set content warning. PNG format, size of masterlist thumbnails.
 
 Additionally, there is an upload under the heading Site CSS. This file will be included after all other CSS files that are added to the page. Reuploading the file will replace the original.
 

@@ -21,12 +21,16 @@ The following search conditions can be set:
 - [Species](species.md)
 - Category
 - Owner name
-- [Artist alias](character-images.md)
-- [Designer alias](character-images.md)
+- [Artist name](character-images.md)
+- [Designer name](character-images.md)
+- Owner URL/alias
+- Artist URL/alias
+- Designer URL/alias
 - Minimum resale price
 - Maximum resale price
 - Trading status (user-assigned)
 - Gift art status (user-assigned)
+- Gift writing status (user-assigned)
 - Can be resold
 - Can be traded
 - Can be gifted

@@ -17,6 +17,7 @@ These pages are:
 - About
 - Privacy Policy
 - Terms of Service
+- Credits
 
 ## See Also
 

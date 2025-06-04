@@ -18,6 +18,10 @@ Create and edit user ranks to assign to users.
 
 Create and edit news posts.
 
+#### [Sales](sales.md)
+
+Create and edit sales posts.
+
 #### [Pages](site-pages.md)
 
 Create and edit site pages.
@@ -94,6 +98,10 @@ Create and edit prompt categories.
 
 Create and edit prompts.
 
+#### [Galleries](galleries.md)
+
+Create and edit galleries.
+
 #### [Character Categories](characters.md)
 
 Create and edit character categories.
@@ -131,6 +139,12 @@ View and approve/reject character design updates.
 #### MYO Approvals
 
 View and approve/reject MYO design submissions.
+
+### Manage Reports
+
+#### [Reports](reports.md)
+
+View and handle user bug and other reports.
 
 ### Manage Raffles
 

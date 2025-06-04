@@ -48,6 +48,10 @@ Allow rank to create/edit raffles, add/remove tickets for users and roll raffles
 
 Allow rank to view the submissions queue, edit rewards attached to a submission and approve/reject them.
 
+#### Manage Reports
+
+Allow rank to view the reports queue and process reports.
+
 ## Editing
 
 Ranks can be edited in the admin panel. **Only the admin rank is able to edit ranks - this is not an assignable power**.

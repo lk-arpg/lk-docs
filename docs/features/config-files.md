@@ -19,6 +19,22 @@ This file lists some basic site settings that are unlikely to change once the si
 
 Please refer to the comments in the file itself for a complete description of each setting.
 
+### extensions.php
+
+This file lists settings to enable and disable as well as configure certain opt-in extensions integrated into Lorekeeper.
+
+### sites.php
+
+This file lists various sites and values for them and is used to enable/disable available authentication options as well as assist with formatting.
+
+### group_currency_form.php
+
+This file lists form fields and information for inclusion in the group currency form. For more information, see [Galleries](galleries.md).
+
+### extension_tracker.php
+
+This file lists extensions installed on an individual Lorekeeper site and is used to supply information for the `php artisan update-extension-tracker` command. It should only be modified by extension authors.
+
 ### admin_sidebar.php
 
 This file lists the links in the admin panel sidebar, as well as the staff power required to view the category of links.
