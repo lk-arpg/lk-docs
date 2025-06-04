@@ -32,4 +32,4 @@ jobs:
           export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct docs/ mkdocs.yml)
           uv run -- mike deploy --alias-type copy "${RELEASE_TAG_NAME}" latest --update-aliases --push
         env:
-          RELEASE_TAG_NAME: ${{ github.event.release.tag_name }}
+          RELEASE_TAG_NAME: ${{ github.ref_name }}
