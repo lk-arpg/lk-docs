@@ -1,0 +1,1615 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lk-arpg.github.io/lk-docs/prerelease/guides/creating-item-types/">
+      
+      
+        <link rel="prev" href="../setup/">
+      
+      
+        <link rel="next" href="../../features/admin-panel/">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Creating Item Types - Lorekeeper Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-creating-item-types" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lorekeeper Docs" class="md-header__button md-logo" aria-label="Lorekeeper Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lorekeeper Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating Item Types
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="System preference"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="System preference" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lk-arpg/lorekeeper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lk-arpg/lorekeeper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lorekeeper Docs" class="md-nav__button md-logo" aria-label="Lorekeeper Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Lorekeeper Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lk-arpg/lorekeeper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lk-arpg/lorekeeper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creating Item Types
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Creating Item Types
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-add-item-type-to-the-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Add item type to the config file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-add-a-service-class-for-the-item-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add a service class for the item tag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-add-item-tag-settings-editing-to-the-admin-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add item tag settings editing to the admin panel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-add-front-facing-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Add front-facing views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-add-action-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Add action processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/admin-panel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/characters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Characters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/myo-slots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MYO Slots
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/character-images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/design-updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/masterlist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Masterlist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/bookmarks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bookmarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/species/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Species
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/rarities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rarities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/traits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/currencies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Currencies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/items/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Items
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/shops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shops
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/trades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/loot-tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loot Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/prompts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/claims/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claims
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/news/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/raffles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raffles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/user-accounts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Accounts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/user-ranks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Ranks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/notifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/invitation-keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Invitation Keys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/config-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/site-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/site-pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Pages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/site-images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/file-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/randomness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Random is Random?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Future Plans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-add-item-type-to-the-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Add item type to the config file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-add-a-service-class-for-the-item-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add a service class for the item tag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-add-item-tag-settings-editing-to-the-admin-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add item tag settings editing to the admin panel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-add-front-facing-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Add front-facing views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-add-action-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Add action processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tutorial-creating-item-types">Tutorial: Creating Item Types<a class="headerlink" href="#tutorial-creating-item-types" title="Permanent link">&para;</a></h1>
+<p>This is a tutorial on how to add new item types (item tags). Throughout the tutorial, I will also walk through the creation of the Box item type in the blue boxes, which was also implemented using this method.</p>
+<div class="admonition info">
+<p class="admonition-title">Following along with the 'box' item type...</p>
+<p>First, let's define what a box type item is/does:</p>
+<ul>
+<li>A box is an "openable" item. This item can be used from the inventory and will give the user a set of assets (can be defined in the admin panel), and delete the original item.</li>
+<li>Assets can be items, currency or loot tables. Loot tables will be rolled. Multiple assets of various quantities can be attached in the admin panel.</li>
+</ul>
+</div>
+<h2 id="1-add-item-type-to-the-config-file">1. Add item type to the config file<a class="headerlink" href="#1-add-item-type-to-the-config-file" title="Permanent link">&para;</a></h2>
+<p>Find the config file: <code>config/lorekeeper/item_tags.php</code></p>
+<p>Add a row inside the array, in the format:</p>
+<div class="highlight"><pre><span></span><code><span class="x">&#39;tag_name&#39; =&gt; [</span>
+<span class="x">    &#39;name&#39; =&gt; &#39;Tag Name&#39;,</span>
+<span class="x">    &#39;text_color&#39; =&gt; &#39;#000000&#39;,</span>
+<span class="x">    &#39;background_color&#39; =&gt; &#39;#000000&#39;</span>
+<span class="x">],</span>
+</code></pre></div>
+<p>Where <code>text_color</code> and <code>background_color</code> are hexadecimal colour codes excluding the <code>#</code>. These colours will be used in displaying the tag label.</p>
+<p>Replace <code>tag_name</code> and <code>Tag Name</code> as well, following those capitalisation/punctuation rules.</p>
+<p><code>tag_name</code> must be a unique key (all small letters, underscores instead of spaces), but <code>Tag Name</code> (any capitalisation, any formatting) does not have to be. The latter will be used in displaying tag names on user-facing pages.</p>
+<div class="admonition info">
+<p class="admonition-title">Following along with the 'box' item type...</p>
+<p>Adding our box item type, which will be an orange tag label with white text.</p>
+<div class="highlight"><pre><span></span><code><span class="x">&#39;box&#39; =&gt; [</span>
+<span class="x">    &#39;name&#39; =&gt; &#39;Box&#39;,</span>
+<span class="x">    &#39;text_color&#39; =&gt; &#39;#ffffff&#39;,</span>
+<span class="x">    &#39;background_color&#39; =&gt; &#39;#f6993f&#39;</span>
+<span class="x">],</span>
+</code></pre></div>
+</div>
+<h2 id="2-add-a-service-class-for-the-item-tag">2. Add a service class for the item tag<a class="headerlink" href="#2-add-a-service-class-for-the-item-tag" title="Permanent link">&para;</a></h2>
+<p>This class will help us process the data and get relevant information for our form.</p>
+<p>Create a file called <code>[ItemTag]Service.php</code> in <code>app/Services/Item</code>. The capitalisation is important!</p>
+<p>These are the required functions:</p>
+<ul>
+<li><code>getEditData()</code> - Retrieves any data that you need for your editing form. Should return an array, and can be accessed from the tag using $tag-&gt;getEditData().</li>
+<li><code>getTagData($tag)</code> - Does some custom processing and returns tag data in an appropriate format for your needs. Can be accessed from the tag using $tag-&gt;getData(). This is not strictly necessary if you don't use it, but allows you to implement some custom handling.</li>
+<li><code>updateData($tag, $data)</code> - Handles updating of the tag's data in the admin panel. Add your custom processing here.</li>
+<li><code>act($stack, $user, $data)</code> - Handles what happens when a user uses the item.</li>
+</ul>
+<details class="abstract">
+<summary>Here is a blank template for the file:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">namespace</span> <span class="nx">App\Services\Item</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">App\Services\Service</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">CustomService</span> <span class="k">extends</span> <span class="nx">Service</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Retrieves any data that should be used in the item tag editing form.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return array</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getEditData</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[];</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Processes the data attribute of the tag and returns it in the preferred format.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param  string  $tag</span>
+<span class="sd">     * @return mixed</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getTagData</span><span class="p">(</span><span class="nv">$tag</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[];</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Processes the data attribute of the tag and returns it in the preferred format.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param  string  $tag</span>
+<span class="sd">     * @param  array   $data</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">updateData</span><span class="p">(</span><span class="nv">$tag</span><span class="p">,</span> <span class="nv">$data</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Acts upon the item when used from the inventory.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param  \App\Models\User\UserItem  $stack</span>
+<span class="sd">     * @param  \App\Models\User\User      $user</span>
+<span class="sd">     * @param  array                      $data</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">act</span><span class="p">(</span><span class="nv">$stack</span><span class="p">,</span> <span class="nv">$user</span><span class="p">,</span> <span class="nv">$data</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<p>You can also add any additional functions that you may need in order to process the data.</p>
+<div class="admonition info">
+<p class="admonition-title">Following along with the 'box' item type...</p>
+<p>As we haven't started creating the form, we probably aren't entirely sure what data we'll need at this point, so we will just create <code>app/Services/Item/BoxService.php</code> for now and move on to the next step.</p>
+</div>
+<h2 id="3-add-item-tag-settings-editing-to-the-admin-panel">3. Add item tag settings editing to the admin panel<a class="headerlink" href="#3-add-item-tag-settings-editing-to-the-admin-panel" title="Permanent link">&para;</a></h2>
+<p>We need to create a form in the admin panel so we can edit the item data.</p>
+<p>Go to the admin panel for the item you want to tag (<code>your-site-url.com/admin/data/items/edit/[item_id]</code>), and add the item tag you want to edit in the Item Tags section. Doing so should bring you to the tag settings page, but only the "Active" toggle will be visible. If you only want this tag to be cosmetic, you can stop here.</p>
+<p>Add a new file in <code>resources/views/admin/items/tags</code> named <code>[tag_name].blade.php</code>, where <code>[tag_name]</code> is as you specified in the config file (no square brackets). This will contain the form HTML for our other fields.</p>
+<p>A few other optional sections can be added to allow you to insert data into the page in various locations.</p>
+<ul>
+<li>If you're using Javascript, make a new file in <code>resources/views/js/admin_items</code> with the same file name as above and include script tags when writing your Javascript.</li>
+<li>Files can be added in <code>resources/views/admin/items/tags</code> named <code>[tag_name]_pre.blade.php</code> and <code>[tag_name]_post.blade.php</code>. These add content before and after the form respectively, so any form elements in these sections will not be sent along with the rest of the data.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Following along with the 'box' item type...</p>
+<p>We'll add 3 files:</p>
+<ul>
+<li><code>box.blade.php</code> in <code>resources/views/admin/items/tags</code></li>
+<li><code>box_post.blade.php</code> in <code>resources/views/admin/items/tags</code></li>
+<li><code>box.blade.php</code> in <code>resources/views/js/admin_items</code></li>
+</ul>
+<p>As they rely heavily on pre-existing code, I would recommend going through the files to see how they're set up.</p>
+<p>These contain the code that will allow us to select assets using Javascript. The code in these files is fairly simple as I've made selectors that are easy to include.</p>
+<p>However, for the select inputs, we need to be able to retrieve the item/currency/loot table data to fill them out, so we'll do that in <code>BoxService</code>:</p>
+<ul>
+<li>In <code>getEditData()</code>, we add the code to retrieve our dropdown data. This makes it possible to select assets from the form.</li>
+<li>In <code>getTagData()</code>, we take the data attribute of the tag and format it so that our item/currency/loot table selection code can read it and show us what we've already put in the box.</li>
+<li>In <code>updateData($tag, $data)</code>, we add the code that processes the data from the admin panel. This is where we handle the saving of what goes into the box.</li>
+<li>In <code>act($stack, $user, $data)</code>, we add the code for distributing the box's contents and deleting the item from the user's inventory. This will be handled later.</li>
+</ul>
+</div>
+<h2 id="4-add-front-facing-views">4. Add front-facing views<a class="headerlink" href="#4-add-front-facing-views" title="Permanent link">&para;</a></h2>
+<p>Now that we're done with editing the item in the admin panel, let's look at how the user will see and interact with the item.</p>
+<p>If you look at the item in your inventory (click on it to show the modal), you will see that it now displays the tag under the name. Let's add a new feature above the "Transfer Item" and "Delete Item" options.</p>
+<p>Create a file named <code>_[tag_name].blade.php</code> (note the underscore in front) in <code>resources/views/inventory</code>. Add any additional options to the list in this file. Sample code:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-group-item&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-title h5 collapse-title&quot;</span>  <span class="na">data-toggle</span><span class="o">=</span><span class="s">&quot;collapse&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#customForm&quot;</span><span class="p">&gt;</span> Action Name<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    {!! Form::open([&#39;url&#39; =&gt; &#39;inventory/act/&#39;.$stack-&gt;id.&#39;/&#39;.$tag-&gt;tag, &#39;id&#39; =&gt; &#39;customForm&#39;, &#39;class&#39; =&gt; &#39;collapse&#39;]) !!}
+        <span class="cm">&lt;!-- You can add more form fields in this space. --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-right&quot;</span><span class="p">&gt;</span>
+            {!! Form::submit(&#39;Action Name&#39;, [&#39;class&#39; =&gt; &#39;btn btn-primary&#39;]) !!}
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    {!! Form::close() !!}
+<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Some notes:</p>
+<ul>
+<li>IDs must be unique, so to avoid any overlap, change customForm (in both places) to a unique name.</li>
+<li>The above form only adds one new option on the modal, but you can add multiple by adding more in succession. The form URL must be the same, but you can distinguish the intended action by, for example, giving the submit button in each form a different name attribute.</li>
+<li>The action will only be displayed if the user is logged in and either owns the item, or is a staff member with the edit_inventories power.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Following along with the 'box' item type...</p>
+<p>As no other information is required in the form, we'll simply put in a note to the user that this action is irreversible. This functions as a confirmation screen for using the item.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-group-item&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-title h5 collapse-title&quot;</span>  <span class="na">data-toggle</span><span class="o">=</span><span class="s">&quot;collapse&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#openBoxForm&quot;</span><span class="p">&gt;</span> Open Box<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    {!! Form::open([&#39;url&#39; =&gt; &#39;inventory/act/&#39;.$stack-&gt;id.&#39;/&#39;.$tag-&gt;tag, &#39;id&#39; =&gt; &#39;openBoxForm&#39;, &#39;class&#39; =&gt; &#39;collapse&#39;]) !!}
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This action is not reversible. Are you sure you want to open this box?<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-right&quot;</span><span class="p">&gt;</span>
+            {!! Form::submit(&#39;Open&#39;, [&#39;class&#39; =&gt; &#39;btn btn-primary&#39;]) !!}
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    {!! Form::close() !!}
+<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="5-add-action-processing">5. Add action processing<a class="headerlink" href="#5-add-action-processing" title="Permanent link">&para;</a></h2>
+<p>We now need to write the back-end code for handling what happens when you use the item.</p>
+<p>Back in <code>[ItemName]Service.php</code> from step 3, one of the functions we created was <code>act($stack, $user, $data)</code>. Inside that function, if you have only one possible action, you can directly write the handling code. If you have multiple possible actions, you can write a switch/case statement that checks $data and calls a different function depending on the intended usage.</p>
+<p>Note that <code>$stack</code> refers to the user-held item stack, while <code>$stack-&gt;item</code> refers to the actual item data itself.</p>
+<div class="admonition info">
+<p class="admonition-title">Following along with the 'box' item type...</p>
+<p>We don't want any other user except for the owner to open a box, so the first thing we do is check that the box belongs to the owner. Following that, we remove the box and distribute the associated rewards (with logging).</p>
+<div class="highlight"><pre><span></span><code><span class="x">public function act($stack, $user, $data)</span>
+<span class="x">{</span>
+<span class="x">    DB::beginTransaction();</span>
+
+<span class="x">    try {</span>
+<span class="x">        // We don&#39;t want to let anyone who isn&#39;t the owner of the box open it,</span>
+<span class="x">        // so do some validation... </span>
+<span class="x">        if($stack-&gt;user_id != $user-&gt;id) throw new \Exception(&quot;This item does not belong to you.&quot;);</span>
+
+<span class="x">        // Next, try to delete the box item. If successful, we can start distributing rewards.</span>
+<span class="x">        if((new InventoryManager)-&gt;debitStack($stack-&gt;user, &#39;Box Opened&#39;, [&#39;data&#39; =&gt; &#39;&#39;], $stack)) {</span>
+
+<span class="x">            // Distribute user rewards</span>
+<span class="x">            if(!$rewards = fillUserAssets(parseAssetData($stack-&gt;item-&gt;tag(&#39;box&#39;)-&gt;data), $user, $user, &#39;Box Rewards&#39;, [</span>
+<span class="x">                &#39;data&#39; =&gt; &#39;Received rewards from opening &lt;a href=&quot;#&quot; class=&quot;inventory-log-stack&quot; data-id=&quot;&#39;.$stack-&gt;id.&#39;&quot; data-name=&quot;&#39;.$stack-&gt;item-&gt;name.&#39;&quot;&gt;&#39;.$stack-&gt;item-&gt;name.&#39;&lt;/a&gt;&#39;</span>
+<span class="x">            ])) throw new \Exception(&quot;Failed to open box.&quot;);  </span>
+<span class="x">        }</span>
+
+<span class="x">        return $this-&gt;commitReturn(true);</span>
+<span class="x">    } catch(\Exception $e) { </span>
+<span class="x">        $this-&gt;setError(&#39;error&#39;, $e-&gt;getMessage());</span>
+<span class="x">    }</span>
+<span class="x">    return $this-&gt;rollbackReturn(false);</span>
+<span class="x">}</span>
+</code></pre></div>
+</div>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>The whole process consists of 5 steps:</p>
+<ol>
+<li>Adding the tag to <code>config/lorekeeper/item_tags.php</code></li>
+<li>Creating the service class in <code>app/Services/Item</code> containing 4 functions, <code>getEditData()</code>, <code>getTagData($tag)</code>, <code>updateData($tag, $data)</code> and <code>act($stack, $user, $data)</code></li>
+<li>Adding item tag setting form fields in <code>resources/views/admin/items/tags</code> and possibly <code>resources/views/js/admin_items</code> for the admin panel, and handling in service class if not already done</li>
+<li>Adding action(s) to the inventory menu in <code>resources/views/inventory</code></li>
+<li>Adding the effects of inventory actions in the service class</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
