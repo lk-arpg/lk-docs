@@ -1,0 +1,34 @@
+name: build-docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-prerelease-docs:
+    permissions:
+      contents: write
+    if: github.repository_owner == 'lk-arpg'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - run:  "git fetch origin gh-pages --depth=1"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "latest"
+      - name: Install dependencies, compile and deploy docs
+        run: |
+          git config user.name 'lk-docs[bot]'
+          git config user.email 'lk-docs[bot]@users.noreply.github.io'
+          export MKDOCS_SITE_NAME="Lorekeeper Docs (prerelease)"
+          set -ev
+          export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct docs/ mkdocs.yml)
+          uv run -- mike deploy --alias-type copy prerelease --push
