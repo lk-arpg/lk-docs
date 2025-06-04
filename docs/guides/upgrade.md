@@ -89,11 +89,11 @@ A credits page has been added. It provides a portion editable via the site pages
 
 ## Upgrading to v2
 
-As of v2, Lorekeeper now requires **PHP 7.4** (previously 7.2). No other requirements are changed.
+As of v2.1, Lorekeeper now requires **PHP 8.1** (previously 7.4). No other requirements are changed.
 
 ### Summary
 
-- Update your site or server to use PHP 7.4
+- Update your site or server to use PHP 8.1
 - Pull the updates, resolving any merge conflicts as appropriate
 - Make any config file changes
 - (Recommended) Put your site in maintenance mode via `php artisan down`
@@ -106,21 +106,21 @@ As of v2, Lorekeeper now requires **PHP 7.4** (previously 7.2). No other require
 
 Note that this guide assumes hosting on Dreamhost; guides for other hosts will be linked as created by community members. This guide also assumes a basic knowledge of git; see [Tutorial: Introduction To Git](https://wiki.lorekeeper.me/index.php?title=Tutorial:_Introduction_To_Git) if you need to review.
 
-#### Updating your site to PHP 7.4
+#### Updating your site to PHP 8.1
 
-Note that this assumes your site is currently running PHP 7.2 as recommended for the previous version of Lorekeeper. If you are already running PHP 7.4, you can skip this step. To check, you may consult the Dreamhost control panel and enter `php -v` into PuTTY to check your PHP version.
+Note that this assumes your site is currently running PHP 7.4 as recommended for the previous version of Lorekeeper. If you are already running PHP 8.1, you can skip this step. To check, you may consult the Dreamhost control panel and enter `php -v` into PuTTY to check your PHP version.
 
 1. In the Dreamhost control panel, navigate to Domains > Manage Domains via the sidebar
 2. Click "Edit" for your site (under "Web Hosting")
-3. Under "Web Options", select one of the PHP 7.4 options for "PHP Mode"
+3. Under "Web Options", select one of the PHP 8.1 options for "PHP Mode"
 4. Click "Change settings". Allow 5-10 minutes or so for changes to process
 5. To verify changes, enter `php -v` into PuTTY
 
-If after this php -v returns PHP 7.2 or others, follow these steps in PuTTY to update it (courtesy of[ this guide in the Lorekeeper Discord server](https://discord.com/channels/678909186683437056/763287225839779842/795023074574729216)):
+If after this php -v returns PHP 7.4 or others, follow these steps in PuTTY to update it (courtesy of[ this guide in the Lorekeeper Discord server](https://discord.com/channels/678909186683437056/763287225839779842/795023074574729216)):
 
 1. Enter `cd ~` to ensure you are in your user directory
 2. Enter `nano .bash_profile`. This will open this file in the editor
-3. Add `export PATH=/usr/local/php74/bin:$PATH` to the end of the file
+3. Add `export PATH=/usr/local/php81/bin:$PATH` to the end of the file
 4. Save the file by pressing ctrl+x, y, and then enter
 5. Enter `. ~/.bash_profile` to update the file you just saved
 6. Enter `php -v` again to verify that the update has worked

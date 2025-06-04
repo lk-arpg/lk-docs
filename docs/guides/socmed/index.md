@@ -9,6 +9,7 @@ Note that these instructions only include specific instructions for each platfor
 - [deviantArt](deviantart.md)
 - [Imgur](imgur.md)
 - [Instagram](instagram.md)
+- [Toyhou.se](toyhouse.md)
 - [Tumblr](tumblr.md)
 - [Twitch](twitch.md)
 - [Twitter](twitter.md)
