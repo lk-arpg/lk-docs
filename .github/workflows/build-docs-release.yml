@@ -1,0 +1,35 @@
+name: build-docs-release
+
+on:
+  push:
+    tags: 
+      - '*'
+
+jobs:
+  build-release-docs:
+    permissions:
+      contents: write
+    if: github.repository_owner == 'lk-arpg'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - run:  "git fetch origin gh-pages --depth=1"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "latest"
+      - name: Install dependencies, compile and deploy docs
+        run: |
+          git config user.name 'lk-docs[bot]'
+          git config user.email 'lk-docs[bot]@users.noreply.github.io'
+          set -ev
+          export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct docs/ mkdocs.yml)
+          uv run -- mike deploy --alias-type copy "${RELEASE_TAG_NAME}" latest --update-aliases --push
+        env:
+          RELEASE_TAG_NAME: ${{ github.event.release.tag_name }}
