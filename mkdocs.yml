@@ -15,7 +15,7 @@ nav:
     - Configuring Lorekeeper: 'guides/configuring.md'
     - Updating Lorekeeper: 'guides/update.md'
     - Social Media Authentication:
-      - discord: 'guides/socmed/discord.md'
+      - Discord: 'guides/socmed/discord.md'
       - deviantArt: 'guides/socmed/deviantart.md'
       - Imgur: 'guides/socmed/imgur.md'
       - Instagram: 'guides/socmed/instagram.md'
