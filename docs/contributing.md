@@ -80,7 +80,9 @@ Now when you press the Git-flow button, a small panel will appear with suggested
 
 Please note when using this feature that you will need to push and PR your feature or hotfix branch itself and cannot use the "Finish Feature/Hotfix" option that Sourcetree offers.
 
-## Making a Pull Request
+## Pull Requests
+
+### Making a Pull Request
 
 Once you have made your branch containing your feature or fixes, tested it (at minimum locally!), and pushed it to your fork on GitHub, make a pull request. This, in essence, is a request for the contents of your branch to be integrated in the branch you make your PR to.
 
@@ -97,8 +99,40 @@ Once you are at this form, you will want to:
 
 Once your PR is submitted, it will be processed and reviewed by maintainers of the repo and members of the community. If/when there is a consensus on its approval, it will be merged in; at this point you can safely delete the branch on your fork if applicable/desired.
 
-## Reviewing Pull Requests
+### Reviewing Pull Requests
 
 As a general rule, reviews from community members **are welcome**! We generally want a minimum of **two** approving reviews on a pull request (barring requests for changes, etc.) before it is considered reviewed and ready to be merged. Pull requests looking for review are marked as "needs review" in the [pull request index](https://github.com/lk-arpg/lorekeeper/pulls).
 
 Note that even if you are not confident in your ability to review the code itself, checking out a pull request and testing the changes it makes is no less helpful and can yield useful feedback!
+
+## Contributing to the Documentation
+
+Likewise, we appreciate contributions, bug reports, and so on to our documentation! The documentation can be found at the [lk-arpg/lk-docs](https://github.com/lk-arpg/lk-docs) repo on GitHub, and issues and pull requests for it are accepted there.
+
+Please note that the documentation site is **versioned**-- that is, documentation for current and previous versions of Lorekeeper are accessible, as well as documentation for the upcoming (prerelease) version. Before reporting an issue with the documentation, please check if it exists in the "prerelease" version of the documentation! You can use the version switcher in the top-left of the website's navbar to do so.
+
+Note also that the prerelease documentation should always correspond to the **upcoming release of Lorekeeper** (the current release branch, e.g. `release/v3.0.0`), *not* the current stable release **or** the contents of the `develop` branch.
+
+The sources for the currently being worked on documentation files are in the [`docs/` directory](https://github.com/lk-arpg/lk-docs/tree/main/docs), and the site itself is built using [mkdocs-material](https://squidfunk.github.io/mkdocs-material/). Correspondingly, settings for the documentation site, including navigation structure, are in [`mkdocs.yml`](https://github.com/lk-arpg/lk-docs/blob/main/mkdocs.yml). All of the documentation files are written in Markdown; previewing the documentation site while you make changes is recommended, but not strictly necessary. Any images (e.g. for guides) should be added to the [`docs/images/` directory](https://github.com/lk-arpg/lk-docs/tree/main/docs/images); if adding several images for one page, please contain them in a directory.
+
+The prerelease documentation is automatically updated from the docs repo's main branch, and should always be up-to-date with it.
+
+### Previewing the Documentation
+
+When editing the documentation, it's useful to check your changes locally, especially if you are making significant changes.
+
+The only piece of software you need to install for this purpose is [uv](https://docs.astral.sh/uv/), a Python package manager. You can find the installation instructions [here](https://docs.astral.sh/uv/getting-started/installation/).
+
+Once you've installed `uv`, previewing the documentation is simple. Run in the root of the documentation repo:
+
+```sh
+uv run mkdocs serve
+```
+
+This will install (or update) all required packages in a virtual environment and start a local preview server for the documentation all in one fell swoop.
+
+Once this is running, open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser to preview the documentation. This preview will update (and reload in your browser) automatically as you make changes to the documentation files.
+
+!!! tip
+
+    `uv run mkdocs serve` must continue to run for as long as you need to preview the documentation. It will also alert you to any issues, such as misdirected links or build errors. Note that  warnings about `"GET /versions.json HTTP/1.1" code 404` are expected and harmless.
