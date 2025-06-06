@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://lk-arpg.github.io/lk-docs/prerelease/guides/upgrade/">
       
       
-        <link rel="prev" href="../update/">
+        <link rel="prev" href="../../release-notes/">
       
       
-        <link rel="next" href="../creating-item-types/">
+        <link rel="next" href="../setup-index/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>v2 Upgrade Guide - Lorekeeper Docs</title>
+        <title>Upgrade Guide - Lorekeeper Docs</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              v2 Upgrade Guide
+              Upgrade Guide
             
           </span>
         </div>
@@ -304,7 +304,7 @@
             
   
   <span class="md-ellipsis">
-    Guides
+    v3.0 Update
     
   </span>
   
@@ -315,7 +315,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Guides
+            v3.0 Update
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -326,33 +326,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../../release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setting Up
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../update/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Updating Lorekeeper
+    Release Notes
     
   </span>
   
@@ -383,7 +361,7 @@
           
   
   <span class="md-ellipsis">
-    v2 Upgrade Guide
+    Upgrade Guide
     
   </span>
   
@@ -395,7 +373,7 @@
         
   
   <span class="md-ellipsis">
-    v2 Upgrade Guide
+    Upgrade Guide
     
   </span>
   
@@ -418,130 +396,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new-in-v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      New in v2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="New in v2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#update-to-laravel-8" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update to Laravel 8
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Update to Laravel 8">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#extensions-and-features-from-modified-main" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extensions and Features from modified-main
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#included-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Included Extensions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Included Extensions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#opt-in-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Opt-in Extensions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#galleries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Galleries
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#authentication-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authentication Update
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Authentication Update">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#changes-to-alias-storage-and-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Changes to Alias Storage and Handling
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expansion-of-authentication-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expansion of Authentication Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#credits-page" class="md-nav__link">
-    <span class="md-ellipsis">
-      Credits Page
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upgrading-to-v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upgrading to v2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Upgrading to v2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
@@ -549,8 +403,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#full-guide" class="md-nav__link">
     <span class="md-ellipsis">
       Full Guide
@@ -633,16 +487,76 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -655,11 +569,33 @@
   
   
     <li class="md-nav__item">
-      <a href="../creating-item-types/" class="md-nav__link">
+      <a href="../configuring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Creating Item Types
+    Configuring Lorekeeper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Lorekeeper
     
   </span>
   
@@ -684,10 +620,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -699,34 +635,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Social Media Authentication
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../socmed/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Index
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -911,10 +825,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -926,8 +840,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Features
           </label>
@@ -1636,10 +1550,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1651,8 +1565,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Design
           </label>
@@ -1701,10 +1615,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1716,8 +1630,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -1735,6 +1649,28 @@
   
   <span class="md-ellipsis">
     Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creating-item-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial - Creating Item Types
     
   </span>
   
@@ -1779,130 +1715,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new-in-v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      New in v2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="New in v2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#update-to-laravel-8" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update to Laravel 8
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Update to Laravel 8">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#extensions-and-features-from-modified-main" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extensions and Features from modified-main
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#included-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Included Extensions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Included Extensions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#opt-in-extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Opt-in Extensions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#galleries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Galleries
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#authentication-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authentication Update
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Authentication Update">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#changes-to-alias-storage-and-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Changes to Alias Storage and Handling
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expansion-of-authentication-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expansion of Authentication Options
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#credits-page" class="md-nav__link">
-    <span class="md-ellipsis">
-      Credits Page
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upgrading-to-v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upgrading to v2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Upgrading to v2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
@@ -1910,8 +1722,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#full-guide" class="md-nav__link">
     <span class="md-ellipsis">
       Full Guide
@@ -1994,11 +1806,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -2020,85 +1827,11 @@
 
 
 <h1 id="upgrade-guide">Upgrade Guide<a class="headerlink" href="#upgrade-guide" title="Permanent link">&para;</a></h1>
-<p>Version 2 of Lorekeeper brings several new features and improvements, including the integration of the previous <code>modified-main</code> branch and its extensions, the integration of <a href="../../features/galleries/">Galleries</a>, and the expansion of social media sites available for user authentication.</p>
-<h2 id="new-in-v2">New in v2<a class="headerlink" href="#new-in-v2" title="Permanent link">&para;</a></h2>
-<p>Following are the major changes for this release. For a full list of changes, see <a href="https://github.com/lk-arpg/lorekeeper/releases/tag/v2.0.0">the release here</a>.</p>
-<h3 id="update-to-laravel-8">Update to Laravel 8<a class="headerlink" href="#update-to-laravel-8" title="Permanent link">&para;</a></h3>
-<p>This update includes updating <a href="https://laravel.com/">Laravel</a>, the framework underlying Lorekeeper, to Laravel 8 (from 5.8). While the impact of this is relatively limited, it has some minor impacts in what methods are used for some tasks. This largely impacts extensions, which may need to be updated to account for these changes.</p>
-<h4 id="extensions-and-features-from-modified-main">Extensions and Features from <code>modified-main</code><a class="headerlink" href="#extensions-and-features-from-modified-main" title="Permanent link">&para;</a></h4>
-<p>modified-main was a branch incorporating several community-developed <a href="https://wiki.lorekeeper.me/index.php?title=Category:Extensions">extensions</a> selected for their wide applicability and for falling into one of the following categories:</p>
-<ul>
-<li>An unavoidable change in behavior, but one that is arguably a net quality-of-life improvement. May also be highly useful as a base for other extensions to build upon.</li>
-<li>Opt-in/must be deliberately enabled for significant changes in the behavior of the site to occur. No more obtrusive than effectively optional functions in core Lorekeeper if not in use.</li>
-</ul>
-<p>It includes certain extensions on an opt-in basis via a config file; these extensions tend to be sufficiently contained for this to be a viable option.</p>
-<p>Also included are several minor but useful features:</p>
-<ul>
-<li><strong>Grouped Notifications:</strong> To account for the potentially large variety and potentially volume of notifications, they are grouped by notification type and collapse when there are more than 5 notifications of a type.</li>
-<li><strong>Toggleable Comments on Site Pages:</strong> Adds a toggle to site pages which enables/disables commenting on them. Disabled by default.</li>
-<li><strong>Extension Service:</strong> A utility for use by extension developers. By default, facilitates adjusting notification type IDs in a site's DB to comply with the <a href="https://wiki.lorekeeper.me/index.php?title=Community_Notification_Standard">Community Notification Standard</a>. See the <a href="https://github.com/itinerare/lorekeeper/blob/15f9ba0a750f4a08d1e3e07139ad32a0b3c7fc9f/app/Console/Commands/FixCharItemNotifs.php">this command</a> (made for Character Items) for an example of how to use this functionality.</li>
-</ul>
-<p>This branch and its contents have been integrated into core as of this release, as they present strong improvements to the functionality of Lorekeeper.</p>
-<h4 id="included-extensions">Included Extensions<a class="headerlink" href="#included-extensions" title="Permanent link">&para;</a></h4>
-<p>Documentation (where it exists) for these extensions can be viewed via <a href="https://wiki.lorekeeper.me/index.php?title=Category:Extensions_in_modified-main">Extensions in modified-main</a>.</p>
-<ul>
-<li><a href="https://github.com/Draginraptor">Draginraptor</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Stacked_Inventories">Stacked Inventories</a></li>
-<li><a href="https://github.com/itinerare">itinerare</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Submission_Addons">Submission Addons</a></li>
-<li><a href="https://github.com/itinerare">itinerare</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Character_Items">Character Items</a></li>
-<li><a href="https://github.com/preimpression">Preimpression</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Bootstrap_Tables">Bootstrap Tables</a></li>
-<li><a href="https://github.com/itinerare">itinerare</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Watermarking">Watermarking</a></li>
-<li><a href="https://github.com/itinerare">itinerare</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Separate_Prompts">Separate Prompts</a></li>
-<li><a href="https://github.com/preimpression">Preimpression</a> &amp; <a href="https://github.com/Ne-wt">Ne-wt</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Comments">Comments</a></li>
-<li><a href="https://github.com/Ne-wt">Ne-wt</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Reports">Reports</a></li>
-<li><a href="https://github.com/junijwi">Junijwi</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Masterlist_Sublists">Masterlist Sublists</a></li>
-<li><a href="https://github.com/junijwi">Junijwi</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:MYO_Item_Tag">MYO Item Tag</a></li>
-</ul>
-<h5 id="opt-in-extensions">Opt-in Extensions<a class="headerlink" href="#opt-in-extensions" title="Permanent link">&para;</a></h5>
-<ul>
-<li><a href="https://github.com/junijwi">Junijwi</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Navbar_News_Notif">Navbar News Notif</a> - Has also been modified to apply to sales</li>
-<li><a href="https://github.com/itinerare">itinerare</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Species_Trait_Index">Species Trait Index</a></li>
-<li><a href="https://github.com/junijwi">Junijwi</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Character_Status_Badges">Character Status Badges</a></li>
-<li><a href="https://github.com/junijwi">Junijwi</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Character_TH_Profile_Link">Character TH Profile Link</a></li>
-<li><a href="https://github.com/itinerare">itinerare</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Design_Update_Voting">Design Update Voting</a></li>
-<li><a href="https://github.com/itinerare">itinerare</a> : <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Item_Entry_Expansion">Item Entry Expansion (Stacked Inventories version)</a></li>
-</ul>
-<h3 id="galleries">Galleries<a class="headerlink" href="#galleries" title="Permanent link">&para;</a></h3>
-<p>The <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Galleries">Galleries extension</a> has been integrated, providing Lorekeeper sites with the means to set up their own built-in galleries for user submissions of art and literature. See <a href="../../features/galleries/">Galleries</a> for more information.</p>
-<h3 id="authentication-update">Authentication Update<a class="headerlink" href="#authentication-update" title="Permanent link">&para;</a></h3>
-<p>This update is in two parts. The first changes how aliases are stored, handled, and used around the site, while the second expands the range of social media platforms usable.</p>
-<h4 id="changes-to-alias-storage-and-handling">Changes to Alias Storage and Handling<a class="headerlink" href="#changes-to-alias-storage-and-handling" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Aliases-- users' usernames on social media platforms, used to authenticate them within Lorekeeper for purposes such as verifying character ownership, etc.-- are now stored in their own table within Lorekeeper's database rather than alongside the rest of the user's information. This allows Lorekeeper to support more than one alias per user.<ul>
-<li>Users now have a "primary" alias, which is always visible and is displayed on their profile, similar to the previous system.</li>
-<li>Users may also have multiple non-primary aliases. These may or may not be visible to other users, as set by the user.</li>
-</ul>
-</li>
-<li>A config file has been added which handles sites both for authentication and formatting purposes.</li>
-<li>Various systems using or searching by user aliases have been updated to use either on-site user or URL (previously was either on-site user and alias or alias only).</li>
-<li>Systems which previously checked if an entered alias (such as for character ownership) belongs to an on-site user have been updated to do so with entered URLs.<ul>
-<li>Features that make use of this require a URL from a site enabled for auth in the associated config file. deviantArt is enabled by default.</li>
-</ul>
-</li>
-<li>Various features which display URLs now format them as "username@site" in the vein of the previous deviantArt alias link formatting.</li>
-</ul>
-<h4 id="expansion-of-authentication-options">Expansion of Authentication Options<a class="headerlink" href="#expansion-of-authentication-options" title="Permanent link">&para;</a></h4>
-<p>Adds the ability to use additional social media platforms as authentication options (compared to the previous sole option of deviantArt).</p>
-<ul>
-<li>Sites may be enabled for authentication in the associated config file; they may also be enabled for use as a user's primary alias separately in the same file.</li>
-<li>Users may select the platform used for their initial link from the sites enabled both as an authentication and primary alias option.</li>
-<li>Users may manage their linked aliases. This includes:<ul>
-<li>Changing primary alias</li>
-<li>Hiding/unhiding non-primary aliases</li>
-<li>Removing non-primary aliases</li>
-</ul>
-</li>
-<li>Users may link multiple accounts on the same social media platform</li>
-<li>A page has been added to user profiles (accessible via the sidebar) listing the user's aliases</li>
-</ul>
-<h3 id="credits-page">Credits Page<a class="headerlink" href="#credits-page" title="Permanent link">&para;</a></h3>
-<p>A credits page has been added. It provides a portion editable via the site pages admin panel for site-specific credits, lists extensions installed by way of integration into core (as above), and supplies a section for other extensions installed and tracked via an extension tracking system. This is supplied via a config file and command for updating the on-site tracker (<code>php artisan update-extension-tracker</code>).</p>
-<h2 id="upgrading-to-v2">Upgrading to v2<a class="headerlink" href="#upgrading-to-v2" title="Permanent link">&para;</a></h2>
-<p>As of v2.1, Lorekeeper now requires <strong>PHP 8.1</strong> (previously 7.4). No other requirements are changed.</p>
+<div class="admonition example">
+<p class="admonition-title">WIP</p>
+<p>This is a WIP version of the upgrade guide for Lorekeeper v3.0. Do not use as a reference at this time.</p>
+</div>
+<p>As of v3.0, Lorekeeper requires <strong>PHP 8.1</strong>. No other requirements are changed.</p>
 <h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Update your site or server to use PHP 8.1</li>
@@ -2106,7 +1839,7 @@
 <li>Make any config file changes</li>
 <li>(Recommended) Put your site in maintenance mode via <code>php artisan down</code></li>
 <li>Push updates</li>
-<li>Run <code>composer update</code> or equivalent and then <code>php artisan update-lorekeeper-v2</code></li>
+<li>Run <code>composer update</code> or equivalent and then <code>php artisan update-lorekeeper-v3</code></li>
 <li>(Recommended) Verify that no errors have occurred and use <code>php artisan up</code> to remove your site from maintenance mode</li>
 <li>Perform any configuration desired within the site</li>
 </ul>
@@ -2140,29 +1873,20 @@
 <li>The pre-existing settings file. Additional options have been added in keeping with the addition of extensions from modified-main, etc.</li>
 </ul>
 </li>
-<li><code>config/lorekeeper/extensions</code><ul>
-<li>Added with the integration of modified-main. Allows toggling of opt-in extensions as outlined above, as well as handling some additional settings for them.</li>
-</ul>
-</li>
+<li><code>config/lorekeeper/extensions</code></li>
 <li><code>config/lorekeeper/sites</code><ul>
-<li>Controls which sites may be used for authentication as well as assisting with link formatting for other sites. Note that any site enabled for auth must also be configured on that platform. See <a href="../socmed/">Social Media Authentication</a> for instructions for supported sites. You may wish to prepare any additional sites you wish to use as an auth option before continuing with the update.</li>
+<li>Controls which sites may be used for authentication as well as assisting with link formatting for other sites. Note that any site enabled for auth must also be configured on that platform. See <a href="socmed/index.md">Social Media Authentication</a> for instructions for supported sites. You may wish to prepare any additional sites you wish to use as an auth option before continuing with the update.</li>
 </ul>
 </li>
 </ul>
 <p>If/when you are ready, commit any changes to config files.</p>
 <h4 id="pushing-updates">Pushing Updates<a class="headerlink" href="#pushing-updates" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Open PuTTY and navigate to your site's www directory (<code>cd ~/site-name.com/www</code>)</li>
-<li><strong>Recommended:</strong> Before pushing any updates to your site, enter <code>php artisan down</code> in PuTTY to put your site in maintenance mode. This will prevent any users from making changes while updates are being run, which helps minimize the risk of issues occurring during the update process.</li>
+<li>Connect to your site's server via SSH and navigate to your site's <code>www</code> directory (<code>cd ~/site-name.com/www</code>)</li>
+<li><strong>Recommended:</strong> Before pushing any updates to your site, enter <code>php artisan down</code> to put your site in maintenance mode. This will prevent any users from making changes while updates are being run, which helps minimize the risk of issues occurring during the update process.</li>
 <li>Push the changes to your site</li>
-<li>Enter <code>composer update</code> (if you installed composer globally) or <code>php composer.phar update</code> (if you installed composer locally only)<ul>
-<li>If you have not already done so, it's highly recommended you update composer itself to 2.x using <code>composer self-update</code> as it is a much faster and less resource-intensive version! You may be prompted to update using <code>composer self-update --2</code> specifically; do so.</li>
-</ul>
-</li>
-<li>Enter <code>php artisan update-lorekeeper-v2</code>. This will run a variety of commands to update Lorekeeper and any existing data in your site for v2.<ul>
-<li>If you installed <a href="https://wiki.lorekeeper.me/index.php?title=Extensions:Character_Items">Character Items</a> prior to September 10th, 2020, also enter <code>php artisan fix-char-item-notifs</code> at this time</li>
-</ul>
-</li>
+<li>Enter <code>composer update</code> (if you installed composer globally) or <code>php composer.phar update</code> (if you installed composer locally only)</li>
+<li>Enter <code>php artisan update-lorekeeper-v3</code>. This will run a variety of commands to update Lorekeeper and any existing data in your site for v3.</li>
 <li>If you put your site in maintenance mode earlier, enter <code>php artisan up</code> to put it back up</li>
 <li>Verify that no errors have occurred</li>
 </ol>
