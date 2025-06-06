@@ -96,3 +96,9 @@ Once you are at this form, you will want to:
 4. Submit your PR!
 
 Once your PR is submitted, it will be processed and reviewed by maintainers of the repo and members of the community. If/when there is a consensus on its approval, it will be merged in; at this point you can safely delete the branch on your fork if applicable/desired.
+
+## Reviewing Pull Requests
+
+As a general rule, reviews from community members **are welcome**! We generally want a minimum of **two** approving reviews on a pull request (barring requests for changes, etc.) before it is considered reviewed and ready to be merged. Pull requests looking for review are marked as "needs review" in the [pull request index](https://github.com/lk-arpg/lorekeeper/pulls).
+
+Note that even if you are not confident in your ability to review the code itself, checking out a pull request and testing the changes it makes is no less helpful and can yield useful feedback!
