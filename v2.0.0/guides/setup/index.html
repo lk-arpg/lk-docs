@@ -1927,7 +1927,7 @@
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <p>Requirements for a web host (assuming it's running on some variant of Unix):</p>
 <ul>
-<li>PHP 7.2</li>
+<li>PHP 7.4</li>
 <li>MySQL</li>
 <li>SSH access</li>
 </ul>
@@ -2085,7 +2085,7 @@ git<span class="w"> </span>pull<span class="w"> </span>hub<span class="w"> </spa
 </ul>
 <p>I recommend following the global instructions. If you follow the local setup, place <code>composer.phar</code> in the <code>www</code> directory.</p>
 <p>Additionally, if you're using DreamHost, you will want to change the default PHP version for convenience. See <a href="https://help.dreamhost.com/hc/en-us/articles/214202148">here</a> for instructions.</p>
-<p>Note: At the time of coding, I was using PHP 7.2; when changing the PHP version make sure to use either 7.2 or 7.3. (i.e. replace all instances of php74 with php72 or php73)</p>
+<p>Note: At the time of coding, I was using PHP 7.4; when changing the PHP version make sure to use either 7.4. (i.e. replace all instances of php72 with php74)</p>
 <h3 id="packages-and-database-setup">Packages and Database Setup<a class="headerlink" href="#packages-and-database-setup" title="Permanent link">&para;</a></h3>
 <p>In your SSH client, navigate to the www folder and run composer install. (Do this also on your own computer, but navigate to the appropriate directory instead)</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/site-name.com/www
@@ -2262,11 +2262,11 @@ Select the shell user, enter a title (not important; you can set this to your si
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Composer install error: The filter extension is missing.</strong><ul>
-<li>You are probably using PHP 7.4 on the command line, change it to 7.2 or 7.3.</li>
+<li>You are probably using PHP 7.2 on the command line, change it to 7.4.</li>
 </ul>
 </li>
 <li><strong>PHP Fatal error: Uncaught Error: Call to undefined function JsonSchema\Uri\filter_var() in …</strong><ul>
-<li>Same as above, change to PHP 7.2 or 7.3.</li>
+<li>Same as above, change to PHP 7.4.</li>
 </ul>
 </li>
 <li><strong>500 Server Error trying to send emails</strong><ul>
