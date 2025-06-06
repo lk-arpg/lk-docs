@@ -2,7 +2,7 @@
 
 This is the home of core documentation for the [Lorekeeper](https://github.com/lk-arpg/lorekeeper) project, built using [mkdocs-material](https://squidfunk.github.io/mkdocs-material/).
 
-The copy of the documentation currently being worked on can be found in the `docs` directory. This corresponds to the documentation for the **upcoming release of Lorekeeper** (the current release branch, e.g. `release/v3.0.0`), *not* the current stable release **or** the contents of the `develop` branch.
+The copy of the documentation currently being worked on can be found in the `docs` directory. This corresponds to the documentation for the **upcoming release of Lorekeeper** (the current release branch, e.g. `release/v3.0.0`), *not* the current stable release **or** the contents of the `develop` branch. The currently deployed version of the prerelease documentation can be viewed [here](https://lk-arpg.github.io/lk-docs/prerelease/).
 
 ## Contributing
 
