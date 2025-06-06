@@ -1,5 +1,9 @@
 # Tutorial: Setting Up
 
+!!! example "Proposed Changes"
+
+    This entire guide should probably be scrapped (give or take recycling some general bits) in favor of several smaller (and more up-to-date) guides. Consequently, it is maintained only for reference purposes.
+
 ## Visual Guides
 
 Some Lorekeeper users have written extensive guides on setting up:
@@ -19,7 +23,7 @@ The information below is the same as detailed in Juni's guide, but more general/
 
 Requirements for a web host (assuming it's running on some variant of Unix):
 
-- PHP 7.2
+- PHP 8.1
 - MySQL
 - SSH access
 

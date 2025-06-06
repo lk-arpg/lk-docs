@@ -6,13 +6,15 @@ repo_name: lk-arpg/lorekeeper
 nav:
   - Home: 'index.md'
 
-  - Guides:
-    - Setting Up: 'guides/setup.md'
+  - v3.0 Update:
+    - Release Notes: 'release-notes.md'
+    - Upgrade Guide: 'guides/upgrade.md'
+
+  - Getting Started:
+    - Setting Up: 'guides/setup-index.md'
+    - Configuring Lorekeeper: 'guides/configuring.md'
     - Updating Lorekeeper: 'guides/update.md'
-    - v2 Upgrade Guide: 'guides/upgrade.md'
-    - Creating Item Types: 'guides/creating-item-types.md'
     - Social Media Authentication:
-      - Index: 'guides/socmed/index.md'
       - deviantArt: 'guides/socmed/deviantart.md'
       - Imgur: 'guides/socmed/imgur.md'
       - Instagram: 'guides/socmed/instagram.md'
@@ -69,6 +71,7 @@ nav:
 
   - Development:
     - Contributing: 'contributing.md'
+    - Tutorial - Creating Item Types: 'guides/creating-item-types.md'
 
 theme:
   name: 'material'

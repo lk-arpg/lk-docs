@@ -2,7 +2,7 @@
 
 !!! info
 
-    This is a general guide on how to update Lorekeeper. See the [v2 Upgrade Guide](upgrade.md) for information on updating to Lorekeeper v2 specifically.
+    This is a general guide on how to update Lorekeeper. See the [3.0 Upgrade Guide](upgrade.md) for information on updating to Lorekeeper v3.0 specifically.
 
 Lorekeeper is continuously undergoing new development-- bugs being fixed, new features being worked on and added. When ready, these updates make their way to the [GitHub repository](https://github.com/lk-arpg/lorekeeper) by being merged into one of its branches, where they become available to you to update your own site with! However, for ease of development, greater consistency and stability in releases, and general organization, Lorekeeper is split into different branches. This may make it difficult to tell at first glance which branch you should update your site with; however, this can also help ensure you get the right updates.
 
