@@ -73,6 +73,20 @@ nav:
   - Development:
     - Contributing: 'contributing.md'
     - Tutorial - Creating Item Types: 'guides/creating-item-types.md'
+    
+  - Version History:
+    - v1.0.x: 'version-history/v1.0.md'
+    - v1.1.x: 'version-history/v1.1.md'
+    - v1.2.x: 'version-history/v1.2.md'
+    - v1.3.x: 'version-history/v1.3.md'
+    - v1.4.x: 'version-history/v1.4.md'
+    - v1.5.x: 'version-history/v1.5.md'
+    - v1.6.x: 'version-history/v1.6.md'
+    - v1.7.x: 'version-history/v1.7.md'
+    - v2.0.x: 'version-history/v2.0.md'
+    - v2.1.x: 'version-history/v2.1.md'
+    - v3.0.0 Pre-release: 'version-history/v3.0.pre.md'
+    - v3.0.x: 'version-history/v3.0.md'
 
 theme:
   name: 'material'
