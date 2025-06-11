@@ -85,7 +85,6 @@ nav:
     - v1.7.x: 'version-history/v1.7.md'
     - v2.0.x: 'version-history/v2.0.md'
     - v2.1.x: 'version-history/v2.1.md'
-    - v3.0.0 Pre-release: 'version-history/v3.0.pre.md'
     - v3.0.x: 'version-history/v3.0.md'
 
 theme:
