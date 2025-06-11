@@ -1,0 +1,2548 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lk-arpg.github.io/lk-docs/prerelease/version-history/v3.0/">
+      
+      
+        <link rel="prev" href="../v2.1/">
+      
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>v3.0.x - Lorekeeper Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#v30x" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lorekeeper Docs" class="md-header__button md-logo" aria-label="Lorekeeper Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lorekeeper Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              v3.0.x
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="System preference"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="System preference" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lk-arpg/lorekeeper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lk-arpg/lorekeeper
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lorekeeper Docs" class="md-nav__button md-logo" aria-label="Lorekeeper Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Lorekeeper Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lk-arpg/lorekeeper" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lk-arpg/lorekeeper
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    v3.0 Update
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            v3.0 Update
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/upgrade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrade Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/setup-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Up
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/configuring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Lorekeeper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Lorekeeper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Social Media Authentication
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Social Media Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/socmed/discord/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/socmed/deviantart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    deviantArt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/socmed/imgur/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Imgur
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/socmed/instagram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instagram
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/socmed/toyhouse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Toyhou.se
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/socmed/tumblr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tumblr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/socmed/twitch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Twitch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/socmed/twitter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Twitter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/admin-panel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/characters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Characters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/myo-slots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MYO Slots
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/character-images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/design-updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Updates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/masterlist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Masterlist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/bookmarks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bookmarks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/species/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Species
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/rarities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rarities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/traits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/currencies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Currencies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/items/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Items
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/shops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shops
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/trades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/loot-tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loot Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/galleries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Galleries
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/prompts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/claims/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claims
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/news/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    News
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/sales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/raffles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raffles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/user-accounts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Accounts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/user-ranks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Ranks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/notifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/invitation-keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Invitation Keys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/config-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/site-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/site-pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Pages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/site-images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/file-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/randomness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Random is Random?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/creating-item-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial - Creating Item Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Version History
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Version History
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.0.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.1.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.2.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.3.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.4.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.5.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.6.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v1.7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.7.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v2.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v2.0.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v2.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v2.1.x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    v3.0.x
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    v3.0.x
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v300-pre-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.0.0 (Pre-release)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.0.0 (Pre-release)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Additions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-extensions-added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Extensions Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v300-release-branch-changes-since-pre-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.0.0 - Release branch (Changes since pre-release)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.0.0 - Release branch (Changes since pre-release)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v300-pre-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.0.0 (Pre-release)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.0.0 (Pre-release)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Additions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-extensions-added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Extensions Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v300-release-branch-changes-since-pre-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.0.0 - Release branch (Changes since pre-release)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v3.0.0 - Release branch (Changes since pre-release)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#miscellaneous_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="v30x">v3.0.x<a class="headerlink" href="#v30x" title="Permanent link">&para;</a></h1>
+<p>This page contains all updates made for version 3.0.0 of Lorekeeper.</p>
+<p>For upgrade instructions, please follow the <a href="../../guides/upgrade/">v3.0.0 upgrade guide</a>.</p>
+<p>This page was last updated with announcement <strong>[090625]</strong>.</p>
+<h2 id="v300-pre-release">v3.0.0 (Pre-release)<a class="headerlink" href="#v300-pre-release" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/lk-arpg/lorekeeper/releases/tag/v3.0.0-pre1">Release notes</a></p>
+<h3 id="breaking-changes">⚠️ Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Update to Laravel 9/Require PHP 8.1 (<a href="https://github.com/lk-arpg/lorekeeper/pull/312">PR #312</a>)</li>
+<li>Update to Laravel 10 (<a href="https://github.com/lk-arpg/lorekeeper/pull/746">PR #746</a>)</li>
+</ul>
+<h3 id="new-additions">New Additions<a class="headerlink" href="#new-additions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add discord as an auth option (<a href="https://github.com/lk-arpg/lorekeeper/pull/118">PR #118</a>)</li>
+<li>Add toggleable "Scroll to Top" extension (<a href="https://github.com/lk-arpg/lorekeeper/pull/143">PR #143</a>)</li>
+<li>Admin log feature (logs admin actions taken by permissioned users) (<a href="https://github.com/lk-arpg/lorekeeper/pull/135">PR #135</a>)</li>
+<li>Add submission rejection to admin logging (<a href="https://github.com/lk-arpg/lorekeeper/pull/167">PR #167</a>)</li>
+<li>Merge in Captcha extension (v3) (<a href="https://github.com/lk-arpg/lorekeeper/pull/169">PR #169</a>)</li>
+<li>Add an optional per-individual ticket cap to raffles (<a href="https://github.com/lk-arpg/lorekeeper/pull/184">PR #184</a>)</li>
+<li>Add search and sort to sales (<a href="https://github.com/lk-arpg/lorekeeper/pull/193">PR #193</a>)</li>
+<li>Add automatic RSS feed generation for news and sales (<a href="https://github.com/lk-arpg/lorekeeper/pull/166">PR #166</a>)</li>
+<li>Add maintenance mode setting and access power (<a href="https://github.com/lk-arpg/lorekeeper/pull/197">PR #197</a>)</li>
+<li>Add an inventory consolidation button (condenses like item stacks at user request) (<a href="https://github.com/lk-arpg/lorekeeper/pull/197">PR #197</a>)</li>
+<li>Optional mini-extension to hide or delete a MYO slot's placeholder image on approval. See PR for more information (<a href="https://github.com/lk-arpg/lorekeeper/pull/215">PR #215</a>)</li>
+<li>Change extension tracker to use individual files per extension for tracking (<a href="https://github.com/lk-arpg/lorekeeper/pull/235">PR #235</a>)</li>
+<li>Extension tracker automatically updates daily (<a href="https://github.com/lk-arpg/lorekeeper/pull/235">PR #235</a>)</li>
+<li>Add a toggleable mini-ext to populate traits when creating a new image for a character (<a href="https://github.com/lk-arpg/lorekeeper/pull/273">PR #273</a>)</li>
+<li>Add a toggle to prompts to make them visible and submittable to only by staff (<a href="https://github.com/lk-arpg/lorekeeper/pull/274">PR #274</a>)</li>
+<li>Add toggleable staff rewards mini-ext (<a href="https://github.com/lk-arpg/lorekeeper/pull/275">PR #275</a>)</li>
+<li>Add [[Extensions:Organised_Trait_Dropdown]], toggleable in config/lorekeeper/extensions.php (<a href="https://github.com/lk-arpg/lorekeeper/pull/293">PR #293</a>)</li>
+<li>Add Toyhou.se as an alias option (<a href="https://github.com/lk-arpg/lorekeeper/pull/300">PR #300</a>)</li>
+<li>Add command to retroactively watermark images (<a href="https://github.com/lk-arpg/lorekeeper/pull/301">PR #301</a>)</li>
+<li>Add the ability to generate the year in char codes (<a href="https://github.com/lk-arpg/lorekeeper/pull/310">PR #310</a>)</li>
+<li>Add likes, optional dislikes feature to comments (<a href="https://github.com/lk-arpg/lorekeeper/pull/320">PR #320</a>)</li>
+<li>Add the ability to deactivate accounts/for users to deactivate their own account (<a href="https://github.com/lk-arpg/lorekeeper/pull/296">PR #296</a>)</li>
+<li>Add permalinks for prompts (<a href="https://github.com/lk-arpg/lorekeeper/pull/341">PR #341</a>)</li>
+<li>Open/closed filter for prompts (<a href="https://github.com/lk-arpg/lorekeeper/pull/349">PR #349</a>)</li>
+<li>Add admin "edit" button to editable objects around the site (<a href="https://github.com/lk-arpg/lorekeeper/pull/364">PR #364</a>)</li>
+<li>Add rich text editor mention for character thumbnails (<a href="https://github.com/lk-arpg/lorekeeper/pull/397">PR #397</a>)</li>
+<li>Add panel to character pages displaying instructions for mentioning (<a href="https://github.com/lk-arpg/lorekeeper/pull/397">PR #397</a>)</li>
+<li>Add rich text editor mention for users including avatars (<a href="https://github.com/lk-arpg/lorekeeper/pull/397">PR #397</a>)</li>
+<li>Add rich text editor mentions for users via ID (<a href="https://github.com/lk-arpg/lorekeeper/pull/397">PR #397</a>)</li>
+<li>Add panel to user profiles displaying instructions for mentioning (<a href="https://github.com/lk-arpg/lorekeeper/pull/397">PR #397</a>)</li>
+<li>Add config setting to disable user ability to upload custom thumbnails with masterlist image automation (<a href="https://github.com/lk-arpg/lorekeeper/pull/398">PR #398</a>)</li>
+<li>Add "is visible" setting to traits (<a href="https://github.com/lk-arpg/lorekeeper/pull/380">PR #380</a>)</li>
+<li>Add sidebars to news and sales (<a href="https://github.com/lk-arpg/lorekeeper/pull/415">PR #415</a>)</li>
+<li>Add "is visible" setting to species (<a href="https://github.com/lk-arpg/lorekeeper/pull/475">PR #475</a>)</li>
+<li>Add "is visible" setting to subtypes (<a href="https://github.com/lk-arpg/lorekeeper/pull/497">PR #497</a>)</li>
+<li>Add ability to search and sort traits by subtype (<a href="https://github.com/lk-arpg/lorekeeper/pull/497">PR #497</a>)</li>
+<li>Add option to resize watermark to scale with character image (<a href="https://github.com/lk-arpg/lorekeeper/pull/499">PR #499</a>)</li>
+<li>Add toggleable previous and next buttons on character pages ext (<a href="https://github.com/lk-arpg/lorekeeper/pull/508">PR #508</a>)</li>
+<li>Add search for non-categorized traits, items, and prompts (<a href="https://github.com/lk-arpg/lorekeeper/pull/507">PR #507</a>)</li>
+<li>Add the ability to make aliases optional (<a href="https://github.com/lk-arpg/lorekeeper/pull/522">PR #522</a>)</li>
+<li>Add optional alias display on user profiles (<a href="https://github.com/lk-arpg/lorekeeper/pull/583">PR #583</a>)</li>
+<li>Add "all recent submissions" page to galleries (<a href="https://github.com/lk-arpg/lorekeeper/pull/594">PR #594</a>)</li>
+<li>Allow hidden characters to be added to sales (<a href="https://github.com/lk-arpg/lorekeeper/pull/601">PR #601</a>)</li>
+<li>Add an icon to the character header for copying the slug (<a href="https://github.com/lk-arpg/lorekeeper/pull/607">PR #607</a>)</li>
+<li>Add ability to make admin sidebar sections collapsible (<a href="https://github.com/lk-arpg/lorekeeper/pull/612">PR #612</a>)</li>
+<li>Add ability to login via alias(es) (see PR for more information/setup instructions) (<a href="https://github.com/lk-arpg/lorekeeper/pull/493">PR #493</a>)</li>
+<li>Add admin log search function (<a href="https://github.com/lk-arpg/lorekeeper/pull/613">PR #613</a>)</li>
+<li>Add ability to use gravatar for user avatars (<a href="https://github.com/lk-arpg/lorekeeper/pull/495">PR #495</a>)</li>
+<li>Allow item, trait, and character categories to be hidden (see PR for more information) (<a href="https://github.com/lk-arpg/lorekeeper/pull/599">PR #599</a>)</li>
+<li>Allow page selection when clicking pagination ellipsis (<a href="https://github.com/lk-arpg/lorekeeper/pull/614">PR #614</a>)</li>
+<li>Use character image at the time a character is added to a sale (<a href="https://github.com/lk-arpg/lorekeeper/pull/615">PR #615</a>)</li>
+<li>Add optional trait information modals to visual trait index (<a href="https://github.com/lk-arpg/lorekeeper/pull/631">PR #631</a>)</li>
+<li>Add full inventory view (<a href="https://github.com/lk-arpg/lorekeeper/pull/669">PR #669</a>)</li>
+<li>Add summarized inventory view (<a href="https://github.com/lk-arpg/lorekeeper/pull/675">PR #675</a>)</li>
+<li>Add asset reward string utility, use for box rewards (<a href="https://github.com/lk-arpg/lorekeeper/pull/668">PR #668</a>)</li>
+<li>Add draft state to submissions (<a href="https://github.com/lk-arpg/lorekeeper/pull/736">PR #736</a>)</li>
+<li>Add sorting options to various admin queues (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Add additional staff powers for news, sales (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Add comment edit history (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Make WebP support explicit (<a href="https://github.com/lk-arpg/lorekeeper/pull/737">PR #737</a>)</li>
+<li>Add additional image processing options in config (<a href="https://github.com/lk-arpg/lorekeeper/pull/737">PR #737</a>)</li>
+<li>Add two-factor authentication (<a href="https://github.com/lk-arpg/lorekeeper/pull/80">PR #80</a>)</li>
+<li>Add WYSIWYG editor option for comments (<a href="https://github.com/lk-arpg/lorekeeper/pull/741">PR #741</a>)</li>
+<li>Add hashes to data images (<a href="https://github.com/lk-arpg/lorekeeper/pull/749">PR #749</a>)</li>
+<li>Add optional username change system (<a href="https://github.com/lk-arpg/lorekeeper/pull/742">PR #742</a>)</li>
+</ul>
+<h3 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Update registration page birthday selector (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Make ReCaptcha toggleable via config (<a href="https://github.com/lk-arpg/lorekeeper/pull/80">PR #80</a>)</li>
+<li>Implement built-in honeypot on registration and login (<a href="https://github.com/lk-arpg/lorekeeper/pull/80">PR #80</a>)</li>
+<li>Improve item release checking (<a href="https://github.com/lk-arpg/lorekeeper/pull/744">PR #744</a>)</li>
+<li>Hide "Use Thumbnail Automation" toggle if manual thumbnail uploads are disabled (<a href="https://github.com/lk-arpg/lorekeeper/pull/744">PR #744</a>)</li>
+<li>Add "no reward" message to reward string utility (<a href="https://github.com/lk-arpg/lorekeeper/pull/743">PR #743</a>)</li>
+<li>Refactor code for better static analysis, etc. (<a href="https://github.com/lk-arpg/lorekeeper/pull/748">PR #748</a>)</li>
+<li>Add anchor to sales comments, tweak spacing for consistency (<a href="https://github.com/lk-arpg/lorekeeper/pull/750">PR #750</a>)</li>
+<li>Show deleted comments and consequently replies (<a href="https://github.com/lk-arpg/lorekeeper/pull/105">PR #105</a>)</li>
+<li>Add a report button to permalink comments (<a href="https://github.com/lk-arpg/lorekeeper/pull/105">PR #105</a>)</li>
+<li>Add ability to upload multiple files via the on-site file manager (<a href="https://github.com/lk-arpg/lorekeeper/pull/129">PR #129</a>)</li>
+<li>Dependency updates</li>
+<li>Add Captcha to credits page (<a href="https://github.com/lk-arpg/lorekeeper/commit/b9ec44f1a33fbc8502c671bab0379f9466a7013e">Commit <code>b9ec44f</code></a>)</li>
+<li>Move character design update functions to own service (<a href="https://github.com/lk-arpg/lorekeeper/pull/188">PR #188</a>)</li>
+<li>Squash pre-2.0.0 migrations (<a href="https://github.com/lk-arpg/lorekeeper/pull/186">PR #186</a>)</li>
+<li>Move loot_select asset retrieval to views (Authors of extensions working with this are recommended to view the PR) (<a href="https://github.com/lk-arpg/lorekeeper/pull/192">PR #192</a>)</li>
+<li>Various changes to code for internal formatting, tidiness (<a href="https://github.com/lk-arpg/lorekeeper/pull/197">PR #197</a>)</li>
+<li>Implement PHP style fixing tools, including automation through github; see PR for more information (<a href="https://github.com/lk-arpg/lorekeeper/pull/243">PR #243</a>)</li>
+<li>Track composer.lock (<a href="https://github.com/lk-arpg/lorekeeper/pull/250">PR #250</a>)</li>
+<li>Character select now updates as a character code is entered (<a href="https://github.com/lk-arpg/lorekeeper/pull/309">PR #309</a>)</li>
+<li>Minor user characters/sublist page edits (<a href="https://github.com/lk-arpg/lorekeeper/pull/336">PR #336</a>)</li>
+<li>Switch to laravel/pint for PHP style fixing (<a href="https://github.com/lk-arpg/lorekeeper/pull/348">PR #348</a>)</li>
+<li>Add blade-formatter and associated workflow (<a href="https://github.com/lk-arpg/lorekeeper/pull/351">PR #351</a>)</li>
+<li>Design update images open in lightbox rather than new tab (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Move user character list to widget for less redundancy (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Update formatting workflows' commit method to address some errors (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Make alt text for avatars consistent (<a href="https://github.com/lk-arpg/lorekeeper/pull/396">PR #396</a>)</li>
+<li>Make user displayNames consistent (<a href="https://github.com/lk-arpg/lorekeeper/pull/395">PR #395</a>)</li>
+<li>Revert formatting workflows commit method update (<a href="https://github.com/lk-arpg/lorekeeper/commit/53e88986009ad1ae0de3d0e46fcda14390f37a5a">Commit <code>53e8898</code></a>)</li>
+<li>Update comment architecture to suit best practices/refactor views (<a href="https://github.com/lk-arpg/lorekeeper/pull/491">PR #491</a>)</li>
+<li>Update previous and next buttons on character pages to skip number gaps/locate nearest neighbors better (<a href="https://github.com/lk-arpg/lorekeeper/pull/556">PR #556</a>)</li>
+<li>Add token to Lorekeeper CSS file use to evade caching on file change (<a href="https://github.com/lk-arpg/lorekeeper/pull/582">PR #582</a>)</li>
+<li>Move "Add Trait" button above trait lists (<a href="https://github.com/lk-arpg/lorekeeper/pull/598">PR #598</a>)</li>
+<li>Indicate hidden items, traits, and species in admin lists (<a href="https://github.com/lk-arpg/lorekeeper/pull/600">PR #600</a>)</li>
+<li>Remove redundant prompt views/information (<a href="https://github.com/lk-arpg/lorekeeper/pull/603">PR #603</a>)</li>
+<li>Add wiki links to some merged extensions and re-alphabetize credits (<a href="https://github.com/lk-arpg/lorekeeper/pull/616">PR #616</a>)</li>
+<li>Prevent design update images from being cached on file change (<a href="https://github.com/lk-arpg/lorekeeper/pull/621">PR #621</a>)</li>
+<li>Allow updating design update image credits without uploading an image (<a href="https://github.com/lk-arpg/lorekeeper/pull/632">PR #632</a>)</li>
+<li>Comment out irrelevant policy in AuthServiceProvider to keep logs cleaner (<a href="https://github.com/lk-arpg/lorekeeper/pull/644">PR #644</a>)</li>
+<li>Make character select fields use selectize (<a href="https://github.com/lk-arpg/lorekeeper/pull/715">PR #715</a>)</li>
+<li>Various mobile styling improvements (<a href="https://github.com/lk-arpg/lorekeeper/pull/727">PR #727</a>)</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Duplicated code in SpeciesService (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Sorting user index/admin user index by alias does not function (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Search by subtype in admin traits index does not function (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Notification for MYO slot profile admin edit uses the wrong URL (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Error when a character added to a submission is deleted (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Error when a character added to a sales post is deleted (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Gallery submission data is not retained on error (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Submission data is not retained on error (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Certain user sidebar items do not display as active when viewed (<a href="https://github.com/lk-arpg/lorekeeper/pull/735">PR #735</a>)</li>
+<li>Images with larger dimensions fail or are resource intensive to process (<a href="https://github.com/lk-arpg/lorekeeper/pull/737">PR #737</a>)</li>
+<li>Error viewing news/sales (<a href="https://github.com/lk-arpg/lorekeeper/pull/744">PR #744</a>)</li>
+<li>Character inventory stack name has no set limit (<a href="https://github.com/lk-arpg/lorekeeper/pull/744">PR #744</a>)</li>
+<li>User mention block not appropriately responsive (<a href="https://github.com/lk-arpg/lorekeeper/pull/744">PR #744</a>)</li>
+<li>Design update comments do not use <code>manage_characters</code> power (<a href="https://github.com/lk-arpg/lorekeeper/pull/745">PR #745</a>)</li>
+<li>Issues with regex for Discord integration (<a href="https://github.com/lk-arpg/lorekeeper/pull/119">PR #119</a>)</li>
+<li>Undefined offset error when adding new characters/images (<a href="https://github.com/lk-arpg/lorekeeper/pull/121">PR #121</a>)</li>
+<li>Error viewing items page in cases where the artist_url column is null (<a href="https://github.com/lk-arpg/lorekeeper/pull/131">PR #131</a>)</li>
+<li>Syntax error in helpers.php (<a href="https://github.com/lk-arpg/lorekeeper/pull/138">PR #138</a>)</li>
+<li>Fix trade approval/rejection admin logging (<a href="https://github.com/lk-arpg/lorekeeper/pull/167">PR #167</a>)</li>
+<li>Error viewing sales (<a href="https://github.com/lk-arpg/lorekeeper/pull/197">PR #197</a>)</li>
+<li>Character getCurrency() variable confusingly named (<a href="https://github.com/lk-arpg/lorekeeper/pull/211">PR #211</a>)</li>
+<li>Sorting items, traits, prompts by category results in strange behavior (<a href="https://github.com/lk-arpg/lorekeeper/issues/210">Issue #210</a> / <a href="https://github.com/lk-arpg/lorekeeper/pull/211">PR #211</a>)</li>
+<li>User/character gallery pagination issue (<a href="https://github.com/lk-arpg/lorekeeper/pull/211">PR #211</a>)</li>
+<li>Errors creating and editing design updates (<a href="https://github.com/lk-arpg/lorekeeper/pull/211">PR #211</a>)</li>
+<li>Cannot clear item category descriptions (<a href="https://github.com/lk-arpg/lorekeeper/pull/211">PR #211</a>)</li>
+<li>Attempting to clear only currency grant notifications clears all notifications (<a href="https://github.com/lk-arpg/lorekeeper/pull/211">PR #211</a>)</li>
+<li>Tumblr alias link formatting error (<a href="https://github.com/lk-arpg/lorekeeper/pull/228">PR #228</a>)</li>
+<li>Subtype list does not populate properly on editing a character (<a href="https://github.com/lk-arpg/lorekeeper/issues/224">Issue #224</a> / <a href="https://github.com/lk-arpg/lorekeeper/pull/229">PR #229</a>)</li>
+<li>Existing loot table rows do not update properly if a new rewardable type is selected (<a href="https://github.com/lk-arpg/lorekeeper/pull/237">PR #237</a>)</li>
+<li>New loot table rows do not have selectize applied properly (<a href="https://github.com/lk-arpg/lorekeeper/pull/237">PR #237</a>)</li>
+<li>Comments are not restricted in size (<a href="https://github.com/lk-arpg/lorekeeper/pull/236">PR #236</a>)</li>
+<li>Birthday selection during registration too small on mobile (<a href="https://github.com/lk-arpg/lorekeeper/pull/236">PR #236</a>)</li>
+<li>Broken image in design update cropper when adjusting the thumbnail (<a href="https://github.com/lk-arpg/lorekeeper/pull/244">PR #244</a>)</li>
+<li>Error logging admin action when creating or editing character categories (<a href="https://github.com/lk-arpg/lorekeeper/pull/281">PR #281</a>)</li>
+<li>Error creating design updates (<a href="https://github.com/lk-arpg/lorekeeper/pull/293">PR #293</a>)</li>
+<li>Non-staff users cannot use items with slot item tag (<a href="https://github.com/lk-arpg/lorekeeper/pull/330">PR #330</a>)</li>
+<li>An exploit allowing for currency duplication (fix also applied to items as a safeguard) (<a href="https://github.com/lk-arpg/lorekeeper/pull/339">PR #339</a>)</li>
+<li>Long character names extend off-screen (<a href="https://github.com/lk-arpg/lorekeeper/pull/342">PR #342</a>)</li>
+<li>Inactive item tags' views are shown in the inv stack modal (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Error viewing submission/claim (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Error checking URL for alias (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Admin prompt index formatting error (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Error creating design update (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Staff rewards enable/disable not properly displayed on credits page (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Title formatting issue on narrow pieces in galleries (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Sublists not shown on all user profile view sidebars (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Add catch for null alias owner URL to MigrateAliases command (credit to <a href="https://github.com/ScuffedNewt">ScuffedNewt</a> for the fix) (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Hide inactive (hidden) prompt pages (<a href="https://github.com/lk-arpg/lorekeeper/pull/350">PR #350</a>)</li>
+<li>Constrain world entry images on small screens (<a href="https://github.com/lk-arpg/lorekeeper/pull/357">PR #357</a>)</li>
+<li>Users can purchase items with currency owned by a character the user does not own (<a href="https://github.com/lk-arpg/lorekeeper/pull/380">PR #380</a>)</li>
+<li>If a character image's files are deleted as part of an re-upload process that errors, new file(s) cannot be uploaded and the image cannot be deleted (<a href="https://github.com/lk-arpg/lorekeeper/pull/407">PR #407</a>)</li>
+<li>Permalinked comments on site pages do not respect page visibility (<a href="https://github.com/lk-arpg/lorekeeper/pull/491">PR #491</a>)</li>
+<li>Insufficient/unclear validation for where a comment is made (<a href="https://github.com/lk-arpg/lorekeeper/pull/491">PR #491</a>)</li>
+<li>Squished mobile profile view (<a href="https://github.com/lk-arpg/lorekeeper/pull/494">PR #494</a>)</li>
+<li>Search traits by category does not preserve category selection (<a href="https://github.com/lk-arpg/lorekeeper/pull/496">PR #496</a>)</li>
+<li>Error reuploading character images (<a href="https://github.com/lk-arpg/lorekeeper/commit/2e20ad4961debe4d561a550f8a4e9633d2778adc">Commit <code>2e20ad4</code></a>)</li>
+<li>Error viewing news and sales (<a href="https://github.com/lk-arpg/lorekeeper/pull/492">PR #492</a>)</li>
+<li>Error reactivating a user (<a href="https://github.com/lk-arpg/lorekeeper/pull/509">PR #509</a>)</li>
+<li>Non-staff users are able to feature comments on areas other than their profile under certain conditions (<a href="https://github.com/lk-arpg/lorekeeper/pull/511">PR #511</a>)</li>
+<li>Misplaced divider in masterlist search options (<a href="https://github.com/lk-arpg/lorekeeper/pull/519">PR #519</a>)</li>
+<li>Admin setup command does not set has_alias (<a href="https://github.com/lk-arpg/lorekeeper/pull/532">PR #532</a>)</li>
+<li>Previous and next character buttons always filter by category, even when the site is set to number across them (<a href="https://github.com/lk-arpg/lorekeeper/pull/555">PR #555</a>)</li>
+<li>Category filtering does not persist selected category for prompt, admin item, and admin trait search (<a href="https://github.com/lk-arpg/lorekeeper/pull/557">PR #557</a>)</li>
+<li>Previous/next character buttons always displays as disabled (<a href="https://github.com/lk-arpg/lorekeeper/pull/584">PR #584</a>)</li>
+<li>User, home, and character inventories not all able to close per category (<a href="https://github.com/lk-arpg/lorekeeper/pull/585">PR #585</a>)</li>
+<li>Category collapses in inventories break when certain characters are used in category names (<a href="https://github.com/lk-arpg/lorekeeper/pull/585">PR #585</a>)</li>
+<li>Category collapse indicators in inventories start "closed" despite the category being "open" (<a href="https://github.com/lk-arpg/lorekeeper/pull/585">PR #585</a>)</li>
+<li>Active gallery not highlighted in galleries sidebar (<a href="https://github.com/lk-arpg/lorekeeper/pull/593">PR #593</a>)</li>
+<li>Item images cannot be removed (<a href="https://github.com/lk-arpg/lorekeeper/pull/569">PR #569</a>)</li>
+<li>Error in sublist filtering (<a href="https://github.com/lk-arpg/lorekeeper/pull/602">PR #602</a>)</li>
+<li>Design update image credits duplicate on error (<a href="https://github.com/lk-arpg/lorekeeper/pull/632">PR #632</a>)</li>
+<li>Users who registered via alias login cannot add email/password (<a href="https://github.com/lk-arpg/lorekeeper/pull/633">PR #633</a>)</li>
+<li>Wrong entry type used for rarity (<a href="https://github.com/lk-arpg/lorekeeper/pull/645">PR #645</a>)</li>
+<li>Invalid default selection for user list sort (<a href="https://github.com/lk-arpg/lorekeeper/pull/653">PR #653</a>)</li>
+<li>Error on uploading .gif avatar (<a href="https://github.com/lk-arpg/lorekeeper/pull/662">PR #662</a>)</li>
+<li>Shops with no image attempt to display one (<a href="https://github.com/lk-arpg/lorekeeper/pull/676">PR #676</a>)</li>
+<li>Cannot create loot table with mixed (critera and non) rows (<a href="https://github.com/lk-arpg/lorekeeper/pull/671">PR #671</a>)</li>
+<li>Item page category visibility check is performed on items without a category (<a href="https://github.com/lk-arpg/lorekeeper/pull/700">PR #700</a>)</li>
+</ul>
+<h3 id="core-extensions-added">Core Extensions Added<a class="headerlink" href="#core-extensions-added" title="Permanent link">&para;</a></h3>
+<p>Here are all Core Extensions added between v2.0.0 and v3.0.0:</p>
+<ul>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Admin_Edit_Button">Admin Edit Buttons</a> by <a href="https://github.com/preimpression">Preimpression</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Alias_Logins">Alias Logins</a> by <a href="https://github.com/AW0005">Moif</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Captcha">Captcha (v3)</a> by <a href="https://github.com/itinerare">itinerare</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Deactivate_Account">Deactivate Account</a> by <a href="https://github.com/preimpression">Preimpression</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Extended_Mentions">Extended Mentions</a> by <a href="https://github.com/SpeedyD">Speedy</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Pagination_Page_Select">Pagination Page Selector</a> by <a href="https://github.com/SpeedyD">Speedy</a> and <a href="https://github.com/AW0005">Moif</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:90_Percent_Watermark">Watermark Resizing</a> by <a href="https://github.com/SpeedyD">Speedy</a></li>
+</ul>
+<p><strong>The following extensions have settings:</strong></p>
+<ul>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Aliases_on_Userpage">Aliases on Userpage</a> by <a href="https://github.com/SpeedyD">Speedy</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Autopopulate_New_Image_Traits">Auto-populate New Image Traits</a> by <a href="https://github.com/itinerare">itinerare</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Character_Prev_and_Next">Character Prev and Next</a> by <a href="https://github.com/SpeedyD">Speedy</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Collapsible_Admin_Sidebar">Collapsible Admin Sidebar</a> by <a href="https://github.com/ScuffedNewt">ScuffedNewt</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Gravatar">Gravatar</a> by <a href="https://github.com/ScuffedNewt">ScuffedNewt</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:MYO_Image_Removal">MYO Image Removal</a> by <a href="https://github.com/itinerare">itinerare</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Organised_Traits_Dropdown">Organised Traits Dropdown</a> by <a href="https://github.com/Draginraptor">Draginraptor</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Character_Prev_and_Next">Previous &amp; Next buttons on Character pages</a> by <a href="https://github.com/SpeedyD">Speedy</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Scroll_To_Top">Scroll to Top</a> by <a href="https://github.com/preimpression">Preimpression</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Gallery_Recent_Submissions">Show All Recent Submissions</a> by <a href="https://github.com/SpeedyD">Speedy</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Staff_Rewards">Staff Rewards</a> by <a href="https://github.com/itinerare">itinerare</a></li>
+<li><a href="http://wiki.lorekeeper.me/index.php?title=Extensions:Submission_Drafts">Submission Drafts</a> by <a href="https://github.com/preimpression">Preimpression</a></li>
+</ul>
+<h2 id="v300-release-branch-changes-since-pre-release">v3.0.0 - Release branch (Changes since pre-release)<a class="headerlink" href="#v300-release-branch-changes-since-pre-release" title="Permanent link">&para;</a></h2>
+<h3 id="miscellaneous_1">Miscellaneous<a class="headerlink" href="#miscellaneous_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Make back-hashing data images optional (<a href="https://github.com/lk-arpg/lorekeeper/pull/779">PR #779</a>)</li>
+<li>Make FTO badge larger (<a href="https://github.com/lk-arpg/lorekeeper/pull/780">PR #780</a>)</li>
+<li>Make date/time picker more consistent, reduce code redundancy (<a href="https://github.com/lk-arpg/lorekeeper/pull/771">PR #771</a>)</li>
+<li>Improve honeypot response (<a href="https://github.com/lk-arpg/lorekeeper/pull/828">PR #828</a>)</li>
+<li>Use reusable workflows for linting (<a href="https://github.com/lk-arpg/lorekeeper/pull/758">PR #758</a>)</li>
+<li>Use home layout for report view (<a href="https://github.com/lk-arpg/lorekeeper/pull/851">PR #851</a>)</li>
+<li>Do not include reports page scripts section if closed (<a href="https://github.com/lk-arpg/lorekeeper/pull/857">PR #857</a>)</li>
+<li>Add wiki page links to core extensions without (<a href="https://github.com/lk-arpg/lorekeeper/pull/889">PR #889</a>)</li>
+<li>Add missing core extension credits and reorganize (<a href="https://github.com/lk-arpg/lorekeeper/pull/934">PR #934</a> / <a href="https://github.com/lk-arpg/lorekeeper/pull/935">PR #935</a>)</li>
+<li>Convert additional admin tables to bootstrap tables for consistency (<a href="https://github.com/lk-arpg/lorekeeper/pull/1026">PR #1026</a>)</li>
+<li>Improve user profile, character page row styling on smaller viewports/mobile (<a href="https://github.com/lk-arpg/lorekeeper/pull/1099">PR #1099</a>)</li>
+<li>Make some galleries queries more efficient (<a href="https://github.com/lk-arpg/lorekeeper/pull/1098">PR #1098</a>)</li>
+<li>Clarify character "no description" text (<a href="https://github.com/lk-arpg/lorekeeper/pull/1136">PR #1136</a>)</li>
+<li>Update robots.txt (<a href="https://github.com/lk-arpg/lorekeeper/pull/1142">PR #1142</a>)</li>
+<li>Improve display of gallery submission log comment form with WYSIWYG comments enabled (<a href="https://github.com/lk-arpg/lorekeeper/pull/1166">PR #1166</a>)</li>
+<li>Eager load rank with user (<a href="https://github.com/lk-arpg/lorekeeper/pull/1174">PR #1174</a>)</li>
+<li>Implement eager loading for /world, refactor queries (<a href="https://github.com/lk-arpg/lorekeeper/pull/1180">PR #1180</a>),</li>
+<li>Add some more eager loading to /browse (<a href="https://github.com/lk-arpg/lorekeeper/pull/1183">PR #1183</a>),</li>
+<li>Implement eager loading for galleries, refactor queries (<a href="https://github.com/lk-arpg/lorekeeper/pull/1175">PR #1175</a>)</li>
+<li>Update laravel/fortify (<a href="https://github.com/lk-arpg/lorekeeper/pull/1206">PR #1206</a>)</li>
+<li>Show 24 MYO slots per page instead of 30 (<a href="https://github.com/lk-arpg/lorekeeper/pull/1238">PR #1238</a>)</li>
+<li>Update footer GitHub repo link (<a href="https://github.com/lk-arpg/lorekeeper/pull/1255">PR #1255</a>)</li>
+</ul>
+<h3 id="bug-fixes_1">Bug Fixes<a class="headerlink" href="#bug-fixes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Option to copy character slug is provided for MYO slots (<a href="https://github.com/lk-arpg/lorekeeper/pull/756">PR #756</a>)</li>
+<li>Redundant sublist reference in user controller (<a href="https://github.com/lk-arpg/lorekeeper/pull/757">PR #757</a>)</li>
+<li>Docblock cleanup (<a href="https://github.com/lk-arpg/lorekeeper/pull/759">PR #759</a>)</li>
+<li>Extension tracker command does not work in linux environments (<a href="https://github.com/lk-arpg/lorekeeper/pull/761">PR #761</a>)</li>
+<li>User log pages not displayed as active in sidebar (<a href="https://github.com/lk-arpg/lorekeeper/pull/762">PR #762</a>)</li>
+<li>Currency icon images not included in image hash command (<a href="https://github.com/lk-arpg/lorekeeper/pull/769">PR #769</a>)</li>
+<li>Old username notification not case-insensitive (<a href="https://github.com/lk-arpg/lorekeeper/pull/763">PR #763</a>)</li>
+<li>Subgallery sidebar does not show other subgalleries of parent (<a href="https://github.com/lk-arpg/lorekeeper/pull/764">PR #764</a>)</li>
+<li>Error migrating with some xampp installations (<a href="https://github.com/lk-arpg/lorekeeper/pull/770">PR #770</a>)</li>
+<li>Errors with birthday input handling (<a href="https://github.com/lk-arpg/lorekeeper/pull/770">PR #770</a>)</li>
+<li>Error with various sort functions (<a href="https://github.com/lk-arpg/lorekeeper/pull/770">PR #770</a>)</li>
+<li>Character sale value cannot be adjusted without setting as sellable (<a href="https://github.com/lk-arpg/lorekeeper/pull/781">PR #781</a>)</li>
+<li>MYO creation errors if no masterlist image format set (<a href="https://github.com/lk-arpg/lorekeeper/pull/782">PR #782</a>)</li>
+<li>Deleted user items cause design updates addon page to error (<a href="https://github.com/lk-arpg/lorekeeper/pull/789">PR #789</a>)</li>
+<li>Last power cannot be removed from ranks (<a href="https://github.com/lk-arpg/lorekeeper/pull/790">PR #790</a>)</li>
+<li>Trait/rarity links overruled by modal trigger (if enabled) in species trait index (<a href="https://github.com/lk-arpg/lorekeeper/pull/783">PR #783</a>)</li>
+<li>Date/time picker uses user machine time rather than site time (<a href="https://github.com/lk-arpg/lorekeeper/pull/771">PR #771</a>)</li>
+<li>Date/time picker in character stats edit modal does not work (<a href="https://github.com/lk-arpg/lorekeeper/pull/771">PR #771</a>)</li>
+<li>Password reset form errors (<a href="https://github.com/lk-arpg/lorekeeper/pull/792">PR #792</a>)</li>
+<li>Email does not autofill on password reset form (<a href="https://github.com/lk-arpg/lorekeeper/pull/792">PR #792</a>)</li>
+<li>Password reset flow has insufficient feedback (<a href="https://github.com/lk-arpg/lorekeeper/pull/792">PR #792</a>)</li>
+<li>Image processing performance improvements not applied to character thumbnail processing (<a href="https://github.com/lk-arpg/lorekeeper/pull/793">PR #793</a>)</li>
+<li>Staff cannot recrop design update thumbnails (<a href="https://github.com/lk-arpg/lorekeeper/pull/804">PR #804</a>)</li>
+<li>Character thumbnail processing does not fully support WebP (<a href="https://github.com/lk-arpg/lorekeeper/pull/803">PR #803</a>)</li>
+<li>MYO creation errors if no masterlist image format set (for real this time) (<a href="https://github.com/lk-arpg/lorekeeper/pull/803">PR #803</a>)</li>
+<li>Subtype selection not limited by species when creating/editing traits (<a href="https://github.com/lk-arpg/lorekeeper/pull/795">PR #795</a>)</li>
+<li>Certain long text, e.g. headers, cause horizontal stretching (<a href="https://github.com/lk-arpg/lorekeeper/pull/813">PR #813</a>)</li>
+<li>Users cannot see comments on assigned tickets (<a href="https://github.com/lk-arpg/lorekeeper/pull/817">PR #817</a>)</li>
+<li>Comment types are not set appropriately (<a href="https://github.com/lk-arpg/lorekeeper/pull/818">PR #818</a>)</li>
+<li>Permissioned staff cannot see hidden traits and items (<a href="https://github.com/lk-arpg/lorekeeper/pull/822">PR #822</a>)</li>
+<li>Image hash not saved for prompts (<a href="https://github.com/lk-arpg/lorekeeper/pull/823">PR #823</a>)</li>
+<li>Hidden traits not properly hidden (<a href="https://github.com/lk-arpg/lorekeeper/pull/824">PR #824</a>)</li>
+<li>MYO ML uses number sort despite MYOs having no numbers (<a href="https://github.com/lk-arpg/lorekeeper/pull/825">PR #825</a>)</li>
+<li>Has image checks missing (<a href="https://github.com/lk-arpg/lorekeeper/pull/828">PR #828</a>)</li>
+<li>Error validating registration input (<a href="https://github.com/lk-arpg/lorekeeper/pull/834">PR #834</a>)</li>
+<li>Errors during user deactivation (<a href="https://github.com/lk-arpg/lorekeeper/pull/834">PR #834</a>)</li>
+<li>Errors accessing raffle ticket, user settings timestamps (<a href="https://github.com/lk-arpg/lorekeeper/pull/836">PR #836</a>)</li>
+<li>Preexisting character fullsize images are not displayed (<a href="https://github.com/lk-arpg/lorekeeper/pull/835">PR #835</a>)</li>
+<li>Birthday input error when registering with an alias (<a href="https://github.com/lk-arpg/lorekeeper/pull/843">PR #843</a>)</li>
+<li>Page title inconsistencies/errors (<a href="https://github.com/lk-arpg/lorekeeper/pull/850">PR #850</a>)</li>
+<li>Admin submissions view uses home layout (<a href="https://github.com/lk-arpg/lorekeeper/pull/851">PR #851</a>)</li>
+<li>Clicking power label when editing rank checks wrong checkbox (<a href="https://github.com/lk-arpg/lorekeeper/pull/852">PR #852</a>)</li>
+<li>Comments scripts interfere with any scripts in the page itself (<a href="https://github.com/lk-arpg/lorekeeper/pull/854">PR #854</a>)</li>
+<li>Reports comments do not have the correct comment type (<a href="https://github.com/lk-arpg/lorekeeper/pull/853">PR #853</a>)</li>
+<li>Hidden trait categories not visible to permissioned staff in species trait index (<a href="https://github.com/lk-arpg/lorekeeper/pull/873">PR #873</a>)</li>
+<li>Sidebar links not displayed for new news/sales admin powers (<a href="https://github.com/lk-arpg/lorekeeper/pull/891">PR #891</a>)</li>
+<li>Error when viewing a site in maintenance mode as a guest (<a href="https://github.com/lk-arpg/lorekeeper/pull/897">PR #897</a>)</li>
+<li>Objects in /world do not paginate properly (<a href="https://github.com/lk-arpg/lorekeeper/pull/913">PR #913</a>)</li>
+<li>Unreleased items visible to staff by default (<a href="https://github.com/lk-arpg/lorekeeper/pull/924">PR #924</a>)</li>
+<li>Admin gallery queue info visible to staff by default (<a href="https://github.com/lk-arpg/lorekeeper/pull/925">PR #925</a>)</li>
+<li>Error handling admin reports page scripts section (<a href="https://github.com/lk-arpg/lorekeeper/pull/944">PR #944</a>)</li>
+<li>Gallery submission rejected notification uses wrong URL (<a href="https://github.com/lk-arpg/lorekeeper/pull/946">PR #946</a>)</li>
+<li>Permissioned staff cannot add hidden characters to sales posts (<a href="https://github.com/lk-arpg/lorekeeper/pull/947">PR #947</a>)</li>
+<li>Home sidebar liked comments link is incorrect (<a href="https://github.com/lk-arpg/lorekeeper/pull/954">PR #954</a>)</li>
+<li>Errors due to insufficient space for logs/log data (<a href="https://github.com/lk-arpg/lorekeeper/pull/956">PR #956</a>)</li>
+<li>Character image credits editing selectize field sometimes nonfunctional (<a href="https://github.com/lk-arpg/lorekeeper/pull/958">PR #958</a>)</li>
+<li>Nonfunctional hidden close button is present in character select views (<a href="https://github.com/lk-arpg/lorekeeper/pull/971">PR #971</a>)</li>
+<li>Erroneous classes in character extended mentions (<a href="https://github.com/lk-arpg/lorekeeper/pull/973">PR #973</a>)</li>
+<li>Error when adding an uncategorized item to a shop (<a href="https://github.com/lk-arpg/lorekeeper/pull/987">PR #987</a>)</li>
+<li>Stock modal image not formatted properly under some conditions (<a href="https://github.com/lk-arpg/lorekeeper/pull/987">PR #987</a>)</li>
+<li>Gallery index page queries are inefficient (<a href="https://github.com/lk-arpg/lorekeeper/pull/1013">PR #1013</a>)</li>
+<li>Staff-User permalink comments on reports incorrectly 404 (<a href="https://github.com/lk-arpg/lorekeeper/pull/1014">PR #1014</a>)</li>
+<li>Error when overcommitting stack to submissions is not handled properly (<a href="https://github.com/lk-arpg/lorekeeper/pull/1015">PR #1015</a>)</li>
+<li>Images in visual trait index squashed on certain viewport sizes (<a href="https://github.com/lk-arpg/lorekeeper/pull/1020">PR #1020</a>)</li>
+<li>Comment permalink page fetches all comments before getting permalinked comment (<a href="https://github.com/lk-arpg/lorekeeper/pull/1027">PR #1027</a>)</li>
+<li>Character image size limit is larger than intended (<a href="https://github.com/lk-arpg/lorekeeper/pull/959">PR #959</a>)</li>
+<li>Character image size limit is not enforced for admin uploads (<a href="https://github.com/lk-arpg/lorekeeper/pull/959">PR #959</a>)</li>
+<li>Issues with character image size limit validation (<a href="https://github.com/lk-arpg/lorekeeper/pull/1039">PR #1039</a>)</li>
+<li>Issues with admin raffle index (<a href="https://github.com/lk-arpg/lorekeeper/pull/1059">PR #1059</a>)</li>
+<li>Character stat updates are logged as slug updates even if it is unchanged (<a href="https://github.com/lk-arpg/lorekeeper/pull/1066">PR #1066</a>)</li>
+<li>Formatting error in logs for currency received from trades (<a href="https://github.com/lk-arpg/lorekeeper/pull/1070">PR #1070</a>)</li>
+<li>Previous username sometimes shown despite no change (<a href="https://github.com/lk-arpg/lorekeeper/pull/1116">PR #1116</a>)</li>
+<li>Extra $ in profile content (<a href="https://github.com/lk-arpg/lorekeeper/pull/1122">PR #1122</a>)</li>
+<li>File input option hidden on mobile devices (<a href="https://github.com/lk-arpg/lorekeeper/pull/1126">PR #1126</a>)</li>
+<li>Report list tabs aren't set as active when viewed (<a href="https://github.com/lk-arpg/lorekeeper/pull/1133">PR #1133</a>)</li>
+<li>Ampersands, etc. are encoded as HTML special characters when parsed (<a href="https://github.com/lk-arpg/lorekeeper/pull/1162">PR #1162</a>)</li>
+<li>News and sales edit buttons do not use new powers (<a href="https://github.com/lk-arpg/lorekeeper/pull/1163">PR #1163</a>)</li>
+<li>WYSIWYG comments do not disable properly (<a href="https://github.com/lk-arpg/lorekeeper/pull/1164">PR #1164</a>)</li>
+<li>Error viewing some comments sections (<a href="https://github.com/lk-arpg/lorekeeper/pull/1164">PR #1164</a>)</li>
+<li>Markdown cheatsheet link, mention info shows when WYSIWYG comments are enabled (<a href="https://github.com/lk-arpg/lorekeeper/pull/1164">PR #1164</a>)</li>
+<li>Fullsize character images from design updates are not stored as the correct format (<a href="https://github.com/lk-arpg/lorekeeper/pull/1165">PR #1165</a>)</li>
+<li>HTML special character decoding does not preserve null input (<a href="https://github.com/lk-arpg/lorekeeper/pull/1170">PR #1170</a>)</li>
+<li>Design update fullsize image saving does not take format from image if relevant (<a href="https://github.com/lk-arpg/lorekeeper/pull/1169">PR #1169</a>)</li>
+<li>Gallery submission log errors if currency form sections don't match configured form (<a href="https://github.com/lk-arpg/lorekeeper/pull/1166">PR #1166</a>)</li>
+<li>Gallery submissions do not list prompt submissions with different protocol (www vs without) (<a href="https://github.com/lk-arpg/lorekeeper/pull/1173">PR #1173</a>)</li>
+<li>Rejected gallery submissions can be edited (<a href="https://github.com/lk-arpg/lorekeeper/pull/1176">PR #1176</a>)</li>
+<li>Character design update thumbnails lack an extension with certain configurations (<a href="https://github.com/lk-arpg/lorekeeper/pull/1181">PR #1181</a>)</li>
+<li>shorter masterlist image dimension target config setting does not work (<a href="https://github.com/lk-arpg/lorekeeper/pull/1182">PR #1182</a>)</li>
+<li>Error viewing prompts (<a href="https://github.com/lk-arpg/lorekeeper/pull/1185">PR #1185</a>)</li>
+<li>Collaborator approval scope does not filter gallery submissions with non-approving collaborators (<a href="https://github.com/lk-arpg/lorekeeper/pull/1193">PR #1193</a>)</li>
+<li>Issues using WYSIWYG editor dialogs when replying to or editing comments (<a href="https://github.com/lk-arpg/lorekeeper/pull/1216">PR #1216</a>)</li>
+<li>Some admin user editing breadcrumbs and page titles are incorrect or unclear (<a href="https://github.com/lk-arpg/lorekeeper/pull/1233">PR #1233</a>)</li>
+<li>Character admin transfer notifications do not correctly link to transferred MYO slots (<a href="https://github.com/lk-arpg/lorekeeper/pull/1246">PR #1246</a>)</li>
+<li>World rarity entry admin edit component display is inconsistent (<a href="https://github.com/lk-arpg/lorekeeper/pull/1257">PR #1257</a>)</li>
+<li>Permissioned users cannot submit to "closed" galleries (<a href="https://github.com/lk-arpg/lorekeeper/pull/1256">PR #1256</a>)</li>
+<li>Rarity entry edit information is missing on admin create/edit page (<a href="https://github.com/lk-arpg/lorekeeper/pull/1269">PR #1269</a>)</li>
+<li>Issue with alias login if user alias snowflakes match (<a href="https://github.com/lk-arpg/lorekeeper/pull/1252">PR #1252</a>); backported in <a href="https://github.com/lk-arpg/lorekeeper/commit/b0fd238122e37b50e9d3b06cb4e8a7ffc2914679">Commit <code>b0fd238</code></a></li>
+<li>Shop name uniqueness is not checked against existing shops on creation (<a href="https://github.com/lk-arpg/lorekeeper/pull/1278">PR #1278</a>)</li>
+<li>Parsed rank descriptions are not set on initial setup (<a href="https://github.com/lk-arpg/lorekeeper/pull/1280">PR #1280</a>)</li>
+<li>Notifications aren't sent to owners of characters included in gallery submissions (<a href="https://github.com/lk-arpg/lorekeeper/pull/1281">PR #1281</a>)</li>
+<li>Custom CSS file is not reloaded when modified (<a href="https://github.com/lk-arpg/lorekeeper/pull/1287">PR #1287</a>)</li>
+<li>Site settings admin panel description column does not use all space available (<a href="https://github.com/lk-arpg/lorekeeper/pull/1290">PR #190</a>)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
