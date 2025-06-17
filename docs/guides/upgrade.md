@@ -4,7 +4,7 @@
 
     This is a WIP version of the upgrade guide for Lorekeeper v3.0. Do not use as a reference at this time.
 
-As of v3.0, Lorekeeper requires **PHP 8.1**. No other requirements are changed.
+As of v3.0, Lorekeeper requires **PHP 8.1**. No other requirements are changed. For a list of changes included in v3.0, see the [Release Notes](../release-notes.md).
 
 ### Summary
 
