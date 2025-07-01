@@ -17,6 +17,7 @@ Lorekeeper is free and open-source, which means it's free for you to use and mod
 Quick Links:
 
 - [Setup Information](guides/setup-index.md)
+    - [Developer Introduction](guides/dev-intro.md) - recommended reading if you have technical background but are new to Lorekeeper
 - [Release Notes](release-notes.md) and [Upgrade Guide](guides/upgrade.md)
 - [Lorekeeper GitHub repo](https://github.com/lk-arpg/lorekeeper)
 - [Contribution Guide](contributing.md)
