@@ -8,6 +8,8 @@
 
 There are several components to Lorekeeper setup, so installation information is broken into several parts. This page aims to give a general overview of the steps required and link to guides for each part of the process.
 
+The information here makes an effort to assume no technical background on the part of the reader. Consequently, some of the steps in this index recommend action for readers with existing technical background, depending on the nature thereof. If the latter applies to you, it's recommended you read the [developer introduction](dev-intro.md), as Lorekeeper and its ecosystem are somewhat unusual.
+
 ## Local Set-up
 
 This section concerns setting up the tools-- software-- that you will need to work with Lorekeeper, and obtaining a copy of the code. As the recommended tools depend heavily on which platform (or operating system) you are working on, information is provided for several platforms.

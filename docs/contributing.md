@@ -13,6 +13,8 @@ As a rule of thumb, we welcome PRs containing:
 
 If you're unsure of what to work on, take a look at the current [issues](https://github.com/lk-arpg/lorekeeper/issues) listed on the repo. These are labeled in accordance with their nature/contents (bug, feature request, etc.) and various other qualities (for instance, being a good first issue)!
 
+Conversely, it's a good idea to make an issue or otherwise discuss a potential PR before making it, especially if the change or addition is significant.
+
 ## General Architecture
 
 Generally speaking, Lorekeeper and its branches are structured and maintained in keeping with [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Loosely, this means that there are two persistent branches:
