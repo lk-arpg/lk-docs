@@ -1891,6 +1891,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#navigating-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigating Branches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#whywhy-not-insert-tool-here" class="md-nav__link">
     <span class="md-ellipsis">
       Why/Why Not (Insert Tool Here)?
@@ -1941,6 +1950,15 @@
 <p>There are many features that site operators might want for their ARPGs that aren't necessarily fit for inclusion in the core project. For instance, some features might fit a certain type of game but not others. In order to meet some of the more common needs (among other reasons), some members of the community have opted to write and publish additional features or modifications for core Lorekeeper. These are referred to as "extensions"; examples of these can be viewed on the <a href="https://wiki.lorekeeper.me/index.php?title=Category:Extensions">extensions wiki</a>.</p>
 <p>From a technical perspective, however, Lorekeeper has no "plugin" support or similar. Instead, extensions are provided as git branches-- modified copies of core Lorekeeper that can be added to a given site by means of merging the branch with git. This process, as with any other site-specific modifications, often results in conflicts (including with updates to the core project). However, given the extensiveness of changes some sites may want to make, it would be difficult to create and maintain a sufficiently robust "plugin" system, if not impossible.</p>
 <p>As a consequence, while you are free to do whatever you please to your own site, development environment, and so on, if you want to leverage the wealth of community-developed features and modifications you will want to maintain some amount of continuity with core Lorekeeper (on which extensions are based). For instance, significantly altering the formatting of code within the project is an easy way to create significant grief for yourself even without changing any functionality.</p>
+<h2 id="navigating-branches">Navigating Branches<a class="headerlink" href="#navigating-branches" title="Permanent link">&para;</a></h2>
+<p>In short, Lorekeeper has 2-3 persistent branches at any given time:</p>
+<ul>
+<li><code>main</code>, which contains the current stable release</li>
+<li><code>develop</code>, which contains the latest in-development version</li>
+<li><code>release/v**</code> (e.g. <code>release/v3.0.0</code>), which contains the testing version of the next/upcoming release</li>
+</ul>
+<p>Standard guidance is to base a live site on either <code>main</code> or a release branch if one exists, as neither of these options will receive new features, only hotfixes or bugfixes respectively.</p>
+<p>If you have existing development experience, you may be tempted to work with <code>develop</code> as the basis for a live site. While this is already not recommended for the usual and customary reasons of it being unstable and not yet thoroughly tested, there is another reason: standard guidance when developing extensions is likewise to target the current stable release/base that work on <code>main</code>. As a result, attempting to work with both <code>develop</code> and the broader ecosystem is liable to result in compatibility issues that you will not be well-equipped to address absent a robust understanding of the state of the project and the changes made on the <code>develop</code> branch relative to the current stable release.</p>
 <h2 id="whywhy-not-insert-tool-here">Why/Why Not (Insert Tool Here)?<a class="headerlink" href="#whywhy-not-insert-tool-here" title="Permanent link">&para;</a></h2>
 <p>Occasionally we field questions as to why the project uses the particular tools it does-- PHP, blade files, Bootstrap, and so on-- rather than other frontend frameworks, including various "modern" JS frameworks. The short answer is that the project as it exists is already written, and to re-write it with any number of other tools would be prohibitively time- and labor-intensive for little to no benefit-- and have significant consequences for the broader ecosystem (extensions, individual sites, and so on) as well as demand existing contributors learn new tools in order to continue contributing. That time and energy is better spent improving the project.</p>
 <h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
