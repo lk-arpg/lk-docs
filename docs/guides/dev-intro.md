@@ -14,6 +14,18 @@ From a technical perspective, however, Lorekeeper has no "plugin" support or sim
 
 As a consequence, while you are free to do whatever you please to your own site, development environment, and so on, if you want to leverage the wealth of community-developed features and modifications you will want to maintain some amount of continuity with core Lorekeeper (on which extensions are based). For instance, significantly altering the formatting of code within the project is an easy way to create significant grief for yourself even without changing any functionality.
 
+## Navigating Branches
+
+In short, Lorekeeper has 2-3 persistent branches at any given time:
+
+- `main`, which contains the current stable release
+- `develop`, which contains the latest in-development version
+- `release/v**` (e.g. `release/v3.0.0`), which contains the testing version of the next/upcoming release
+
+Standard guidance is to base a live site on either `main` or a release branch if one exists, as neither of these options will receive new features, only hotfixes or bugfixes respectively.
+
+If you have existing development experience, you may be tempted to work with `develop` as the basis for a live site. While this is already not recommended for the usual and customary reasons of it being unstable and not yet thoroughly tested, there is another reason: standard guidance when developing extensions is likewise to target the current stable release/base that work on `main`. As a result, attempting to work with both `develop` and the broader ecosystem is liable to result in compatibility issues that you will not be well-equipped to address absent a robust understanding of the state of the project and the changes made on the `develop` branch relative to the current stable release.
+
 ## Why/Why Not (Insert Tool Here)?
 
 Occasionally we field questions as to why the project uses the particular tools it does-- PHP, blade files, Bootstrap, and so on-- rather than other frontend frameworks, including various "modern" JS frameworks. The short answer is that the project as it exists is already written, and to re-write it with any number of other tools would be prohibitively time- and labor-intensive for little to no benefit-- and have significant consequences for the broader ecosystem (extensions, individual sites, and so on) as well as demand existing contributors learn new tools in order to continue contributing. That time and energy is better spent improving the project.
