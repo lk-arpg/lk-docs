@@ -23,7 +23,6 @@ This process is heavily dependent on your local platform, and is broken up into 
 Topics covered:
 
 - Working with git, setting up a graphical git client
-- Setting up to connect to a remote server using SSH
 - Setting up PHP, MySQL (or MariaDB), and a webserver on your local machine
 - Installing composer locally
 - Serving your local files and working with them locally
@@ -34,7 +33,11 @@ Local setup on:
 - [Mac](local-setup/mac.md)
 - [Linux](local-setup/linux.md)
 
-If the above main guides do not work for you (for example, if you run into issues with XAMPP), here are alternative guides for initial setup:
+If the above main guides do not work for you (for example, if you run into issues with XAMPP), here are alternative guides:
+
+!!! example "WIP"
+
+    Please suggest alternatives for other operating systems.
 
 - [Windows - Laragon](local-setup/windows-laragon.md)
 - [Windows - Valet](local-setup/windows-valet.md)
@@ -54,6 +57,8 @@ Topics covered:
 - Obtaining a domain name
 - Selecting hosting
 - Setting up on a given host
+
+For any of the below guides, you will first need to [set up a SSH client](local-setup/ssh-clients.md).
 
 !!! example "WIP"
 
