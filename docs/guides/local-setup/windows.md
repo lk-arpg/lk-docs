@@ -1,6 +1,20 @@
 # Local Setup - Windows
 
-## Installing XAMPP
+## Overview
+
+- **This guide assumes you are on Windows.** [Mac](local-setup/mac.md) and [Linux](local-setup/linux.md) have different methods.
+- **Please read every step of this guide carefully.** It is highly recommend doing a full read-through before you even get started.
+
+Within this guide, we will be installing the following software:
+
+- [XAMPP](https://www.apachefriends.org/download.html) for the local webserver and database
+- [Git Extensions](https://gitextensions.github.io) for our graphical git client
+- [Composer](https://getcomposer.org) for handling PHP packages
+- [VS Code](https://code.visualstudio.com) as our code editor
+
+## XAMPP Setup
+
+### Installing XAMPP
 
 1. Download [XAMPP](https://www.apachefriends.org/download.html).
 
@@ -65,63 +79,65 @@
   ![Starting Apache and MySQL](../../images/local-setup/windows/uac-error.png){ width="600" }
 </figure>
 
-10. Next, we need to update the config files. Click "Config" next to Apache, and select `php.ini`.
+### Configuring XAMPP
+
+1. Next, we need to update the config files. Click "Config" next to Apache, and select `php.ini`.
 
 <figure markdown="span">
   ![Opening the PHP.ini in XAMPP](../../images/local-setup/windows/xampp-php-ini.png){ width="600" }
 </figure>
 
-10. A file should open up in Notepad. We are going to change two values. First, use the search feature (Ctrl + F) or simply scroll down until you see `post_max_size`. This controls how large the files are that you can upload. Change this to `0` on your local *only*.
+2. A file should open up in Notepad. We are going to change two values. First, use the search feature (Ctrl + F) or simply scroll down until you see `post_max_size`. This controls how large the files are that you can upload. Change this to `0` on your local *only*.
 
 <figure markdown="span">
   ![Editing the post_max_size variable](../../images/local-setup/windows/xampp-post-max.png){ width="600" }
 </figure>
 
-11. The next value we change is `upload_max_size`. I like to change this to abnormally high on my local, but make it whatever feels right for you. To change it to 10 megabytes, for example, put a value of `10M`.
+3. The next value we change is `upload_max_size`. I like to change this to abnormally high on my local, but make it whatever feels right for you. To change it to 10 megabytes, for example, put a value of `10M`.
 
 <figure markdown="span">
   ![Editing the upload_max_size variable](../../images/local-setup/windows/xampp-upload-max.png){ width="600" }
 </figure>
 
-12. Close this file and save your changes. We are going to edit one more config file.
+4. Close this file and save your changes. We are going to edit one more config file.
 
-13. Go back to XAMPP, click "Config", and select `http.conf`.
+5. Go back to XAMPP, click "Config", and select `http.conf`.
 
 <figure markdown="span">
   ![Selecting the http.conf file](../../images/local-setup/windows/xampp-http-conf.png){ width="600" }
 </figure>
 
-14. Another file should open up in Notepad. We are going to change one value this time. Change whatever value is currently in `DocumentRoot` and the following `Directory` line to `C:\xampp\htdocs\lorekeeper\public`.
+6. Another file should open up in Notepad. We are going to change one value this time. Change whatever value is currently in `DocumentRoot` and the following `Directory` line to `C:\xampp\htdocs\lorekeeper\public`.
 
 <figure markdown="span">
   ![Updating the DocumentRoot value](../../images/local-setup/windows/xampp-document-root.png){ width="600" }
 </figure>
 
-15. Close this file and save your changes. Then, click the "Stop" button next to Apache. After it **fully shuts downs**, click "Start" again.
+7. Close this file and save your changes. Then, click the "Stop" button next to Apache. After it **fully shuts downs**, click "Start" again.
 
 <figure markdown="span">
   ![Stopping and starting XAMPP](../../images/local-setup/windows/xampp-stop-start.png){ width="600" }
 </figure>
 
-16. Next, we are going to make one more change in anticipation of installing Lorekeeper. Click the "Admin" button next to MySQL.
+8. Next, we are going to make one more change in anticipation of installing Lorekeeper. Click the "Admin" button next to MySQL.
 
 <figure markdown="span">
   ![pressing the mysql admin button](../../images/local-setup/windows/mysql-admin.png){ width="600" }
 </figure>
 
-17. This will open a window similar to this in your browser. This is PHPMyAdmin, and it is where we control how most of the data is stored for Lorekeeper. Click "New".
+9. This will open a window similar to this in your browser. This is PHPMyAdmin, and it is where we control how most of the data is stored for Lorekeeper. Click "New".
 
 <figure markdown="span">
   ![phpmyadmin front page](../../images/local-setup/windows/phpmyadmin-start.png){ width="600" }
 </figure>
 
-18. Type in `lorekeeper` or any other easy to remember name, then click "Create".
+10. Type in `lorekeeper` or any other easy to remember name, then click "Create".
 
 <figure markdown="span">
   ![creating a database in phpmyadmin](../../images/local-setup/windows/phpmyadmin-create.png){ width="600" }
 </figure>
 
-19. **Congratulations! We're done here for now.** Next, we will install the Git software needed to manage our Lorekeeper files.
+11. **Congratulations! We're done here for now.** Next, we will install the Git software needed to manage our Lorekeeper files.
 
 ## Installing Git Software
 
@@ -416,11 +432,11 @@ Now we start to get to the fun stuff! We are now going to use Git Extensions to 
 
 ## Setting Up Lorekeeper
 
-Back to installing stuff. There's a few things we need before we can full get our copy of Lorekeeper up and running.
+We need to install two more pieces of software before we can get our copy of Lorekeeper fully up and running.
 
 ### Installing Composer
 
-1. We need to install two more pieces of software. First, we will install Composer. Go [here](https://getcomposer.org) and select "Download" beneath the image of this funky little dude.
+1. First, we will install Composer, which handles installation of PHP packages. Go [here](https://getcomposer.org) and select "Download".
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/composer-1.png){ width="600" }
@@ -480,7 +496,9 @@ Back to installing stuff. There's a few things we need before we can full get ou
 
 Visual Studio Code is the piece of software we will use to edit our Lorekeeper files. (Pardon the sparse screenshots here, I already had it installed!)
 
-**A Note for Advanced Users:** You can install the VSCodium open source version, which comes with AI/Copilot features disabled by default, [here](https://github.com/VSCodium/vscodium/releases). However, you may run into issues with using certain extensions due to Microsoft's licensing. When in doubt, it is better to go with the Microsoft official release.
+!!! info "A Note for Advanced Users"
+
+    You can install the VSCodium open source version, which comes with AI/Copilot features disabled by default, [here](https://github.com/VSCodium/vscodium/releases). However, you may run into issues with using certain extensions due to Microsoft's licensing. When in doubt, it is better to go with the Microsoft official release.
 
 1. Go [here](https://code.visualstudio.com) to download it and press the big download button. (Fortunately, we can disable the recently added AI features.)
 
@@ -511,8 +529,6 @@ Visual Studio Code is the piece of software we will use to edit our Lorekeeper f
 </figure>
 
 ## Running Lorekeeper
-
-We can _finally_ get to actually running Lorekeeper! 
 
 1. Open up the File Explorer and navigate to where Lorekeeper is installed on your computer. The easiest way to do this is via Git Extensions. Click "Repository" and then "File Explorer" in the top navigation.
 
@@ -651,11 +667,11 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 14. Finally, we will run the command `php artisan setup-admin-user`. This will create user #1, the default admin account. The email and details you give it do not need to be real, but make them something you'll remember easily.
 
-The important details to mark as `yes` have been highlighted in red.
+- `Proceed to create account with this information? (yes/no)` Answer **yes**.
+- `Are you on a local/testing instance and not a live site? (yes/no)` Answer **yes**.
+- `Would you like to mark your email address as verified and enter an alias now? (yes/no)` Answer **yes**.
 
-- `Proceed to create account with this information? (yes/no)`
-- `Are you on a local/testing instance and not a live site? (yes/no)`
-- `Would you like to mark your email address as verified and enter an alias now? (yes/no)`
+The important details to mark as `yes` have been highlighted in red.
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/running-lk-13.png){ width="600" }
