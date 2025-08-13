@@ -25,9 +25,9 @@ Topics covered:
 
 Local setup on:
 
-- [Windows](local-setup.md#windows)
-- [Mac](local-setup.md#mac)
-- [Linux](local-setup.md#linux)
+- [Windows](local-setup/windows.md)
+- [Mac](local-setup/mac.md)
+- [Linux](local-setup/linux.md)
 
 If you are already familiar with these subjects and have a preferred workflow, clone `https://github.com/lk-arpg/lorekeeper.git` via your preferred method and move on to the next step.
 
