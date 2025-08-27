@@ -18,6 +18,7 @@ dev = [
     # Allows setting up redirects when renaming docs files
     "mkdocs-redirects<2.0.0,>=1.2.1",
     "mkdocs-include-markdown-plugin<8.0.0,>=7.1.4",
+    "mkdocs-glightbox>=0.4.0",
 ]
 
 [tool.uv]
