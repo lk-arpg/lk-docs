@@ -51,7 +51,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2147,14 +2156,14 @@ mkdir<span class="w"> </span>site_hub.git
 git<span class="w"> </span>--bare<span class="w"> </span>init
 </code></pre></div>
 <figure>
-  <img alt="Creating directories" src="../../images/setup-basic/creating_directories.png" width="600" />
+  <a class="glightbox" href="../../images/setup-basic/creating_directories.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating directories" src="../../images/setup-basic/creating_directories.png" width="600" /></a>
 <br />
 <figcaption>Creating and initialising the directories on the server.</figcaption>
 </figure>
 <p>Go to your Git client (e.g. Sourcetree as suggested above), select your folder containing Lorekeeper's code and add <code>site_hub.git</code> as a remote. The address is similar to your SSH address but points directly to the folder, something like <code>ssh://username@host.com/~/site-name.com/site_hub.git</code>.</p>
 <p>If successful, push the code to the remote. In Sourcetree, right click on the remote, choose to push, select the master branch and click OK.</p>
 <figure>
-  <img alt="Adding a remote" src="../../images/setup-basic/sourcetree_add_remote.png" width="600" />
+  <a class="glightbox" href="../../images/setup-basic/sourcetree_add_remote.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Adding a remote" src="../../images/setup-basic/sourcetree_add_remote.png" width="600" /></a>
 <br />
 <figcaption>Adding the remote in Sourcetree.</figcaption>
 </figure>
@@ -2167,7 +2176,7 @@ git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </s
 <span class="w">  </span>URL:<span class="w"> </span>/home/your_username/site-name.com/site_hub.git
 </code></pre></div>
 <figure>
-  <img alt="Adding site_hub as a remote" src="../../images/setup-basic/site_hub_add_remote.png" width="600" />
+  <a class="glightbox" href="../../images/setup-basic/site_hub_add_remote.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Adding site_hub as a remote" src="../../images/setup-basic/site_hub_add_remote.png" width="600" /></a>
 <br />
 <figcaption>Adding the remote on the server.</figcaption>
 </figure>
@@ -2176,7 +2185,7 @@ git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </s
 </code></pre></div>
 <p>Wait for it to finish running, and if it looks like nothing went wrong, enter <code>ls</code> and see that there are files inside the directory.</p>
 <figure>
-  <img alt="Running git pull" src="../../images/setup-basic/git_pull_hub.png" width="600" />
+  <a class="glightbox" href="../../images/setup-basic/git_pull_hub.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Running git pull" src="../../images/setup-basic/git_pull_hub.png" width="600" /></a>
 <br />
 <figcaption>Running git pull.</figcaption>
 </figure>
@@ -2222,7 +2231,7 @@ git<span class="w"> </span>pull<span class="w"> </span>hub<span class="w"> </spa
 </code></pre></div>
 <p>You can now test the hooks by modifying something harmless on your local copy (such as a comment) and commit/pushing the change to the server.</p>
 <figure>
-  <img alt="Creating a hook" src="../../images/setup-basic/creating_git_hook.png" width="600" />
+  <a class="glightbox" href="../../images/setup-basic/creating_git_hook.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a hook" src="../../images/setup-basic/creating_git_hook.png" width="600" /></a>
 <br />
 <figcaption>Creating a hook.</figcaption>
 </figure>
@@ -2235,16 +2244,16 @@ git<span class="w"> </span>pull<span class="w"> </span>hub<span class="w"> </spa
 </ol>
 <p>In the future, you (and other users who have access to the repository) can simply push new changes to the code through your Git client at the click of a button, which also keeps track of files that you've added and/or modified, and contains a log of who made what changes to the code. Hooray!</p>
 <figure>
-  <img alt="Branch context menu" src="../../images/setup-basic/branch_shuffle_1.png" width="400" />
-  <img alt="Checking out a branch" src="../../images/setup-basic/branch_shuffle_2.png" width="400" />
-  <img alt="Renaming a remote" src="../../images/setup-basic/branch_shuffle_3.png" width="400" />
+  <a class="glightbox" href="../../images/setup-basic/branch_shuffle_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Branch context menu" src="../../images/setup-basic/branch_shuffle_1.png" width="400" /></a>
+  <a class="glightbox" href="../../images/setup-basic/branch_shuffle_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Checking out a branch" src="../../images/setup-basic/branch_shuffle_2.png" width="400" /></a>
+  <a class="glightbox" href="../../images/setup-basic/branch_shuffle_3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Renaming a remote" src="../../images/setup-basic/branch_shuffle_3.png" width="400" /></a>
 </figure>
 <h2 id="setting-up">Setting up<a class="headerlink" href="#setting-up" title="Permanent link">&para;</a></h2>
 <h3 id="web-directory">Web Directory<a class="headerlink" href="#web-directory" title="Permanent link">&para;</a></h3>
 <p>Update your domain to point to the www/public folder.</p>
 <p>For DreamHost users, this is under Manage Domains &gt; Edit &gt; Web directory. The page may take a few hours to update, and display an error if you have not completely finished the setup yet (this is normal).</p>
 <figure>
-  <img alt="Setting web directory" src="../../images/setup-basic/web_directory.png" width="600" />
+  <a class="glightbox" href="../../images/setup-basic/web_directory.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Setting web directory" src="../../images/setup-basic/web_directory.png" width="600" /></a>
 <br />
 <figcaption>Sample web directory.</figcaption>
 </figure>
@@ -2268,7 +2277,7 @@ This is easiest through phpMyAdmin, so navigate to your site's phpMyAdmin in you
 <p>Click on "Databases" in the top bar, and add a database - it can be called anything you like.</p>
 <p>If you're on DreamHost, go to the control panel to set up a database (see image on right). Be sure to choose names and a password that cannot be easily guessed and note them down! You will need the <strong>database name</strong>, <strong>database user</strong> (the New Username field) and <strong>database user password</strong> (the New Password field) later. The <strong>hostname</strong> can be used to access PHPMyAdmin - note this down as well.</p>
 <figure>
-  <img alt="Creating a DreamHost database in the control panel" src="../../images/setup-basic/dreamhost_database.png" width="600" />
+  <a class="glightbox" href="../../images/setup-basic/dreamhost_database.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creating a DreamHost database in the control panel" src="../../images/setup-basic/dreamhost_database.png" width="600" /></a>
 <br />
 <figcaption>Creating a DreamHost database in the control panel.</figcaption>
 </figure>
@@ -2364,7 +2373,7 @@ DB_USERNAME=your_server_database_user_name
 DB_PASSWORD=your_server_database_user_password
 </code></pre></div>
 <figure>
-  <img alt="Comparison of local (left) and server (right) .env" src="../../images/setup-basic/env_comparison.png" width="600" />
+  <a class="glightbox" href="../../images/setup-basic/env_comparison.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Comparison of local (left) and server (right) .env" src="../../images/setup-basic/env_comparison.png" width="600" /></a>
 <br />
 <figcaption>Comparison of local (left) and server (right) .env.</figcaption>
 </figure>
@@ -2497,5 +2506,7 @@ Select the shell user, enter a title (not important; you can set this to your si
       <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
