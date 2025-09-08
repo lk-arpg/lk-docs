@@ -33,8 +33,8 @@ If the above main guides do not work for you (for example, if you run into issue
 
     Please suggest alternatives for other operating systems.
 
-- [Windows - Laragon](local-setup/windows-laragon.md)
-- [Windows - Valet](local-setup/windows-valet.md)
+- [Windows - Laragon](software-setup/windows-laragon.md)
+- [Windows - Valet](software-setup/windows-valet.md)
 
 If you already have a preferred workflow for locally serving and developing PHP-based applications, move onto the next step.
 
@@ -54,7 +54,7 @@ Topics covered:
 
 !!! example "WIP"
 
-    As development environment setup is liable to be more involved than basic setup of tools-- and may offer multiple options, e.g. for serving site files locally on Windows-- these currently link to separate pages.
+    As development environment setup is liable to be more involved than basic setup of tools, these currently link to separate pages.
 
 Development environment setup on:
 
