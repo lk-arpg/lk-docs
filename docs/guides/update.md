@@ -15,8 +15,7 @@ If you yourself are interested in contributing to Lorekeeper, meanwhile, please 
 The core Lorekeeper repository, or repo, has several different branches corresponding to different kinds and stages of development. There are two that are always present:
 
 - `main`, which always has the latest **stable release** of Lorekeeper. You can always pull this!
-- `develop`, which always has the latest updates and new features, but this means it's the **least stable**. You can always pull this, but be aware that changes will be more frequent and bugs more likely!
-    - As a general rule of thumb, it's recommended to only pull develop if you are confident in the ability of yourself or someone on your team to both resolve any bugs or issues that come up (as these may be specific to your site, depending on any existing modifications) *and* report (or, more ideally, contribute fixes for) any issues that are present in an **clean, unmodified** copy of the `develop` branch.
+- `develop`, which always has the latest updates and new features, but this means it's the **least stable**.
 
 "Stable", here, means that **no new features are being added**. Any change in the code in `main`, for instance, comes from either a new release or hotfix (which are only for critical issues!). This also tends to mean fewer bugs, as ideally most are caught and fixed before a a new version is released, and the lack of change means new bugs don't occur. Conversely, `develop` is the exact opposite: it always has the latest features, updates, etc.! Of course, this means that it always has the latest bugs. Similarly, new releases-- or updates to `main`-- happen relatively infrequently, while `develop` may be updated and added to at any time!
 
@@ -37,22 +36,15 @@ There are also three different *types* of branches. Branches of these types are 
 
 ### Which branch do I pull?
 
-The answer to this question depends on whether you really need the latest features and/or how willing you're willing to handle potential bugs/bug reports, as well as how often you want to update your site. In summary:
+In short, you should generally pull (in order of preference) the **current stable version** or the current release branch (if one exists). Note that if you pull a release branch, it's recommended to update your site frequently (as much as weekly) to receive any new bugfixes! 
 
-- `main`
-    - Most stable
-    - Updates least frequently
-    - Ideally, has the least bugs!
-- (If one exists) the current release branch
-    - Stable
-    - Release branches occur infrequently, and update with bugfixes as they are contributed
-    - Has a variable but diminishing number of bugs, generally
-- `develop`
-    - Least stable
-    - Updates most frequently
-    - Liable to have the most bugs!
+The `develop` branch is not recommended unless you are:
 
-Regardless of which you choose, remember that you only need to pull one of them to receive all relevant updates for that branch! That is, any updates from one branch that apply to another will always be merged into the latter branch by contributors-- so if there is, for instance, a hotfix that is merged into `main`, but you are currently pulling the latest release branch, you don't need to pull `main` as well; the hotfix will also be merged into the release branch!
+- Following and/or actively participating in Lorekeeper's development, and able to understand the implications of changes as they are incorporated into the `develop` branch (including upon any other modifications made to your site) **on your own**
+- Willing and able to resolve most issues on your own
+- Ideally, willing and able to test against an **unmodified** copy of `develop` in the event that an issue is present in Lorekeeper itself, and report and/or contribute fixes for problems discovered this way
+
+This is both because `develop` is unstable, and because most extensions are built on the current stable version. This means that additional changes in `develop` can cause conflicts or introduce issues (including potential hard incompatibilities if there are breaking changes) that may not be obvious unless you are familiar with the codebase. As it is the most unstable branch, changes that cause these problems may potentially be incorporated into it at any time.
 
 ## Update Announcements
 
