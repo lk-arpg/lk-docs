@@ -2052,10 +2052,7 @@
 <p>The core Lorekeeper repository, or repo, has several different branches corresponding to different kinds and stages of development. There are two that are always present:</p>
 <ul>
 <li><code>main</code>, which always has the latest <strong>stable release</strong> of Lorekeeper. You can always pull this!</li>
-<li><code>develop</code>, which always has the latest updates and new features, but this means it's the <strong>least stable</strong>. You can always pull this, but be aware that changes will be more frequent and bugs more likely!<ul>
-<li>As a general rule of thumb, it's recommended to only pull develop if you are confident in the ability of yourself or someone on your team to both resolve any bugs or issues that come up (as these may be specific to your site, depending on any existing modifications) <em>and</em> report (or, more ideally, contribute fixes for) any issues that are present in an <strong>clean, unmodified</strong> copy of the <code>develop</code> branch.</li>
-</ul>
-</li>
+<li><code>develop</code>, which always has the latest updates and new features, but this means it's the <strong>least stable</strong>.</li>
 </ul>
 <p>"Stable", here, means that <strong>no new features are being added</strong>. Any change in the code in <code>main</code>, for instance, comes from either a new release or hotfix (which are only for critical issues!). This also tends to mean fewer bugs, as ideally most are caught and fixed before a a new version is released, and the lack of change means new bugs don't occur. Conversely, <code>develop</code> is the exact opposite: it always has the latest features, updates, etc.! Of course, this means that it always has the latest bugs. Similarly, new releases-- or updates to <code>main</code>-- happen relatively infrequently, while <code>develop</code> may be updated and added to at any time!</p>
 <p>There are also three different <em>types</em> of branches. Branches of these types are temporary, and used primarily to keep code organized before it is merged into another branch. These types are:</p>
@@ -2080,28 +2077,14 @@
 </li>
 </ul>
 <h3 id="which-branch-do-i-pull">Which branch do I pull?<a class="headerlink" href="#which-branch-do-i-pull" title="Permanent link">&para;</a></h3>
-<p>The answer to this question depends on whether you really need the latest features and/or how willing you're willing to handle potential bugs/bug reports, as well as how often you want to update your site. In summary:</p>
+<p>In short, you should generally pull (in order of preference) the <strong>current stable version</strong> or the current release branch (if one exists). Note that if you pull a release branch, it's recommended to update your site frequently (as much as weekly) to receive any new bugfixes! </p>
+<p>The <code>develop</code> branch is not recommended unless you are:</p>
 <ul>
-<li><code>main</code><ul>
-<li>Most stable</li>
-<li>Updates least frequently</li>
-<li>Ideally, has the least bugs!</li>
+<li>Following and/or actively participating in Lorekeeper's development, and able to understand the implications of changes as they are incorporated into the <code>develop</code> branch (including upon any other modifications made to your site) <strong>on your own</strong></li>
+<li>Willing and able to resolve most issues on your own</li>
+<li>Ideally, willing and able to test against an <strong>unmodified</strong> copy of <code>develop</code> in the event that an issue is present in Lorekeeper itself, and report and/or contribute fixes for problems discovered this way</li>
 </ul>
-</li>
-<li>(If one exists) the current release branch<ul>
-<li>Stable</li>
-<li>Release branches occur infrequently, and update with bugfixes as they are contributed</li>
-<li>Has a variable but diminishing number of bugs, generally</li>
-</ul>
-</li>
-<li><code>develop</code><ul>
-<li>Least stable</li>
-<li>Updates most frequently</li>
-<li>Liable to have the most bugs!</li>
-</ul>
-</li>
-</ul>
-<p>Regardless of which you choose, remember that you only need to pull one of them to receive all relevant updates for that branch! That is, any updates from one branch that apply to another will always be merged into the latter branch by contributors-- so if there is, for instance, a hotfix that is merged into <code>main</code>, but you are currently pulling the latest release branch, you don't need to pull <code>main</code> as well; the hotfix will also be merged into the release branch!</p>
+<p>This is both because <code>develop</code> is unstable, and because most extensions are built on the current stable version. This means that additional changes in <code>develop</code> can cause conflicts or introduce issues (including potential hard incompatibilities if there are breaking changes) that may not be obvious unless you are familiar with the codebase. As it is the most unstable branch, changes that cause these problems may potentially be incorporated into it at any time.</p>
 <h2 id="update-announcements">Update Announcements<a class="headerlink" href="#update-announcements" title="Permanent link">&para;</a></h2>
 <p>Each Monday-- assuming there are updates to report-- an announcement of changes made over the course of the week is posted to the Announcements channel of the <a href="https://discord.gg/U4JZfsu">Lorekeeper discord server</a>.</p>
 <p>These announcements are broken down by branch (if multiple branches have been updated) and then broken down into three types of change:</p>
