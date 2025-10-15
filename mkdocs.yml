@@ -75,6 +75,7 @@ nav:
     - Tutorial - Creating Item Types: 'guides/creating-item-types.md'
     
   - Version History:
+    - v0.0.x: 'version-history/v0.0.md'
     - v1.0.x: 'version-history/v1.0.md'
     - v1.1.x: 'version-history/v1.1.md'
     - v1.2.x: 'version-history/v1.2.md'
