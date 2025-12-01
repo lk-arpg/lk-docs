@@ -10,6 +10,13 @@ Within this guide, we will be installing the following software:
 - [XAMPP](https://www.apachefriends.org/download.html) for the local webserver and database
 - [Git Extensions](https://gitextensions.github.io) for our graphical git client
 
+!!! info "Windows Firewall Pop-ups"
+    At any point in time while installing the below software, you may see a pop-up like this. **Click "Allow" to allow the software to finish installing.** All of the recommended software is safe.
+
+    <figure markdown="span">
+    ![Windows Firewall pop-up](../../images/local-setup/windows/xampp-firewall.png){ width="600" }
+    </figure>
+
 ## XAMPP Setup
 
 ### Installing XAMPP
@@ -23,7 +30,7 @@ Within this guide, we will be installing the following software:
   ![Downloading XAMPP](../../images/local-setup/windows/setup-xampp.png){ width="600" }
 </figure>
 
-2. Run the XAMPP .exe file. **If you see this warning, as long as you follow this guide, you can ignore it.**
+2. Run the XAMPP .exe file. **If you see this warning, as long as you follow this guide, you can ignore it and just hit "OK".**
 
 <figure markdown="span">
   ![XAMPP UAC Error](../../images/local-setup/windows/xampp-error.png){ width="600" }
@@ -59,7 +66,7 @@ Within this guide, we will be installing the following software:
   ![XAMPP Installating](../../images/local-setup/windows/xampp-installing.png){ width="600" }
 </figure>
 
-8. Once XAMPP has installed, check the box to start the control panel immediately (if it is not checked by default).
+8. Once XAMPP has installed, check the box to start the control panel immediately (if it is not checked by default) and click "Finish".
 
 <figure markdown="span">
   ![XAMPP Installation Finished](../../images/local-setup/windows/xampp-finished.png){ width="600" }
@@ -71,11 +78,14 @@ Within this guide, we will be installing the following software:
   ![Starting Apache and MySQL](../../images/local-setup/windows/xampp-start.png){ width="600" }
 </figure>
 
-**If you are presented with a window like this for either application: Check both "Private" and "Public", then click "Allow Access". This software is perfectly safe.**
+!!! info "Windows Defender Firewall Alert"
+    If you are presented with a window like this for either application: Check both "Private" and "Public", then click "Allow Access". 
+    
+    This software is safe. You may need to click "Show More" to see these options.
 
-<figure markdown="span">
-  ![Starting Apache and MySQL](../../images/local-setup/windows/uac-error.png){ width="600" }
-</figure>
+    <figure markdown="span">
+      ![Starting Apache and MySQL](../../images/local-setup/windows/uac-error.png){ width="600" }
+    </figure>
 
 ### Configuring XAMPP
 
@@ -91,31 +101,34 @@ Within this guide, we will be installing the following software:
   ![Editing the post_max_size variable](../../images/local-setup/windows/xampp-post-max.png){ width="600" }
 </figure>
 
-3. The next value we change is `upload_max_size`. I like to change this to abnormally high on my local, but make it whatever feels right for you. To change it to 10 megabytes, for example, put a value of `10M`.
+3. The next value we change is `upload_max_filesize`. I like to change this to abnormally high on my local, but make it whatever feels right for you. To change it to 10 megabytes, for example, put a value of `10M`.
 
 <figure markdown="span">
   ![Editing the upload_max_size variable](../../images/local-setup/windows/xampp-upload-max.png){ width="600" }
 </figure>
 
-4. Close this file and save your changes. We are going to edit one more config file.
+4. Save your changes and close this file. We are going to edit one more config file.
 
-5. Go back to XAMPP, click "Config", and select `http.conf`.
+5. Go back to XAMPP, click "Config", and select `httpd.conf`.
 
 <figure markdown="span">
   ![Selecting the http.conf file](../../images/local-setup/windows/xampp-http-conf.png){ width="600" }
 </figure>
 
-6. Another file should open up in Notepad. We are going to change one value this time. Change whatever value is currently in `DocumentRoot` and the following `Directory` line to `C:\xampp\htdocs\lorekeeper\public`.
+6. Another file should open up in Notepad. We are going to change one value this time. Change whatever value is currently in `DocumentRoot` and the following `Directory` line to `C:/xampp/htdocs/lorekeeper/public`.
 
 <figure markdown="span">
   ![Updating the DocumentRoot value](../../images/local-setup/windows/xampp-document-root.png){ width="600" }
 </figure>
 
-7. Close this file and save your changes. Then, click the "Stop" button next to Apache. After it **fully shuts downs**, click "Start" again.
+7. Save your changes and close this file. Then, click the "Stop" button next to Apache. After it **fully shuts downs**, click "Start" again.
 
 <figure markdown="span">
   ![Stopping and starting XAMPP](../../images/local-setup/windows/xampp-stop-start.png){ width="600" }
 </figure>
+
+!!! info 
+    Apache may fail to start if the folder `C:/xampp/htdocs/lorekeeper/public` does not exist. **This is OK.** Continue with this guide, and Apache will start after you have cloned LK.
 
 8. Next, we are going to make one more change in anticipation of installing Lorekeeper. Click the "Admin" button next to MySQL.
 
@@ -161,91 +174,93 @@ Click this button...
   ![git gnu license agreement](../../images/local-setup/windows/git-install.png){ width="600" }
 </figure>
 
-3. **Make sure the highlighted fields are selected.** Press "Next".
+3. You may see a screen asking about a start menu folder. The default location (often "Git") is acceptable. Press "Next".
+
+4. **Make sure the highlighted fields are selected.** Press "Next".
 
 <figure markdown="span">
   ![a checklist of installation settings for git](../../images/local-setup/windows/git-install-1.png){ width="600" }
 </figure>
 
-4. This next option is up to you. I personally use Notepad++, but if you're brand new, select **Notepad**.
+5. This next option is up to you. Notepad++ (if you have it installed) or Notepad are both valid options.
 
 <figure markdown="span">
   ![selecting your default text editor for git](../../images/local-setup/windows/git-install-2.png){ width="600" }
 </figure>
 
-5. This next option should populate by default, but for maximum compatibility with Lorekeeper, you will want to make sure you check "Override" and type in `main`.
+6. For maximum compatibility with Lorekeeper, you will want to make sure you check "Override" and type in `main`.
 
 <figure markdown="span">
   ![selecting your default branch name for git](../../images/local-setup/windows/git-install-3.png){ width="600" }
 </figure>
 
-6. You will then see this screen. Select the middle/"recommended" option.
+7. You will then see this screen. Select the middle/"recommended" option.
 
 <figure markdown="span">
   ![command line installation options for git](../../images/local-setup/windows/git-install-4.png){ width="600" }
 </figure>
 
-7. The default (OpenSSH) on this screen is fine.
+8. Select "OpenSSH".
 
 <figure markdown="span">
   ![selecting default ssh option for git](../../images/local-setup/windows/git-install-5.png){ width="600" }
 </figure>
 
-8. Leave this option (OpenSSL) also as default.
+9. Leave this option as whatever your computer detects as default.
 
 <figure markdown="span">
   ![selecting how to handle SSL connections for git](../../images/local-setup/windows/git-install-6.png){ width="600" }
 </figure>
 
-9. Select the default (Checkout Windows-style, commit Unix-style line endings) here as well.
+10. Select "Checkout Windows-style, commit Unix-style line endings".
 
 <figure markdown="span">
   ![selecting line ending conversion settings for git](../../images/local-setup/windows/git-install-7.png){ width="600" }
 </figure>
 
-10. You know the drill -- select the default (MinTTY)!
+11. Select "MinTTY".
 
 <figure markdown="span">
   ![selecting the terminal editor for git](../../images/local-setup/windows/git-install-8.png){ width="600" }
 </figure>
 
-11. **This one is important. Select "fast-forward or merge".**
+12. **This one is important. Select "fast-forward or merge".**
 
 <figure markdown="span">
   ![selecting the terminal editor for git](../../images/local-setup/windows/git-install-9.png){ width="600" }
 </figure>
 
-12. The default is good here as well.
+13. Select "Git Credential Manager".
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/git-install-10.png){ width="600" }
 </figure>
 
-13. Check both these options.
+14. Enable both file-system caching and symbolic links.
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/git-install-11.png){ width="600" }
 </figure>
 
-14. You may be prompted with this screen. If so, **close all other windows on your computer** and then click "Install".
+15. You may be prompted with this screen. If so, **close all other windows on your computer** and then click "Install".
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/git-install-12.png){ width="600" }
 </figure>
 
-15. Git will then begin to install. Be patient while it completes!
+16. Git will then begin to install. Be patient while it completes!
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/git-install-13.png){ width="600" }
 </figure>
 
-16. Congratulations! Git is now installed. Check "finish".
+17. Congratulations! Git is now installed. Check "finish".
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/git-install-14.png){ width="600" }
 </figure>
 
-17. **Reboot your entire computer.** Certain things we installed with Git will only take effect _after_ our computer has restarted. So do that, and then come back!
+18. **Reboot your entire computer.** Certain things we installed with Git will only take effect _after_ our computer has restarted. So do that, and then come back!
 
 ### Installing Git Extensions
 
@@ -287,13 +302,15 @@ You can use Git purely from the command line, but it's not reccomended for begin
   ![alt text](../../images/local-setup/windows/git-extensions-4.png){ width="600" }
 </figure>
 
-7. Git Extensions will then begin installing. After it's done, you'll be sent to this screen. Click "Finish".
+7. You may be presented with a "Telemetry Options" screen. What you choose here is up to you and your own privacy concerns.
+
+8. Git Extensions will then begin installing. After it's done, you'll be sent to this screen. Click "Finish".
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/git-extensions-5.png){ width="600" }
 </figure>
 
-8. When starting Git Extensions, you may see this message. That's OK! We just need to install one more file. 
+9. When starting Git Extensions, you may see this message. That's OK! We just need to install one more file. 
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/GitExtensions_p3zdwm14Fi.png){ width="600" }
@@ -305,31 +322,31 @@ Click the button. It should open a webpage and automatic start the download of t
   ![alt text](../../images/local-setup/windows/net-runtime.png){ width="600" }
 </figure>
 
-9. Start Git Extensions again. You should be presented with the option to pick your language. I will be selecting English.
+10. Start Git Extensions again. You should be presented with the option to pick your language. I will be selecting English.
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/git-extensions-language.png){ width="600" }
 </figure>
 
-10. Git Extensions will present you with this "checklist" window every time you start the software. **Not everything needs to be completed for it to run properly -- we will go through the essentials.**
+11. Git Extensions will present you with this "checklist" window every time you start the software. **Not everything needs to be completed for it to run properly -- we will go through the essentials.**
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/git-extensions-checklist.png){ width="600" }
 </figure>
 
-11. Most options should be automatically marked as green. Please make a thread in the Lorekeeper discord if any of the options are not automatically detected. The option we are most concerned about is the second (configuring a username/email), which may or may not be green for you. Click that option.
+12. Most options should be automatically marked as green. Please make a thread in the Lorekeeper discord if any of the options are not automatically detected. The option we are most concerned about is the second (configuring a username/email), which may or may not be green for you. Click that option.
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/git-extensions-checklist-1.png){ width="600" }
 </figure>
 
-12. **Make sure the highlighted values are something you are OK with being seen by the public.** They are mandatory fields. All others can be left blank. Fill them in how you'd like, then select **Apply** then **OK**.
+13. **Make sure the highlighted values are something you are OK with being seen by the public.** They are mandatory fields. All others can be left blank. Fill them in how you'd like, then select **Apply** then **OK**.
 
 <figure markdown="span">
   ![setting a name and email in git extensions](../../images/local-setup/windows/git-extensions-checklist-2.png){ width="600" }
 </figure>
 
-13. A window like this should then open. **Congratulations! Git Extensions is now installed.**
+14. A window like this should then open. **Congratulations! Git Extensions is now installed.**
 
 <figure markdown="span">
   ![main screen of git extensions](../../images/local-setup/windows/git-extensions-installed.png){ width="600" }
@@ -337,4 +354,4 @@ Click the button. It should open a webpage and automatic start the download of t
 
 ## Setup Complete
 
-You have installed a local webserver and the software needed to handling Lorekeeper's code. You can now move onto [setting up your local copy of Lorekeeper](guides/setup-index/#development-environment-set-up).
+You have installed a local webserver and the software needed to handling Lorekeeper's code. You can now move onto [setting up your local copy of Lorekeeper](../setup-index.md#development-environment-set-up).

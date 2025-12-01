@@ -10,6 +10,13 @@ Within this guide, we will be installing the following software:
 - [Composer](https://getcomposer.org) for handling PHP packages
 - [VS Code](https://code.visualstudio.com) as our code editor
 
+!!! info "Windows Firewall Pop-ups"
+    At any point in time while installing the below software, you may see a pop-up like this. **Click "Allow" to allow the software to finish installing.** All of the recommended software is safe.
+
+    <figure markdown="span">
+    ![Windows Firewall pop-up](../../images/local-setup/windows/xampp-firewall.png){ width="600" }
+    </figure>
+
 ## Copying Lorekeeper
 
 We are now going to use Git Extensions to make a copy of Lorekeeper. This will be your personalized version that is posted to your live website.
@@ -29,7 +36,7 @@ We are now going to use Git Extensions to make a copy of Lorekeeper. This will b
   ![clicking clone repository button in git extensions](../../images/local-setup/windows/clone-repo-1.png){ width="600" }
 </figure>
 
-4. Next, click "Browse". We are going to navigate to a specific directory within our installation of XAMPP. If you installed XAMPP in the directory `C:/xampp/`, we will be selecting the folder `C:/xampp/htdocs`.
+4. Next, click "Browse". We are going to navigate to a specific directory within our installation of XAMPP. If you installed XAMPP in the directory `C:/xampp/`, we will be selecting the folder `C:/xampp/htdocs`. **If this folder does not exist, just type it in, and it'll be created for you.**
 
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/clone-repo-2.png){ width="600" }
@@ -179,7 +186,7 @@ Visual Studio Code is the piece of software we will use to edit our Lorekeeper f
   ![alt text](../../images/local-setup/windows/vscode-1.png){ width="600" }
 </figure>
 
-2. You will be presented with the license agreement. Check the agree button, then click "Next".
+2. Run the newly downloaded file. You will be presented with the license agreement. Check the agree button, then click "Next".
 
 3. Check all the boxes (with desktop icon checked depending on your preference) and click "Next".
 
@@ -195,11 +202,10 @@ Visual Studio Code is the piece of software we will use to edit our Lorekeeper f
   ![alt text](../../images/local-setup/windows/VSCodeUserSetup-x64-1.102.3.tmp_YGV489RIgS.png){ width="600" }
 </figure>
 
-6. **If you wish to disable the AI features** aka "Copilot", go to the top bar and type in `>copilot disable`. You should be presented with options like this. Click "Disable Completions". This should disable any of the in-your-face AI options.
+!!! info "Disabling AI Features"
+    Microsoft constantly changes how to disable AI features within Visual Studio Code. As a result, unfortunately we can not provide up-to-date instructions. Please use your favorite search engine to find the latest way to disable these features.
 
-<figure markdown="span">
-  ![alt text](../../images/local-setup/windows/disable-copilot.png){ width="600" }
-</figure>
+    The Lorekeeper community does **not** encourage, promote, or endorse usage of AI tools.
 
 ## Running Lorekeeper
 
@@ -319,6 +325,41 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 <figure markdown="span">
   ![alt text](../../images/local-setup/windows/running-lk-10.png){ width="600" }
 </figure>
+
+!!! info "Adding MySQL to your PATH Variable"
+
+    If you run into an error when running `php artisan migrate`, you may need to add MySQL to your computer's PATH variable.
+
+    1. Open your start menu and search for "edit system environment variables".
+    <figure markdown="span">
+      ![start menu with edit environment variables selected](../../images/local-setup/windows/start-menu-edit-system-env-variables.png){ width="600" }
+    </figure>
+
+    2. Click "Environment Variables" in the pop-up.
+
+    <figure markdown="span">
+      ![start menu with edit environment variables selected](../../images/local-setup/windows/env-variables-popup.png){ width="600" }
+    </figure>
+
+    3. Under "System Variables", selected "Path" and then "Edit..."
+
+    <figure markdown="span">
+      ![selecting path and then clicking edit on system variables](../../images/local-setup/windows/system-variables-path-edit.png){ width="600" }
+    </figure>
+
+    4. Click "New".
+
+    <figure markdown="span">
+      ![selecting new on environment variables window](../../images/local-setup/windows/edit-env-variables-new.png){ width="600" }
+    </figure>
+
+    5. Type in the location of your MySQL bin folder. For example, if you followed our XAMPP guide, this will be located `C:\xampp\mysql\bin`. Click OK to save.
+
+    <figure markdown="span">
+      ![entering mysql path into environment variables window](../../images/local-setup/windows/entering-mysql-path.png){ width="600" }
+    </figure>
+
+    6. Restart Visual Studio Code as well as any other command prompts you have open for the changes to reflect.
 
 11. Now for some Lorekeeper-specific commands. Run `php artisan add-site-settings` to populate the database with the site settings. It should look like this when completed:
 
