@@ -269,75 +269,76 @@ You can use Git purely from the command line, but it's not reccomended for begin
 1. Go [here](https://gitextensions.github.io) and click "Download". 
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-dl.png){ width="600" }
+  ![clicking the download button on the git extensions homepage](../../images/local-setup/windows/git-extensions-dl.png){ width="600" }
 </figure>
 
 2. Scroll down and download the `.msi` file.
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-dl-1.png){ width="600" }
+  ![clicking the msi file version of git extensions](../../images/local-setup/windows/git-extensions-dl-1.png){ width="600" }
 </figure>
 
 3. Run this file. You should be prompted with a window like this. Click "Next".
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-1.png){ width="600" }
+  ![start screen for git extensions install](../../images/local-setup/windows/git-extensions-1.png){ width="600" }
 </figure>
 
 4. You will be presented with two options. Select "Install for all users of this machine".
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-2.png){ width="600" }
+  ![installation scope screen for git extensions, with install for all users of this machine highlighted](../../images/local-setup/windows/git-extensions-2.png){ width="600" }
 </figure>
 
-5. Then, you will be asked for the installation directory. The default is perfectly acceptable.
+5. Then, you will be asked for the installation directory. Whichever is your default is acceptable.
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-3.png){ width="600" }
+  ![selecting install directory for git extensions](../../images/local-setup/windows/git-extensions-3.png){ width="600" }
 </figure>
 
 6. Click "Next" on this screen. We don't need to change any of the options.
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-4.png){ width="600" }
+  ![options screen for git extensions install](../../images/local-setup/windows/git-extensions-4.png){ width="600" }
 </figure>
 
-7. You may be presented with a "Telemetry Options" screen. What you choose here is up to you and your own privacy concerns.
+!!! info "Telemetry Options"
+    You may be presented with a "Telemetry Options" screen. What you choose here is up to you and your own privacy concerns -- feel free to click yes or no.
 
 8. Git Extensions will then begin installing. After it's done, you'll be sent to this screen. Click "Finish".
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-5.png){ width="600" }
+  ![finishing git extensions install](../../images/local-setup/windows/git-extensions-5.png){ width="600" }
 </figure>
 
-9. When starting Git Extensions, you may see this message. That's OK! We just need to install one more file. 
+9. When starting Git Extensions, you may see this message prompting you to install .NET. That's OK! We just need to install one more file. 
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/GitExtensions_p3zdwm14Fi.png){ width="600" }
+  ![popup when starting git extensions that shows a prompt to install dot net](../../images/local-setup/windows/GitExtensions_p3zdwm14Fi.png){ width="600" }
 </figure>
 
-Click the button. It should open a webpage and automatic start the download of the .NET runtime. Run this file, and install it. It's a fairly straightforward install -- you shouldn't be presented with any funky options.
+Click the button. It should open a webpage and automatic start the download of the .NET runtime. Run this file, and install it. It's a fairly straightforward install -- you shouldn't be presented with any options (if you are, defaults are perfectly fine).
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/net-runtime.png){ width="600" }
+  ![two screenshots of installing the dot net runtime](../../images/local-setup/windows/net-runtime.png){ width="600" }
 </figure>
 
-10. Start Git Extensions again. You should be presented with the option to pick your language. I will be selecting English.
+10. Start Git Extensions again. You should be presented with the option to pick your language. This guide will be selecting English.
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-language.png){ width="600" }
+  ![selecting your language in git extensions](../../images/local-setup/windows/git-extensions-language.png){ width="600" }
 </figure>
 
 11. Git Extensions will present you with this "checklist" window every time you start the software. **Not everything needs to be completed for it to run properly -- we will go through the essentials.**
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-checklist.png){ width="600" }
+  ![git extensions launch checklist](../../images/local-setup/windows/git-extensions-checklist.png){ width="600" }
 </figure>
 
-12. Most options should be automatically marked as green. Please make a thread in the Lorekeeper discord if any of the options are not automatically detected. The option we are most concerned about is the second (configuring a username/email), which may or may not be green for you. Click that option.
+12. Most options should be automatically marked as green. The option we are most concerned about is the second (configuring a username/email), which may or may not be green for you. If it is **not** green, click that option.
 
 <figure markdown="span">
-  ![alt text](../../images/local-setup/windows/git-extensions-checklist-1.png){ width="600" }
+  ![highlighting username and email address config in git extensions](../../images/local-setup/windows/git-extensions-checklist-1.png){ width="600" }
 </figure>
 
 13. **Make sure the highlighted values are something you are OK with being seen by the public.** They are mandatory fields. All others can be left blank. Fill them in how you'd like, then select **Apply** then **OK**.
