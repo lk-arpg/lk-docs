@@ -78,7 +78,7 @@ Topics covered:
 - Selecting hosting
 - Setting up on a given host
 
-For any of the below guides, you will first need to [set up a SSH client](local-setup/ssh-clients.md).
+For any of the below guides, you will first need to [set up a SSH client](software-setup/ssh-clients.md).
 
 !!! example "WIP"
 
