@@ -174,11 +174,7 @@ Visual Studio Code is the code editor we will use to edit our Lorekeeper files.
 
 ## Running Lorekeeper
 
-1. Open up the File Explorer and navigate to where Lorekeeper is installed on your computer. The easiest way to do this is via Git Extensions. Click "Repository" and then "File Explorer" in the top navigation.
-
-<figure markdown="span">
-  ![alt text](../../images/dev-setup/windows/running-lk-1.png){ width="600" }
-</figure>
+1. Open up the File Explorer and navigate to where Lorekeeper is installed on your computer. This is likely to be `C:/xampp/htdocs/lorekeeper` if you've been following our guides.
 
 2. Right click anywhere in the empty space (make sure you don't have a file/directory selected!) and click "Open With Code".
 

@@ -152,7 +152,7 @@ Within this guide, we will be installing the following software:
 
 ## Installing Git Software
 
-Historically, the software used for managing Git was Sourcetree, but I will be using **Git Extensions** as it is more stable and frequently updated.
+Historically, the software used for managing Git was Sourcetree, but I will be using **SourceGit** as it is more stable and frequently updated.
 
 ### Installing Git
 
