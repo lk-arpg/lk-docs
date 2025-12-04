@@ -95,11 +95,13 @@ Within this guide, we will be installing the following software:
   ![Opening the PHP.ini in XAMPP](../../images/software-setup/windows/xampp-php-ini.png){ width="600" }
 </figure>
 
-2. A file should open up in Notepad. We are going to change two values. First, use the search feature (Ctrl + F) or simply scroll down until you see `post_max_size`. This controls how large the files are that you can upload. Change this to `0` on your local *only*.
+2. A file should open up in Notepad. We are going to change two values. First, use the search feature (Ctrl + F) or simply scroll down until you see `post_max_size`. This controls how large the files are that you can upload. Change this to a number similar to what you'll use on your live website. If you don't know yet, change it to `5M` (five megabytes).
 
 <figure markdown="span">
   ![Editing the post_max_size variable](../../images/software-setup/windows/xampp-post-max.png){ width="600" }
 </figure>
+
+![alt text](image.png)
 
 3. The next value we change is `upload_max_filesize`. I like to change this to abnormally high on my local, but make it whatever feels right for you. To change it to 10 megabytes, for example, put a value of `10M`.
 
