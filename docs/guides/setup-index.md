@@ -10,28 +10,35 @@ There are several components to Lorekeeper setup, so installation information is
 
 The information here makes an effort to assume no technical background on the part of the reader. Consequently, some of the steps in this index recommend action for readers with existing technical background, depending on the nature thereof. If the latter applies to you, it's recommended you read the [developer introduction](dev-intro.md), as Lorekeeper and its ecosystem are somewhat unusual.
 
-## Local Set-up
+## Local Environment Set-up
 
-This section concerns setting up the tools-- software-- that you will need to work with Lorekeeper, and obtaining a copy of the code. As the recommended tools depend heavily on which platform (or operating system) you are working on, information is provided for several platforms.
+### Software Set-up
+
+This section concerns setting up the tools-- software-- that you will need to work with Lorekeeper. As the recommended tools depend heavily on which platform (or operating system) you are working on, information is provided for several platforms.
 
 Topics covered:
 
+- Setting up your local webserver software (XAMPP, Laragon, Valet)
 - Working with git, setting up a graphical git client
-- Setting up to connect to a remote server using SSH
-
-!!! example "WIP"
-
-    Currently, these links all lead to different sections of one page, under the assumption that the whole page will not end up too long (as it should only cover basic setup of tools). This may or may not end up being correct.
 
 Local setup on:
 
-- [Windows](local-setup.md#windows)
-- [Mac](local-setup.md#mac)
-- [Linux](local-setup.md#linux)
+- [Windows](software-setup/software-windows.md)
+- [Mac](software-setup/software-mac.md)
+- [Linux](software-setup/software-linux.md)
 
-If you are already familiar with these subjects and have a preferred workflow, clone `https://github.com/lk-arpg/lorekeeper.git` via your preferred method and move on to the next step.
+If the above main guides do not work for you (for example, if you run into issues with XAMPP), here are alternative guides:
 
-### Setting up a Local Development Environment
+!!! example "WIP"
+
+    Please suggest alternatives for other operating systems.
+
+- [Windows - Laragon](software-setup/windows-laragon.md)
+- [Windows - Valet](software-setup/windows-valet.md)
+
+If you already have a preferred workflow for locally serving and developing PHP-based applications, move onto the next step.
+
+### Development Environment Set-up
 
 Before moving ahead to setting up a live Lorekeeper site, it's recommended to set up a local or development environment so that you can preview and test your changes as you make them-- and *before* pushing them to a live site. This helps catch errors (especially large or breaking ones!) before they become larger problems, and is especially key if you plan to (or have already) modified your Lorekeeper site heavily!
 
@@ -41,23 +48,23 @@ As above, this process is heavily dependent on your local platform, and is broke
 
 Topics covered:
 
-- Setting up PHP, MySQL (or MariaDB), and a webserver on your local machine
+- Cloning a copy of Lorekeeper
 - Installing composer locally
-- Serving your local files and working with them locally
+- Serving your local files and working with them
 
 !!! example "WIP"
 
-    As development environment setup is liable to be more involved than basic setup of tools-- and may offer multiple options, e.g. for serving site files locally on Windows-- these currently link to separate pages.
+    As development environment setup is liable to be more involved than basic setup of tools, these currently link to separate pages.
 
 Development environment setup on:
 
-- [Windows](dev-setup-win.md)
-- [Mac](dev-setup-mac.md)
-- [Linux](dev-setup-linux.md)
+- [Windows](dev-setup/dev-windows.md)
+- [Mac](dev-setup/dev-mac.md)
+- [Linux](dev-setup/dev-linux.md)
 
-If you already have a preferred workflow for developing PHP-based applications, do so for the local files you set up in the previous step and move on to the next one.
+If you are already familiar with these subjects and have a preferred workflow, clone `https://github.com/lk-arpg/lorekeeper.git` via your preferred method and move on to the next step.
 
-## Webserver Set-up
+## Webserver (Live) Set-up
 
 This section concerns setting up a webserver to host your Lorekeeper site so that it is accessible via the internet at large. The steps involved here are generally *host* rather than platform-specific, as in most cases you will be working with some form of Linux server.
 
@@ -70,6 +77,8 @@ Topics covered:
 - Obtaining a domain name
 - Selecting hosting
 - Setting up on a given host
+
+For any of the below guides, you will first need to [set up a SSH client](software-setup/ssh-clients.md).
 
 !!! example "WIP"
 
