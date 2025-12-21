@@ -67,7 +67,7 @@ We are now going to use SourceGit to make a copy of Lorekeeper. This will be you
 
     As of this writing, the main branch of LK is on version 2.1. You may wish to be on a higher version, such as the release branch version 3.0. 
     
-    **Please note that is *extremely discouraged* to put your site on the develop branch of Lorekeeper.** Please see our [dev intro](../dev-intro#navigating-branches) regarding different branches.
+    **Please note that is *extremely discouraged* to put your site on the develop branch of Lorekeeper.** Please see our [dev intro](../dev-intro.md#navigating-branches) regarding different branches.
 
     SourceGit will clone the main branch by default. If you wish to update to version 3.0 or otherwise the current release, branch, simply pull that branch into your local branch with right click -> "Merge into main".
 
@@ -280,6 +280,9 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 <figure markdown="span">
   ![alt text](../../images/dev-setup/windows/running-lk-9.png){ width="600" }
 </figure>
+
+!!! warn "Creating Your Database"
+    At this step, you need to create your database, if you haven't already. You may need to do this if you were following the XAMPP guide. If you need to, [return to PHPMyAdmin and create your database](../software-setup/software-windows.md#configuring-phpmyadmin).
 
 10. Next, type in `php artisan migrate`. This will populate the database with all of the tables that Lorekeeper needs to function. You'll see a LOT of text start to fly by. It should look like this when completed:
 

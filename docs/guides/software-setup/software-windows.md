@@ -129,28 +129,30 @@ Within this guide, we will be installing the following software:
   ![Stopping and starting XAMPP](../../images/software-setup/windows/xampp-stop-start.png){ width="600" }
 </figure>
 
-!!! info 
-    Apache may fail to start if the folder `C:/xampp/htdocs/lorekeeper/public` does not exist. **This is OK.** Continue with this guide, and Apache will start after you have cloned LK.
+!!! warn "Apache Failing to Start"
+    Apache will fail to start if the folder `C:/xampp/htdocs/lorekeeper/public` does not exist. PHPMyAdmin will not be accessible unless Apache has started. **This is OK.** Skip the PHPMyAdmin section and return after you've cloned Lorekeeper.
 
-8. Next, we are going to make one more change in anticipation of installing Lorekeeper. Click the "Admin" button next to MySQL.
+### Configuring PHPMyAdmin
+
+1. Next, we are going to make one more change in anticipation of installing Lorekeeper. Make sure Apache has started, then click the "Admin" button next to MySQL.
 
 <figure markdown="span">
   ![pressing the mysql admin button](../../images/software-setup/windows/mysql-admin.png){ width="600" }
 </figure>
 
-9. This will open a window similar to this in your browser. This is PHPMyAdmin, and it is where we control how most of the data is stored for Lorekeeper. Click "New".
+2. This will open a window similar to this in your browser. This is PHPMyAdmin, and it is where we control how most of the data is stored for Lorekeeper. Click "New".
 
 <figure markdown="span">
   ![phpmyadmin front page](../../images/software-setup/windows/phpmyadmin-start.png){ width="600" }
 </figure>
 
-10. Type in `lorekeeper` or any other easy to remember name, then click "Create".
+3. Type in `lorekeeper` or any other easy to remember name, then click "Create".
 
 <figure markdown="span">
   ![creating a database in phpmyadmin](../../images/software-setup/windows/phpmyadmin-create.png){ width="600" }
 </figure>
 
-11. **Congratulations! We're done here for now.** Next, we will install the Git software needed to manage our Lorekeeper files.
+4. **Congratulations! We're done here for now.** Next, we will install the Git software needed to manage our Lorekeeper files.
 
 ## Installing Git Software
 
