@@ -2067,7 +2067,7 @@
 <div class="admonition info">
 <p class="admonition-title">Cloning a Higher Version of LK</p>
 <p>As of this writing, the main branch of LK is on version 2.1. You may wish to be on a higher version, such as the release branch version 3.0. </p>
-<p><strong>Please note that is <em>extremely discouraged</em> to put your site on the develop branch of Lorekeeper.</strong> Please see our <a href="../dev-intro#navigating-branches">dev intro</a> regarding different branches.</p>
+<p><strong>Please note that is <em>extremely discouraged</em> to put your site on the develop branch of Lorekeeper.</strong> Please see our <a href="../../dev-intro/#navigating-branches">dev intro</a> regarding different branches.</p>
 <p>SourceGit will clone the main branch by default. If you wish to update to version 3.0 or otherwise the current release, branch, simply pull that branch into your local branch with right click -&gt; "Merge into main".</p>
 <p><figure markdown="span">
   <a class="glightbox" href="../../../images/dev-setup/windows/cloning-lk-higher-version.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="merging version 3 into main" src="../../../images/dev-setup/windows/cloning-lk-higher-version.png" width="600" /></a>
@@ -2278,6 +2278,10 @@ MIX_PUSHER_APP_CLUSTER=&quot;${PUSHER_APP_CLUSTER}&quot;
 <figure>
   <a class="glightbox" href="../../../images/dev-setup/windows/running-lk-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../images/dev-setup/windows/running-lk-9.png" width="600" /></a>
 </figure>
+<div class="admonition warn">
+<p class="admonition-title">Creating Your Database</p>
+<p>At this step, you need to create your database, if you haven't already. You may need to do this if you were following the XAMPP guide. If you need to, <a href="../../software-setup/software-windows/#configuring-phpmyadmin">return to PHPMyAdmin and create your database</a>.</p>
+</div>
 <ol start="10">
 <li>Next, type in <code>php artisan migrate</code>. This will populate the database with all of the tables that Lorekeeper needs to function. You'll see a LOT of text start to fly by. It should look like this when completed:</li>
 </ol>

@@ -1949,6 +1949,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#configuring-phpmyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring PHPMyAdmin
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2144,29 +2153,30 @@
 <figure>
   <a class="glightbox" href="../../../images/software-setup/windows/xampp-stop-start.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stopping and starting XAMPP" src="../../../images/software-setup/windows/xampp-stop-start.png" width="600" /></a>
 </figure>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Apache may fail to start if the folder <code>C:/xampp/htdocs/lorekeeper/public</code> does not exist. <strong>This is OK.</strong> Continue with this guide, and Apache will start after you have cloned LK.</p>
+<div class="admonition warn">
+<p class="admonition-title">Apache Failing to Start</p>
+<p>Apache will fail to start if the folder <code>C:/xampp/htdocs/lorekeeper/public</code> does not exist. PHPMyAdmin will not be accessible unless Apache has started. <strong>This is OK.</strong> Skip the PHPMyAdmin section and return after you've cloned Lorekeeper.</p>
 </div>
-<ol start="8">
-<li>Next, we are going to make one more change in anticipation of installing Lorekeeper. Click the "Admin" button next to MySQL.</li>
+<h3 id="configuring-phpmyadmin">Configuring PHPMyAdmin<a class="headerlink" href="#configuring-phpmyadmin" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Next, we are going to make one more change in anticipation of installing Lorekeeper. Make sure Apache has started, then click the "Admin" button next to MySQL.</li>
 </ol>
 <figure>
   <a class="glightbox" href="../../../images/software-setup/windows/mysql-admin.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pressing the mysql admin button" src="../../../images/software-setup/windows/mysql-admin.png" width="600" /></a>
 </figure>
-<ol start="9">
+<ol start="2">
 <li>This will open a window similar to this in your browser. This is PHPMyAdmin, and it is where we control how most of the data is stored for Lorekeeper. Click "New".</li>
 </ol>
 <figure>
   <a class="glightbox" href="../../../images/software-setup/windows/phpmyadmin-start.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="phpmyadmin front page" src="../../../images/software-setup/windows/phpmyadmin-start.png" width="600" /></a>
 </figure>
-<ol start="10">
+<ol start="3">
 <li>Type in <code>lorekeeper</code> or any other easy to remember name, then click "Create".</li>
 </ol>
 <figure>
   <a class="glightbox" href="../../../images/software-setup/windows/phpmyadmin-create.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="creating a database in phpmyadmin" src="../../../images/software-setup/windows/phpmyadmin-create.png" width="600" /></a>
 </figure>
-<ol start="11">
+<ol start="4">
 <li><strong>Congratulations! We're done here for now.</strong> Next, we will install the Git software needed to manage our Lorekeeper files.</li>
 </ol>
 <h2 id="installing-git-software">Installing Git Software<a class="headerlink" href="#installing-git-software" title="Permanent link">&para;</a></h2>
