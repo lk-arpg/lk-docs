@@ -35,6 +35,7 @@ Raffles have the following properties:
 - Number of Winners to Draw
 - Raffle Group
 - Raffle Order
+- Ticket Cap (optional)
 - Active
 
 **Raffle Name** is the name of the raffle. This name does not have to be unique.
@@ -44,6 +45,8 @@ Raffles have the following properties:
 **Raffle Group** is the group that the raffle is grouped under.
 
 **Raffle Order** is the order in which the raffle will be drawn, if the raffle is part of a group that will be rolled together. The lower the number, the earlier it will be drawn - e.g. a raffle numbered 1 will be drawn before a raffle numbered 2, and so on.
+
+**Ticket Cap** is an optional per-user cap for tickets.
 
 The **Active** setting controls if the raffle is visible to users.
 
