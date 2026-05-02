@@ -19,7 +19,7 @@ This section concerns setting up the tools-- software-- that you will need to wo
 Topics covered:
 
 - Setting up your local webserver software (XAMPP, Laragon, Valet)
-- Working with git, setting up a graphical git client
+- Working with git, setting up a graphical git client, setting up Github SSH keys
 
 Local setup on:
 
@@ -40,16 +40,16 @@ If you already have a preferred workflow for locally serving and developing PHP-
 
 ### Development Environment Set-up
 
-Before moving ahead to setting up a live Lorekeeper site, it's recommended to set up a local or development environment so that you can preview and test your changes as you make them-- and *before* pushing them to a live site. This helps catch errors (especially large or breaking ones!) before they become larger problems, and is especially key if you plan to (or have already) modified your Lorekeeper site heavily!
+Before setting up a live Lorekeeper site that others can visit, it is heavily recommended to set up a local (development) environment so that you can preview and test your changes as you make them-- *before* pushing them to a live site. This helps catch errors (especially large or breaking ones!) before they become larger problems, and is especially key if you plan to (or have already) modified your Lorekeeper site heavily!
 
-It also provides a testing-ground to experiment or become more familiar with Lorekeeper at no cost, as it does not require a domain name or hosting.
+It also provides a testing-ground to experiment or become more familiar with Lorekeeper without the added cost of a domain name and cloud hosting needed for a live site.
 
 As above, this process is heavily dependent on your local platform, and is broken up into several guides.
 
 Topics covered:
 
 - Cloning a copy of Lorekeeper
-- Installing composer locally
+- Installing and configuring a local test setup (composer, php, mariadb, dbeaver)
 - Serving your local files and working with them
 
 !!! example "WIP"
