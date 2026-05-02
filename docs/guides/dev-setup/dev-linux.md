@@ -11,14 +11,13 @@ Within this guide, we will be setting up your copy of lorekeeper code as well as
 - [Composer](https://getcomposer.org/)
 - [Mariadb](https://mariadb.org/)
 - [dbeaver](https://dbeaver.com/) (DB Management Software)
-- (Optionally) Installing nginx for a persistent server
 
 !!! info "Replace the <text\> with your own info"
     For the purposes of this guide, when you need to fill in your own text it will be enclosed in angle brackets: `<Explaination Text>`.
 
     For example, if the guide gives the command `cd <Your Lorekeeper Directory> ` and your lorekeeper directory was in ~/Documents/lorekeeper, you would type `cd ~/Documents/lorekeeper` in your terminal window.
 
-## Copying Lorekeeper
+## Lorekeeper Codebase Setup
 
 We are now going to use SourceGit to make a clone of Lorekeeper. This will be your personalized version that is eventually posted to your live website.
 
@@ -31,7 +30,7 @@ In SourceGit, select the little cloud icon in the top right to "Clone Repository
 
 Now fill out the information that tells SourceGit where the Lorekeeper code is located. In the browser, it can be accessed [here](https://github.com/lk-arpg/lorekeeper), but we use a slightly different URL address when pasting it into Git which can be found on the github page.
 <figure markdown="span">
-  ![github clone http address](../../images/dev-setup/linux/cloning-lk-1.5.png){ width="600" }
+  ![github clone HTTP address](../../images/dev-setup/linux/cloning-lk-1.5.png){ width="600" }
 </figure>
 
 Fill in the missing info:
@@ -55,17 +54,17 @@ The first thing you will want to do is rename the origin (core Lorekeeper) remot
 
 Click the dropdown for "Remotes", and then right click "origin" and click "Edit".
 <figure markdown="span">
-  ![repository cloning in progress](../../images/dev-setup/linux/cloning-lk-4.png){ width="600" }
+  ![Edit Remote](../../images/dev-setup/linux/cloning-lk-4.png){ width="600" }
 </figure>
 
 Rename this branch to something to indicate to you that this is where the core lorekeeper updates will come from.
 <figure markdown="span">
-  ![repository cloning in progress](../../images/dev-setup/linux/cloning-lk-5.png){ width="600" }
+  ![Edit Remote menu](../../images/dev-setup/linux/cloning-lk-5.png){ width="600" }
 </figure>
 
 Click "OK" and now you should see the newly renamed core lorekeeper:
 <figure markdown="span">
-  ![repository cloning in progress](../../images/dev-setup/linux/cloning-lk-6.png){ width="600" }
+  ![Renamed Remote Branch](../../images/dev-setup/linux/cloning-lk-6.png){ width="600" }
 </figure>
 
 *Note: You may notice this remote has more than one branch. At the time of writing this, the main branch is v2.1. This means in order to start with v3.0 (which these docs are written for)
@@ -104,12 +103,12 @@ Copy the **SSH** address from the Quick Setup section of the page.
 Moving back to SourceGit, we need to add your newly created remote repo. Click the cloud with plus icon next to the "REMOTES" category.
 
 <figure markdown="span">
-      ![push local main to new remote](../../images/dev-setup/linux/cloning-lk-11.png){ width="600" }
+      ![Add new Remote](../../images/dev-setup/linux/cloning-lk-11.png){ width="600" }
 </figure>
 
 Paste the link you copied from github and name it "origin" and then click "OK":
 <figure markdown="span">
-      ![push local main to new remote](../../images/dev-setup/linux/cloning-lk-11.5.png){ width="600" }
+      ![Add Remote menu](../../images/dev-setup/linux/cloning-lk-11.5.png){ width="600" }
 </figure>
 *Note: If you run in to errors, make sure you have copied the SSH address rather than the https address of your remote repo*
 
@@ -122,7 +121,7 @@ To commit our local changes to it, simply right click the local branch **"main"*
 
 In the menu that appears, select **"origin"** as the remote and click **"Set as a tracking branch"**.
 <figure markdown="span">
-      ![push local main to new remote](../../images/dev-setup/linux/cloning-lk-13.png){ width="600" }
+      ![set origin as tracked remote](../../images/dev-setup/linux/cloning-lk-13.png){ width="600" }
 </figure>
 
 Congrats, we now have a version of lorekeeper attached to our personal remote github repo and are ready to move on to setting up our test setup!
@@ -162,7 +161,7 @@ Edit `/etc/php/php.ini` to enable the following extensions:
 
 The php.ini file's Dynamic Extensions section should look like this:
 <figure markdown="span">
-  ![VS Codium](../../images/dev-setup/linux/localhost-software-mariadb-1.png){ width="600" }
+  ![PHP plugins enabled](../../images/dev-setup/linux/localhost-software-mariadb-1.png){ width="600" }
 </figure>
 
 ### Dbeaver
@@ -172,12 +171,12 @@ Install Dbeaver
 Now you should be able to launch Dbeaver.
 Once launched, click the **Database** tab and select **MariaDB** then **Next**
 <figure markdown="span">
-  ![VS Codium](../../images/dev-setup/linux/localhost-software-dbeaver-1.png){ width="600" }
+  ![Configure Dbeaver](../../images/dev-setup/linux/localhost-software-dbeaver-1.png){ width="600" }
 </figure>
 
 Enter **“test”** as your DB. **By default the root user will have no password** and you can leave this blank, but if you have set a root password for your mariadb database enter that here too.
 <figure markdown="span">
-  ![VS Codium](../../images/dev-setup/linux/localhost-software-dbeaver-2.png){ width="600" }
+  ![Add Test database](../../images/dev-setup/linux/localhost-software-dbeaver-2.png){ width="600" }
 </figure>
 You can click the **Test Connection** button to verify DBeaver is able to connect to the DB.
 Then click **Finish**
@@ -185,7 +184,7 @@ Then click **Finish**
 Your Dbeaver should then display the test database space.
 To add a database for your lorekeeper, right click **Databases** in the left window and click **"Create new Database"**
 <figure markdown="span">
-  ![VS Codium](../../images/dev-setup/linux/localhost-software-dbeaver-3.png){ width="600" }
+  ![Create Database for Lorekeeper](../../images/dev-setup/linux/localhost-software-dbeaver-3.png){ width="600" }
 </figure>
 Follow prompts to create your database. Remember the name for later.
 
@@ -274,7 +273,7 @@ And connecting to `http://localhost:8000` on the browser
 You have finished installing a local copy of Lorekeeper. You can login as the admin account you just set up, and begin trying out the different features.
 
 <figure markdown="span">
-  ![alt text](../../images/dev-setup/linux/running-lk.png){ width="600" }
+  ![Lorekeeper Website homepage in Browser](../../images/dev-setup/linux/running-lk.png){ width="600" }
 </figure>
 
 When you are ready, you can move onto [configuration or setting up a live website](../setup-index.md#webserver-live-set-up).

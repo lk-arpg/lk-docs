@@ -18,9 +18,7 @@ Within this guide, we will install the following:
 
     For example, if the guide gives the command `cd <Your Lorekeeper Directory> ` and your lorekeeper directory was in ~/Documents/lorekeeper, you would type `cd ~/Documents/lorekeeper` in your terminal window.
 
-## Development Setup
-
-### IDE
+## IDE
 First you will need an IDE (Integrated Development Environment). IDEs are software that provide an environment to write and often test/debug code within a single, unified interface. We recommend [VSCodium](https://vscodium.com/), the open source cousin of VSCode.
 
 <figure markdown="span">
@@ -30,13 +28,13 @@ First you will need an IDE (Integrated Development Environment). IDEs are softwa
 VSCodium can easily be installed with the following command:
 : `sudo pacman -S codium`
 
-### GIT
+## GIT
 You will also need Git. Git is a version control software that is used to manage files, file histories and merge conflicts from pulling different versions of code into your lorekeeper. It also allows multiple people to work on the same codebase without needing to manually sync all changes. Run the following command to install Git:
 : `sudo pacman -S git`
 
 Traditionally, Git is a command line software, but using a Git client makes handling it much easier. Next, we’ll install a Git client in order to have a visual GUI for Git.
 
-### Git Client
+## Git Client
 Git clients are a good way to visualize git and version histories. There are [many git clients out there](https://git-scm.com/tools/guis?os=linux), but this guide will focus on [SourceGit](https://sourcegit-scm.github.io/).
 
 <figure markdown="span">
@@ -74,12 +72,13 @@ Go to the “Git” Tab and enter your github **User Name** and **User Email**.
   ![SourceGit Git Setup Menu](../../images/software-setup/linux/configuring-sourcegit-5.png){ width="600" }
 </figure>
 
+## SSH keys for Github
 As an additional setup step, we will now also set up your github SSH key which will allow your computer to interface with your private repos on Github. You should not share the SSH keys with anyone.
 1. Generate an SSH key to use with github in a terminal window:
 : `ssh-keygen -t rsa`
 : And follow the prompts to create your key. It should print something like this:
 <figure markdown="span">
-  ![Generate rsa ssh key output](../../images/software-setup/linux/configuring-github-SSH-keys-1.png){ width="600" }
+  ![Generate RSA SSH key output](../../images/software-setup/linux/configuring-github-SSH-keys-1.png){ width="600" }
 </figure>
 
 2. Print the contents of your public key to the clipboard and copy what is printed out:
