@@ -64,6 +64,23 @@ Development environment setup on:
 
 If you are already familiar with these subjects and have a preferred workflow, clone `https://github.com/lk-arpg/lorekeeper.git` via your preferred method and move on to the next step.
 
+##  Github Set-up
+
+This section concerns setting up a remote repository to push (upload) your code to. This gives you a copy of your code that can be pulled (downloaded) by you or any additional coders you work with, as well as provides a history of all the commits over time. It also adds a layer of redundancy in case your local code becomes broken beyond repair and you need to revert to a clean working version without starting over again.
+
+This guide will cover:
+
+ - Linking SSH keys to your github account
+ - Creating a private repository on github
+ - Rebasing your local copy of lorekeeper to your private repo using sourceGit
+ - Adding collaborators to your private repo
+
+ For the guide below, you will first need to [set up SSH keys](software-setup/ssh-clients.md).
+
+ - [All Platforms](software-setup/github-setup.md)
+
+If you are already familiar with sourcegit and github, configure your environment as desired and move on to the next step.
+
 ## Webserver (Live) Set-up
 
 This section concerns setting up a webserver to host your Lorekeeper site so that it is accessible via the internet at large. The steps involved here are generally *host* rather than platform-specific, as in most cases you will be working with some form of Linux server.
@@ -78,7 +95,7 @@ Topics covered:
 - Selecting hosting
 - Setting up on a given host
 
-For any of the below guides, you will first need to [set up a SSH client](software-setup/ssh-clients.md).
+For any of the below guides, you will need to [set up a SSH client](software-setup/ssh-clients.md) if you haven't set it up already.
 
 !!! example "WIP"
 

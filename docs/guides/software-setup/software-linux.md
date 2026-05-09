@@ -9,24 +9,60 @@
 
 Within this guide, we will install the following:
 
-- [VS Codium](https://www.apachefriends.org/download.html) for editing your lorekeeper files.
+- [Microsoft VS Code](https://code.visualstudio.com/download) or [VSCodium](https://vscodium.com/) as our IDE for editing lorekeeper files.
 - [Git](https://git-scm.com/) as our version control software
 - [SourceGit](https://sourcegit-scm.github.io) for our graphical git client
 
 !!! info "Replace the <text\> with your own info"
-    For the purposes of this guide, when you need to fill in your own text it will be enclosed in angle brackets: `<Explaination Text>`.
+    For the purposes of this guide, when you need to fill in your own text, it will be enclosed in angle brackets: `<Explaination Text>`.
 
     For example, if the guide gives the command `cd <Your Lorekeeper Directory> ` and your lorekeeper directory was in ~/Documents/lorekeeper, you would type `cd ~/Documents/lorekeeper` in your terminal window.
 
 ## IDE
-First you will need an IDE (Integrated Development Environment). IDEs are software that provide an environment to write and often test/debug code within a single, unified interface. We recommend [VSCodium](https://vscodium.com/), the open source cousin of VSCode.
+First, you will need an IDE (Integrated Development Environment). IDEs are software that provide an environment to write and often test/debug code within a single, unified interface. Microsoft's Visual Studio Code is the code editor we will be installing in this guide, however there are many other IDEs and which one you use is largely up to personal preference.
 
+!!! info "A Note for those who want to avoid Microsoft"
+
+    You can install the [VSCodium](https://vscodium.com/), the open source cousin of VSCode, which comes with AI/Copilot features disabled by default and is up kept by the community rather than Microsoft, [here](https://github.com/VSCodium/vscodium/releases). VSCodium uses the [Open VSX Registry](https://open-vsx.org/) over the default VS Code Extension library, this means that due to licensing, some extensions may be unavailable in VSCodium.
+
+    VSCodium can easily be installed with the following command:
+    : `sudo pacman -S codium`
+    or through AUR (`https://aur.archlinux.org/packages/vscodium`)
+
+VS Code can be downloaded and built manually from the AUR repository or from the official website [here](https://code.visualstudio.com):
 <figure markdown="span">
-  ![VS Codium](../../images/software-setup/linux/IDE-codium.png){ width="600" }
+  ![VS Code](../../images/software-setup/linux/IDE-code.png){ width="600" }
 </figure>
 
-VSCodium can easily be installed with the following command:
-: `sudo pacman -S codium`
+We will be walking through the install through AUR:
+
+1. Find the sourceGit [AUR package](https://aur.archlinux.org/packages/visual-studio-code-bin) and copy the Git Clone URL:
+<figure markdown="span">
+  ![VS Code AUR repository](../../images/software-setup/linux/IDE-code-2.png){ width="600" }
+</figure>
+
+!!! info "A Quick Aside: What is AUR"
+    The Arch User Repository, aka "AUR", is **a repository of user-generated packages for Arch-based distributions**. It contains additional packages from the official Arch package repositories (which can be downloaded with `pacman`) If a package is unavailable through pacman, it's likely in the AUR! This makes it an invaluable resource;
+
+    Because **AUR contains user-generated and maintained packages which could possibly be malicious, you should always exercise caution and review packages and updates installed from AUR**. Its always a good practice to check the upstream of the package to make sure the source is what you expect. In VSC's case, the upstream should be the their official page (`https://code.visualstudio.com/`).
+
+    Packages you install from the AUR aren't automatically updated by `pacman`. An AUR helper, like `paru`, can help simplify this process and help keep packages from the AUR up-to-date (they should always be updated alongside the rest of the software on your computer!). We recommend `paru` in particular as it will present you with changes to a package before you install or update it, allowing you to review them-- generally, if all that changed is the version and hashes, there's no cause for concern.
+
+2. `cd /tmp`
+3. `git clone <URL copied from above: ex: https://aur.archlinux.org/visual-studio-code-bin.git>`
+4. `cd visual-studio-code-bin/`
+5. `makepkg -si`
+6. Follow prompts in installation process
+
+You can now launch VS Code
+<figure markdown="span">
+  ![VS Code Launch Screen](../../images/software-setup/linux/IDE-code-3.png){ width="600" }
+</figure>
+
+!!! info "Disabling AI Features"
+    Microsoft constantly changes how to disable AI features within Visual Studio Code, their "AI code editor". As a result, unfortunately we can not provide up-to-date instructions. Please use your favorite search engine to find the latest way to disable these features... or consider VS Codium
+
+    The Lorekeeper community does **not** encourage, promote, or endorse usage of AI tools.
 
 ## GIT
 You will also need Git. Git is a version control software that is used to manage files, file histories and merge conflicts from pulling different versions of code into your lorekeeper. It also allows multiple people to work on the same codebase without needing to manually sync all changes. Run the following command to install Git:
@@ -49,9 +85,9 @@ To install through AUR:
 <figure markdown="span">
   ![AUR Sourcegit repo listing](../../images/software-setup/linux/configuring-sourcegit-2.png){ width="600" }
 </figure>
-: *Note: Its always a good practice to check the upstream of the AUR Package to make sure the source is what you expect. In SourceGit's case, the upstream should be the github linked on their official page (`https://github.com/sourcegit-scm/sourcegit`).*
+: *Reminder: Always good to check the AUR repo upstream URL, in SourceGit's case, the upstream should be the github linked on their official page (`https://github.com/sourcegit-scm/sourcegit`).*
 
-2. `cd <folder you want to put the downloaded package. This can be deleted later>`
+2. `cd <folder you want to put the downloaded package.>`
 3. `git clone <URL copied from above: ex: https://aur.archlinux.org/sourcegit.git>`
 4. `cd sourcegit/`
 5. `makepkg -si`
@@ -71,31 +107,6 @@ Go to the “Git” Tab and enter your github **User Name** and **User Email**.
 <figure markdown="span">
   ![SourceGit Git Setup Menu](../../images/software-setup/linux/configuring-sourcegit-5.png){ width="600" }
 </figure>
-
-## SSH keys for Github
-As an additional setup step, we will now also set up your github SSH key which will allow your computer to interface with your private repos on Github. You should not share the SSH keys with anyone.
-1. Generate an SSH key to use with github in a terminal window:
-: `ssh-keygen -t rsa`
-: And follow the prompts to create your key. It should print something like this:
-<figure markdown="span">
-  ![Generate RSA SSH key output](../../images/software-setup/linux/configuring-github-SSH-keys-1.png){ width="600" }
-</figure>
-
-2. Print the contents of your public key to the clipboard and copy what is printed out:
-: `cat ~/.ssh/id_rsa.pub`
-
-3. Add SSH key to your Github
-: **Settings** --> **SSH and GPG keys**, select **New SSH key**
-
-<figure markdown="span">
-  ![Github SSH key Configuration](../../images/software-setup/linux/configuring-github-SSH-keys-2.png){ width="600" }
-</figure>
-
-4. Add your github credentials to your global git config in the terminal
-: `git config --global user.name <user_name>`
-: `git config --global user.email <email_id>`
-
-Your Github SSH key should now be set up for later use.
 
 ## Setup Complete
 

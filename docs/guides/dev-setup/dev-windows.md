@@ -369,4 +369,4 @@ You have finished installing a local copy of Lorekeeper. You can login as the ad
   ![alt text](../../images/dev-setup/windows/running-lk-14.png){ width="600" }
 </figure>
 
-When you are ready, you can move onto [configuration or setting up a live website](../setup-index.md).
+When you are ready, you can move onto [configuring your github remote](../setup-index.md#github-set-up).

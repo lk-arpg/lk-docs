@@ -70,7 +70,7 @@ Click "OK" and now you should see the newly renamed core lorekeeper:
 *Note: You may notice this remote has more than one branch. At the time of writing this, the main branch is v2.1. This means in order to start with v3.0 (which these docs are written for)
 you will want to merge `release/v3.0.0` in to your current local branch.*
 
-**Please note that is *extremely discouraged* to put your site on the develop branch of Lorekeeper.** Please see our [dev intro](../dev-intro.md#navigating-branches) regarding different branches.
+**Please note that is *extremely discouraged* to put your site on the develop branch of Lorekeeper, especially if you have no prior knowledge.** Please see our [dev intro](../dev-intro.md#navigating-branches) regarding different branches.
 
 !!! info "Cloning a Higher Version of LK"
     If you wish to update to version 3.0 or otherwise, simply pull that branch into your local branch with **right click** -> **"Merge into main"**.
@@ -82,52 +82,10 @@ you will want to merge `release/v3.0.0` in to your current local branch.*
       ![merging version 3 into main part 2](../../images/dev-setup/linux/cloning-lk-7.5.png){ width="600" }
     </figure>
 
-#### Add Personal Github Remote
-Now we need to add your github as the remote you will be storing your modified lorekeeper on.
-
-First we have to create a repo in github for you to push your code to. Navigate to your repositories on [github.com](https://github.com/) and click **"New"**
-<figure markdown="span">
-      ![create new repo on github](../../images/dev-setup/linux/cloning-lk-8.png){ width="600" }
-</figure>
-
-Give the repository a name and change the visibility to Private.
-<figure markdown="span">
-      ![Fill in name for repository and change visibility](../../images/dev-setup/linux/cloning-lk-9.png){ width="600" }
-</figure>
-
-Copy the **SSH** address from the Quick Setup section of the page.
-<figure markdown="span">
-      ![Quick Setup](../../images/dev-setup/linux/cloning-lk-10.png){ width="600" }
-</figure>
-
-Moving back to SourceGit, we need to add your newly created remote repo. Click the cloud with plus icon next to the "REMOTES" category.
-
-<figure markdown="span">
-      ![Add new Remote](../../images/dev-setup/linux/cloning-lk-11.png){ width="600" }
-</figure>
-
-Paste the link you copied from github and name it "origin" and then click "OK":
-<figure markdown="span">
-      ![Add Remote menu](../../images/dev-setup/linux/cloning-lk-11.5.png){ width="600" }
-</figure>
-*Note: If you run in to errors, make sure you have copied the SSH address rather than the https address of your remote repo*
-
-After some loading, we now have our new remote!
-
-To commit our local changes to it, simply right click the local branch **"main"** and select **"push main"**.
-<figure markdown="span">
-      ![push local main to new remote](../../images/dev-setup/linux/cloning-lk-12.png){ width="600" }
-</figure>
-
-In the menu that appears, select **"origin"** as the remote and click **"Set as a tracking branch"**.
-<figure markdown="span">
-      ![set origin as tracked remote](../../images/dev-setup/linux/cloning-lk-13.png){ width="600" }
-</figure>
-
-Congrats, we now have a version of lorekeeper attached to our personal remote github repo and are ready to move on to setting up our test setup!
+Congrats, now we have a local version of lorekeeper and can move on to setting up our local testing environment!
 
 ## Local Testing Setup
-Now that we have our codebase and have set up our remotely tracked branch, we need to install just a few more pieces of software before we can get our copy of Lorekeeper fully up and running.
+Now that we have our codebase, we need to install just a few more pieces of software before we can get our copy of Lorekeeper fully up and running.
 
 ### PHP
 Lorekeeper v3.0 requires PHP 8.3 (php-legacy). If you have need for a different version of php, use this script to handle installing php versions from AUR (`https://github.com/Its-Satyajit/phpv`) and follow the instructions given there instead of the PHP section here.
@@ -276,4 +234,4 @@ You have finished installing a local copy of Lorekeeper. You can login as the ad
   ![Lorekeeper Website homepage in Browser](../../images/dev-setup/linux/running-lk.png){ width="600" }
 </figure>
 
-When you are ready, you can move onto [configuration or setting up a live website](../setup-index.md#webserver-live-set-up).
+When you are ready, you can move onto [configuring your github remote](../setup-index.md#github-set-up).
