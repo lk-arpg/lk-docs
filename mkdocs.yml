@@ -14,6 +14,8 @@ nav:
     - Setting Up: 'guides/setup-index.md'
     - Configuring Lorekeeper: 'guides/configuring.md'
     - Updating Lorekeeper: 'guides/update.md'
+    - Hiring Developers: 'guides/hiring-devs.md'
+    - Getting Hired: 'guides/getting-hired.md'
     - Social Media Authentication:
       - Discord: 'guides/socmed/discord.md'
       - deviantArt: 'guides/socmed/deviantart.md'
@@ -73,6 +75,7 @@ nav:
   - Development:
     - Contributing: 'contributing.md'
     - Tutorial - Creating Item Types: 'guides/creating-item-types.md'
+    - Working With Multiple Developers: 'guides/working-with-multiple-devs.md'
     
   - Version History:
     - v0.0.x: 'version-history/v0.0.md'
