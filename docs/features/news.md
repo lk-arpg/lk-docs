@@ -8,6 +8,8 @@ News posts can be created in the admin panel and viewed on the news page. The ne
 
 News posts can be scheduled to post at certain times. Note that this posting is handled via crontab scheduling, and therefore may not be entirely accurate to the minute.
 
+An RSS feed is automatically generated from all news posts. This RSS feed is separate from the [sales](sales.md) feed.
+
 ## Editing
 
 News posts have the following properties:

@@ -58,6 +58,7 @@ nav:
     - User Ranks: 'features/user-ranks.md'
     - Notifications: 'features/notifications.md'
     - Invitation Keys: 'features/invitation-keys.md'
+    - Captcha: 'features/captcha.md'
 
     - Reports: 'features/reports.md'
     

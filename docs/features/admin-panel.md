@@ -6,11 +6,15 @@ The admin panel collects most of the features of the site that require [user ran
 
 ### Admin
 
-These can only be edited by the admin account, which is not an assignable power.
+These can only be edited and accessed by the admin account, which is not an assignable power.
 
 #### [User Ranks](user-ranks.md)
 
 Create and edit user ranks to assign to users.
+
+#### Admin Logs
+
+View the logs of admin actions taken by permissioned users.
 
 ### Edit Text Pages
 

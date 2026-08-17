@@ -6,6 +6,12 @@ The configuration files are files in the site’s code that allow customisation 
 
 These files are located in `config/lorekeeper`. The `settings.php` file is the only file that may require any editing at all; the others should not be touched except when coding new features.
 
+## Subdirectories
+
+### ext-tracker
+
+This folder contains files that each list an extension installed on an the Lorekeeper site. It is used to supply information for the `php artisan update-extension-tracker` command. It should only be modified by extension authors.
+
 ## Files
 
 ### settings.php
@@ -32,6 +38,9 @@ This file lists various sites and values for them and is used to enable/disable 
 This file lists form fields and information for inclusion in the group currency form. For more information, see [Galleries](galleries.md).
 
 ### extension_tracker.php
+
+!!! warning "Deprecated"
+    This file has been replaced by the `ext-tracker` folder in v3. It might be present after installing extensions developed for older versions of Lorekeeper. Extensions in this file [should be migrated](../guides/upgrade/#extension-tracker) to their own individual files.
 
 This file lists extensions installed on an individual Lorekeeper site and is used to supply information for the `php artisan update-extension-tracker` command. It should only be modified by extension authors.
 
