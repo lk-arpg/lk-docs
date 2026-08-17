@@ -19,7 +19,7 @@ This section concerns setting up the tools-- software-- that you will need to wo
 Topics covered:
 
 - Setting up your local webserver software (XAMPP, Laragon, Valet)
-- Working with git, setting up a graphical git client
+- Working with git, setting up a graphical git client, setting up Github SSH keys
 
 Local setup on:
 
@@ -40,16 +40,16 @@ If you already have a preferred workflow for locally serving and developing PHP-
 
 ### Development Environment Set-up
 
-Before moving ahead to setting up a live Lorekeeper site, it's recommended to set up a local or development environment so that you can preview and test your changes as you make them-- and *before* pushing them to a live site. This helps catch errors (especially large or breaking ones!) before they become larger problems, and is especially key if you plan to (or have already) modified your Lorekeeper site heavily!
+Before setting up a live Lorekeeper site that others can visit, it is heavily recommended to set up a local (development) environment so that you can preview and test your changes as you make them-- *before* pushing them to a live site. This helps catch errors (especially large or breaking ones!) before they become larger problems, and is especially key if you plan to (or have already) modified your Lorekeeper site heavily!
 
-It also provides a testing-ground to experiment or become more familiar with Lorekeeper at no cost, as it does not require a domain name or hosting.
+It also provides a testing-ground to experiment or become more familiar with Lorekeeper without the added cost of a domain name and cloud hosting needed for a live site.
 
 As above, this process is heavily dependent on your local platform, and is broken up into several guides.
 
 Topics covered:
 
 - Cloning a copy of Lorekeeper
-- Installing composer locally
+- Installing and configuring a local test setup (composer, php, mariadb, dbeaver)
 - Serving your local files and working with them
 
 !!! example "WIP"
@@ -63,6 +63,23 @@ Development environment setup on:
 - [Linux](dev-setup/dev-linux.md)
 
 If you are already familiar with these subjects and have a preferred workflow, clone `https://github.com/lk-arpg/lorekeeper.git` via your preferred method and move on to the next step.
+
+##  Github Set-up
+
+This section concerns setting up a remote repository to push (upload) your code to. This gives you a copy of your code that can be pulled (downloaded) by you or any additional coders you work with, as well as provides a history of all the commits over time. It also adds a layer of redundancy in case your local code becomes broken beyond repair and you need to revert to a clean working version without starting over again.
+
+This guide will cover:
+
+ - Linking SSH keys to your github account
+ - Creating a private repository on github
+ - Rebasing your local copy of lorekeeper to your private repo using sourceGit
+ - Adding collaborators to your private repo
+
+ For the guide below, you will first need to [set up SSH keys](software-setup/ssh-clients.md).
+
+ - [All Platforms](software-setup/github-setup.md)
+
+If you are already familiar with sourcegit and github, configure your environment as desired and move on to the next step.
 
 ## Webserver (Live) Set-up
 
@@ -78,7 +95,7 @@ Topics covered:
 - Selecting hosting
 - Setting up on a given host
 
-For any of the below guides, you will first need to [set up a SSH client](software-setup/ssh-clients.md).
+For any of the below guides, you will need to [set up a SSH client](software-setup/ssh-clients.md) if you haven't set it up already.
 
 !!! example "WIP"
 

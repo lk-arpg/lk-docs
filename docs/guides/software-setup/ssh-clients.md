@@ -2,9 +2,9 @@
 
 !!! example "WIP"
 
-    Please include information here for Mac and Linux.
+    Please include information here for Mac.
 
-SSH (Secure Shell Protocol) is used to securely connect from your local computer to a remote server. It is required to interact with your live version of Lorekeeper.
+SSH (Secure Shell Protocol) is used to securely connect from your local computer to a remote server. It is required to interact with your live version of Lorekeeper and your private Github.
 
 ## Windows
 
@@ -52,8 +52,21 @@ For Windows, the preferred SSH client is PuTTY.
   ![alt text](../../images/software-setup/ssh-clients/setting-up-ssh-6.png){ width="600" }
 </figure>
 
-You will use these keys when [configuring your live server](../setup-index.md#webserver-live-set-up).
+You have now configured your SSH client, move to [SSH complete](#ssh-setup-complete)!
 
 ## Mac
 
+WIP
+
 ## Linux
+Unlike Windows, linux is able to SSH from the command line and we do not need a client. We will still need a set of SSH keys however
+
+1. Generate an SSH key in a terminal window:
+: `ssh-keygen -t rsa`
+: And follow the prompts to create your key. It should print something like this:
+<figure markdown="span">
+  ![Generate RSA SSH key output](../../images/software-setup/ssh-clients/configuring-linux-SSH-keys-1.png){ width="600" }
+</figure>
+
+## SSH Setup Complete
+Congrats, you have now set up your SSH client and keys! Make sure you do not share these keys with ANYONE. If you wish to give access to additional people, they should generate their own set of keys to be added to the live server. You will need these keys when [configuring your live server](../setup-index.md#webserver-live-set-up) and [configuring your github remote](../setup-index.md#github-set-up).
