@@ -2,7 +2,7 @@
 
 ## Overview
 
-- **This guide assumes you are on Windows.** [Mac](software-setup/mac.md) and [Linux](software-setup/linux.md) have different methods.
+- **This guide assumes you are on Windows.** [Mac](software-mac.md) and [Linux](software-linux.md) have different methods.
 - **Please read every step of this guide carefully.** It is highly recommend doing a full read-through before you even get started.
 
 Within this guide, we will be installing the following software:
@@ -54,7 +54,7 @@ Within this guide, we will be installing the following software:
   ![XAMPP Installation Language](../../images/software-setup/windows/xampp-language.png){ width="600" }
 </figure>
 
-6. Click "Next" on the following screen. 
+6. Click "Next" on the following screen.
 
 <figure markdown="span">
   ![XAMPP Installation Ready to Install Screen](../../images/software-setup/windows/xampp-ready-to-install.png){ width="600" }
@@ -79,8 +79,8 @@ Within this guide, we will be installing the following software:
 </figure>
 
 !!! info "Windows Defender Firewall Alert"
-    If you are presented with a window like this for either application: Check both "Private" and "Public", then click "Allow Access". 
-    
+    If you are presented with a window like this for either application: Check both "Private" and "Public", then click "Allow Access".
+
     This software is safe. You may need to click "Show More" to see these options.
 
     <figure markdown="span">

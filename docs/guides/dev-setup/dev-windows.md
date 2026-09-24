@@ -2,7 +2,7 @@
 
 ## Overview
 
-- **This guide assumes you are on Windows.** [Mac](dev-setup/mac.md) and [Linux](dev-setup/linux.md) have different methods.
+- **This guide assumes you are on Windows.** [Mac](dev-mac.md) and [Linux](dev-linux.md) have different methods.
 - **Please read every step of this guide carefully.** It is highly recommend doing a full read-through before you even get started.
 
 Within this guide, we will be installing the following software:
@@ -65,8 +65,8 @@ We are now going to use SourceGit to make a copy of Lorekeeper. This will be you
 
 !!! info "Cloning a Higher Version of LK"
 
-    As of this writing, the main branch of LK is on version 2.1. You may wish to be on a higher version, such as the release branch version 3.0. 
-    
+    As of this writing, the main branch of LK is on version 2.1. You may wish to be on a higher version, such as the release branch version 3.0.
+
     **Please note that is *extremely discouraged* to put your site on the develop branch of Lorekeeper.** Please see our [dev intro](../dev-intro.md#navigating-branches) regarding different branches.
 
     SourceGit will clone the main branch by default. If you wish to update to version 3.0 or otherwise the current release, branch, simply pull that branch into your local branch with right click -> "Merge into main".
@@ -139,11 +139,11 @@ We need to install two more pieces of software before we can get our copy of Lor
 
 ### Installing Visual Studio Code
 
-Visual Studio Code is the code editor we will use to edit our Lorekeeper files. 
+Visual Studio Code is the code editor we will use to edit our Lorekeeper files.
 
 !!! info "A Note for Advanced Users"
 
-    You can install the VSCodium open source version, which comes with AI/Copilot features disabled by default, [here](https://github.com/VSCodium/vscodium/releases). However, you may run into issues with using certain extensions due to Microsoft's licensing. 
+    You can install the VSCodium open source version, which comes with AI/Copilot features disabled by default, [here](https://github.com/VSCodium/vscodium/releases). However, you may run into issues with using certain extensions due to Microsoft's licensing.
 
 1. Go [here](https://code.visualstudio.com) to download it and press the big download button. (Fortunately, we can disable the recently added AI features.)
 
@@ -229,7 +229,7 @@ APP_URL=http://localhost
 
 CONTACT_ADDRESS=
 DEVIANTART_ACCOUNT=
- 
+
 LOG_CHANNEL=stack
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -369,4 +369,4 @@ You have finished installing a local copy of Lorekeeper. You can login as the ad
   ![alt text](../../images/dev-setup/windows/running-lk-14.png){ width="600" }
 </figure>
 
-When you are ready, you can move onto [configuration or setting up a live website](../setup-index.md).
+When you are ready, you can move onto [configuring your github remote](../setup-index.md#github-set-up).

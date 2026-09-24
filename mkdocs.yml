@@ -23,10 +23,10 @@ nav:
       - Tumblr: 'guides/socmed/tumblr.md'
       - Twitch: 'guides/socmed/twitch.md'
       - Twitter: 'guides/socmed/twitter.md'
-  
+
   - Features:
     - Admin Panel: 'features/admin-panel.md'
-    
+
     - Characters: 'features/characters.md'
     - MYO Slots: 'features/myo-slots.md'
     - Character Images: 'features/character-images.md'
@@ -60,7 +60,7 @@ nav:
     - Invitation Keys: 'features/invitation-keys.md'
 
     - Reports: 'features/reports.md'
-    
+
     - Config Files: 'features/config-files.md'
     - Site Settings: 'features/site-settings.md'
     - Site Pages: 'features/site-pages.md'
@@ -73,7 +73,7 @@ nav:
   - Development:
     - Contributing: 'contributing.md'
     - Tutorial - Creating Item Types: 'guides/creating-item-types.md'
-    
+
   - Version History:
     - v0.0.x: 'version-history/v0.0.md'
     - v1.0.x: 'version-history/v1.0.md'
@@ -93,9 +93,9 @@ theme:
   language: 'en'
   features:
     - navigation.instant
-  
+
   favicon: images/favicon.ico
-  
+
   icon:
     repo: fontawesome/brands/github
 
