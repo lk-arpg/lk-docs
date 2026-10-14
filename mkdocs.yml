@@ -12,6 +12,23 @@ nav:
 
   - Getting Started:
     - Setting Up: 'guides/setup-index.md'
+    - Local Environment Set-up:
+      - Windows : 'guides/software-setup/software-windows.md'
+      - Windows - Laragon : 'guides/software-setup/windows-laragon.md'
+      - Windows - Valet : 'guides/software-setup/windows-valet.md'
+      - Mac : 'guides/software-setup/software-mac.md'
+      - Linux : 'guides/software-setup/software-linux.md'
+    - Development Environment Set-up:
+      - Developer introduction: 'guides/dev-intro.md'
+      - Windows: 'guides/dev-setup/dev-windows.md'
+      - Mac: 'guides/dev-setup/dev-mac.md'
+      - Linux: 'guides/dev-setup/dev-linux.md'
+    - Webserver (Live) Set-up:
+      - SSH Client Setup: 'guides/software-setup/ssh-clients.md'
+      - Dreamhost: 'guides/setup-index/hosts/dreamhost.md'
+      - DigitalOcean: 'guides/setup-index/hosts/digitalocean.md'
+      - Hetzner: 'guides/setup-index/hosts/hetzner.md'
+      - Linux Server (General): 'guides/setup-index/hosts/linux.md'
     - Configuring Lorekeeper: 'guides/configuring.md'
     - Updating Lorekeeper: 'guides/update.md'
     - Social Media Authentication:
@@ -93,6 +110,8 @@ theme:
   language: 'en'
   features:
     - navigation.instant
+    - navigation.tabs
+    - navigation.path
   
   favicon: images/favicon.ico
   
