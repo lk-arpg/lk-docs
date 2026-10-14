@@ -4,9 +4,11 @@ Sales are a form of text post that can be used to alert all users to on-site sal
 
 ## Usage
 
-Sales posts can be created in the admin panel and viewed on the sales page. The sales page lists sales posts ordered by newest first. When a new post is made, all users will gain an alert at the top of every page notifying them of the new post. This alert disappears when the sales page is viewed.
+Sales posts can be created in the admin panel and viewed on the sales page. The sales page lists sales posts, ordered by newest by default. Sales posts are also able to be searched through. When a new post is made, all users will gain an alert at the top of every page notifying them of the new post. This alert disappears when the sales page is viewed.
 
 Sales posts can be scheduled to post at certain times. Note that this posting is handled via crontab scheduling, and therefore may not be entirely accurate to the minute.
+
+An RSS feed is automatically generated from all sales posts. This RSS feed is separate from the [news](news.md) feed.
 
 ## Editing
 

@@ -82,6 +82,10 @@ Default value: 1
 
 Default value: 1
 
+### is_maintenance_mode
+
+0: Site is normal, 1: Users without the Has Maintenance Access power will be redirected to the home page.
+
 #### is_prompts_open
 
 0: New prompt submissions cannot be made (mods can work on the queue still), 1: Prompts are submittable.

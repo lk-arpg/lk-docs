@@ -70,7 +70,18 @@ By default, two item tags are available:
 
 ## Inventory
 
-Each user has an inventory, which is sorted by item category and further sorted by alphabetical order of item names.  Items within this inventory are "stacked", meaning that all copies of an item, or stacks, are collapsed down to one entry in the user's inventory. Clicking on an item brings up a menu that lists the item's source (if any), accompanying notes (if any), and actions that can be performed on it.
+Each user has an inventory, which is sorted by item category and further sorted by alphabetical order of item names. Items within this inventory are "stacked", meaning that all copies of an item, or stacks, are collapsed down to one entry in the user's inventory. 
+
+At the top of the page, the following actions and links are listed.
+
+- **Consolidate inventory**
+    - Consolidates each copy of an item down into one stack entry, as long as the source and notes fields are the same. It does not go over items that are in character inventories, or partially held in trades and submissions.
+- **Account search**
+    - Searches for the selected item through the user's entire account, including character inventories, design updates and trades. All held locations will be linked.
+- **Full View**
+    - Shows the user's full inventory. Clicking on the word "stack" shows which actions the user can perform on it.
+
+Clicking on an item brings up a menu that lists the item's source (if any), accompanying notes (if any), and actions that can be performed on it.
 
 The **Source** field notes down the source of the item. This field is automatically filled out when the user receives an item through site activity e.g. through [prompts](prompts.md)/[claims](claims.md) and functions as a record of how/why an item was received. In the case of shop purchases, this also notes who purchased the item, the shop it was purchased from, and the price.
 
